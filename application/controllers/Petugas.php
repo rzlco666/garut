@@ -13,9 +13,9 @@ class Petugas extends CI_Controller
     public function index()
     {
 
-        /* if ($this->session->userdata('is_login') == FALSE) {
-            redirect('/', 'refresh');
-        } */
+        if ($this->session->userdata('is_login') == FALSE) {
+            redirect('/petugas/login/', 'refresh');
+        }
 
         $this->load->view('petugas/layout/header');
         $this->load->view('petugas/layout/sidebar');
@@ -26,9 +26,9 @@ class Petugas extends CI_Controller
     public function login()
     {
 
-        /* if ($this->session->userdata('is_login') == TRUE) {
+        if ($this->session->userdata('is_login') == TRUE) {
             redirect('petugas/index', 'refresh');
-        } */
+        }
         
 
         $this->load->view('petugas/login/index');

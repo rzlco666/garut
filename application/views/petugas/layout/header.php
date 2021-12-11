@@ -7,18 +7,22 @@
     <title>Ecommerce Dashboard &mdash; Stisla</title>
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/fontawesome/css/all.min.css">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>modules/jqvmap/dist/jqvmap.min.css">
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>modules/summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>modules/owlcarousel2/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/datatables/datatables.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/jqvmap/dist/jqvmap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/owlcarousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>css/style.css">
-    <link rel="stylesheet" href="<?=base_url('assets_petugas/'); ?>css/components.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>css/style.css">
+    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>css/components.css">
     <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
     <script>
@@ -42,9 +46,9 @@
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
                         <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-                        <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+                        <!-- <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li> -->
                     </ul>
-                    <div class="search-element">
+                    <!-- <div class="search-element">
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
                         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                         <div class="search-backdrop"></div>
@@ -69,19 +73,19 @@
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="<?=base_url('assets_petugas/'); ?>img/products/product-3-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url('assets_petugas/'); ?>img/products/product-3-50.png" alt="product">
                                     oPhone S9 Limited Edition
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="<?=base_url('assets_petugas/'); ?>img/products/product-2-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url('assets_petugas/'); ?>img/products/product-2-50.png" alt="product">
                                     Drone X2 New Gen-7
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="<?=base_url('assets_petugas/'); ?>img/products/product-1-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url('assets_petugas/'); ?>img/products/product-1-50.png" alt="product">
                                     Headphone Blitz
                                 </a>
                             </div>
@@ -105,10 +109,10 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </form>
                 <ul class="navbar-nav navbar-right">
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+                    <!-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
                         <div class="dropdown-menu dropdown-list dropdown-menu-right">
                             <div class="dropdown-header">Messages
                                 <div class="float-right">
@@ -118,7 +122,7 @@
                             <div class="dropdown-list-content dropdown-list-message">
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?=base_url('assets_petugas/'); ?>img/avatar/avatar-1.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url('assets_petugas/'); ?>img/avatar/avatar-1.png" class="rounded-circle">
                                         <div class="is-online"></div>
                                     </div>
                                     <div class="dropdown-item-desc">
@@ -129,7 +133,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?=base_url('assets_petugas/'); ?>img/avatar/avatar-2.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url('assets_petugas/'); ?>img/avatar/avatar-2.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Dedik Sugiharto</b>
@@ -139,7 +143,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?=base_url('assets_petugas/'); ?>img/avatar/avatar-3.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url('assets_petugas/'); ?>img/avatar/avatar-3.png" class="rounded-circle">
                                         <div class="is-online"></div>
                                     </div>
                                     <div class="dropdown-item-desc">
@@ -150,7 +154,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?=base_url('assets_petugas/'); ?>img/avatar/avatar-4.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url('assets_petugas/'); ?>img/avatar/avatar-4.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Ardian Rahardiansyah</b>
@@ -160,7 +164,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?=base_url('assets_petugas/'); ?>img/avatar/avatar-5.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url('assets_petugas/'); ?>img/avatar/avatar-5.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Alfa Zulkarnain</b>
@@ -232,9 +236,9 @@
                                 <a href="#">View All <i class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="<?=base_url('assets_petugas/'); ?>img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                            <img alt="image" src="<?= base_url('assets_petugas/'); ?>img/avatar/avatar-1.png" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
