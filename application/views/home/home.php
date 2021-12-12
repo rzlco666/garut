@@ -1,7 +1,7 @@
       <!-- Swiper-->
       <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
         <div class="swiper-wrapper text-left">
-          <div class="swiper-slide context-dark" data-slide-bg="<?=base_url('assets/'); ?>images/karacak.jpeg">
+          <div class="swiper-slide context-dark" data-slide-bg="<?= base_url('assets/'); ?>images/karacak.jpeg">
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row">
@@ -13,7 +13,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide context-dark" data-slide-bg="<?=base_url('assets/'); ?>images/gunung.jpeg">
+          <div class="swiper-slide context-dark" data-slide-bg="<?= base_url('assets/'); ?>images/gunung.jpeg">
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row">
@@ -25,7 +25,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide context-dark" data-slide-bg="<?=base_url('assets/'); ?>images/danau.jpeg">
+          <div class="swiper-slide context-dark" data-slide-bg="<?= base_url('assets/'); ?>images/danau.jpeg">
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row">
@@ -49,21 +49,21 @@
               <div class="row justify-content-center">
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="#"><img src="<?=base_url('assets/'); ?>images/cta-1-368x420.jpg" alt="" width="368" height="420"/></a>
+                    <li><a href="#"><img src="<?= base_url('assets/'); ?>images/cta-1-368x420.jpg" alt="" width="368" height="420" /></a>
                       <h5 class="box-categories-title">Balloon Flights</h5>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="#"><img src="<?=base_url('assets/'); ?>images/cta-2-368x420.jpg" alt="" width="368" height="420"/></a>
+                    <li><a href="#"><img src="<?= base_url('assets/'); ?>images/cta-2-368x420.jpg" alt="" width="368" height="420" /></a>
                       <h5 class="box-categories-title">Mountain Holiday</h5>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="#"><img src="<?=base_url('assets/'); ?>images/cta-3-368x420.jpg" alt="" width="368" height="420"/></a>
+                    <li><a href="#"><img src="<?= base_url('assets/'); ?>images/cta-3-368x420.jpg" alt="" width="368" height="420" /></a>
                       <h5 class="box-categories-title">Beach Holidays</h5>
                     </li>
                   </ul>
@@ -78,7 +78,7 @@
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-            <div class="col-lg-6 text-center wow fadeInUp"><img src="<?=base_url('assets/'); ?>images/index-3-556x382.jpg" alt="" width="556" height="382"/>
+            <div class="col-lg-6 text-center wow fadeInUp"><img src="<?= base_url('assets/'); ?>images/index-3-556x382.jpg" alt="" width="556" height="382" />
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
               <div class="box-width-lg-470">
@@ -207,7 +207,7 @@
               <!-- Product Big-->
               <article class="product-big">
                 <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="<?=base_url('assets/'); ?>images/product-big-1-600x366.jpg" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="<?= base_url('assets/'); ?>images/product-big-1-600x366.jpg" alt="" width="600" height="366" /></a></div>
                   <div class="unit-body">
                     <div class="product-big-body">
                       <h5 class="product-big-title"><a href="#">Benidorm, Spain</a></h5>
@@ -225,7 +225,7 @@
               <!-- Product Big-->
               <article class="product-big">
                 <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="<?=base_url('assets/'); ?>images/product-big-2-600x366.jpg" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="<?= base_url('assets/'); ?>images/product-big-2-600x366.jpg" alt="" width="600" height="366" /></a></div>
                   <div class="unit-body">
                     <div class="product-big-body">
                       <h5 class="product-big-title"><a href="#">Mauritius Island, Africa</a></h5>
@@ -250,7 +250,7 @@
             <div class="col-sm-6 col-md-5 col-lg-3">
               <!-- Team Modern-->
               <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?=base_url('assets/'); ?>images/user-1-118x118.jpg" alt="" width="118" height="118"/></a>
+                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-1-118x118.jpg" alt="" width="118" height="118" /></a>
                   <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
                     <g>
                       <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
@@ -267,7 +267,7 @@
             <div class="col-sm-6 col-md-5 col-lg-3">
               <!-- Team Modern-->
               <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?=base_url('assets/'); ?>images/user-2-118x118.jpg" alt="" width="118" height="118"/></a>
+                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-2-118x118.jpg" alt="" width="118" height="118" /></a>
                   <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
                     <g>
                       <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
@@ -284,7 +284,7 @@
             <div class="col-sm-6 col-md-5 col-lg-3">
               <!-- Team Modern-->
               <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?=base_url('assets/'); ?>images/user-3-118x118.jpg" alt="" width="118" height="118"/></a>
+                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-3-118x118.jpg" alt="" width="118" height="118" /></a>
                   <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
                     <g>
                       <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
@@ -301,7 +301,7 @@
             <div class="col-sm-6 col-md-5 col-lg-3">
               <!-- Team Modern-->
               <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?=base_url('assets/'); ?>images/user-4-118x118.jpg" alt="" width="118" height="118"/></a>
+                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-4-118x118.jpg" alt="" width="118" height="118" /></a>
                   <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
                     <g>
                       <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
@@ -320,7 +320,7 @@
       </section>
       <!-- Section Subscribe-->
       <section class="section bg-default text-center offset-top-50">
-        <div class="parallax-container" data-parallax-img="<?=base_url('assets/'); ?>images/parallax-1-1920x850.jpg">
+        <div class="parallax-container" data-parallax-img="<?= base_url('assets/'); ?>images/parallax-1-1920x850.jpg">
           <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
             <div class="container">
               <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-semi-bold">First-class Impressions</span><span class="d-block font-weight-light">are Waiting for You!</span></h2>
@@ -337,51 +337,51 @@
           <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/>
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-1-270x195.jpg" alt="" width="270" height="195" />
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-2-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195" /></a>
               </div>
             </article>
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-3-270x195.jpg" alt="" width="270" height="195"/>
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-2-270x195.jpg" alt="" width="270" height="195" />
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-4-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195" /></a>
               </div>
             </article>
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-5-270x195.jpg" alt="" width="270" height="195"/>
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-3-270x195.jpg" alt="" width="270" height="195" />
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-6-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195" /></a>
               </div>
             </article>
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?=base_url('assets/'); ?>images/gallery-image-7-270x195.jpg" alt="" width="270" height="195"/>
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-4-270x195.jpg" alt="" width="270" height="195" />
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('assets/'); ?>images/gallery-image-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195" /></a>
+              </div>
+            </article>
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-mary">
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-5-270x195.jpg" alt="" width="270" height="195" />
+              </div>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195" /></a>
+              </div>
+            </article>
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-mary">
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-6-270x195.jpg" alt="" width="270" height="195" />
+              </div>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195" /></a>
+              </div>
+            </article>
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-mary">
+              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-7-270x195.jpg" alt="" width="270" height="195" />
+              </div>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195" /></a>
               </div>
             </article>
           </div>

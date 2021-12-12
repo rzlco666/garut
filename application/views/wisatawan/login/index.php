@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Petugas &mdash; <?= $title; ?></title>
+    <title>Wisatawan &mdash; <?= $title; ?></title>
     <link rel="icon" href="<?= base_url('assets/'); ?>images/favicon.ico" type="image/x-icon">
 
     <!-- General CSS Files -->
@@ -49,7 +49,7 @@
 
                             <div class="card-body">
                                 <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
-                                <?php echo form_open('petugas/login_proses', ''); ?>
+                                <?php echo form_open('home/login_proses', ''); ?>
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="mt-5 text-muted text-center">
-                            Don't have an account? <a href="<?= base_url('petugas/register/'); ?>">Create One</a>
+                            Don't have an account? <a href="<?= base_url('home/register/'); ?>">Create One</a>
                         </div>
                         <div class="simple-footer">
                             Copyright &copy; Garut 2021

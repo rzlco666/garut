@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Petugas &mdash; <?= $title; ?></title>
+  <title>Wisatawan &mdash; <?= $title; ?></title>
   <link rel="icon" href="<?= base_url('assets/'); ?>images/favicon.ico" type="image/x-icon">
 
   <!-- General CSS Files -->
@@ -49,7 +49,7 @@
 
               <div class="card-body">
                 <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
-                <?php echo form_open('petugas/register_proses', ''); ?>
+                <?php echo form_open('home/register_proses', ''); ?>
                 <div class="form-group">
                   <label for="nama">Nama Lengkap</label>
                   <input id="nama" type="text" class="form-control" name="nama" autofocus>
@@ -84,6 +84,14 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="no_hp">No. HP</label>
+                  <input id="no_hp" type="number" class="form-control" name="no_hp">
+                  <?php echo form_error('no_hp', '<div class="text-danger"><small>', '</small></div>'); ?>
+                  <div class="invalid-feedback">
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label for="alamat">Alamat</label>
                   <input id="alamat" type="text" class="form-control" name="alamat">
                   <div class="invalid-feedback">
@@ -106,7 +114,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Have an account? <a href="<?= base_url('petugas/login/'); ?>">Login</a>
+              Have an account? <a href="<?= base_url('home/login/'); ?>">Login</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Garut 2021
