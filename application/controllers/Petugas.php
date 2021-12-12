@@ -17,9 +17,11 @@ class Petugas extends CI_Controller
             redirect('/petugas/login/', 'refresh');
         }
 
-        $this->load->view('petugas/layout/header');
+        $data['title'] = 'Dashboard';
+
+        $this->load->view('petugas/layout/header', $data);
         $this->load->view('petugas/layout/sidebar');
-        $this->load->view('petugas/index');
+        $this->load->view('petugas/index', $data);
         $this->load->view('petugas/layout/footer');
     }
 
@@ -30,8 +32,9 @@ class Petugas extends CI_Controller
             redirect('petugas/index', 'refresh');
         }
         
+        $data['title'] = 'Login';
 
-        $this->load->view('petugas/login/index');
+        $this->load->view('petugas/login/index', $data);
     }
 
     public function register()
@@ -41,7 +44,9 @@ class Petugas extends CI_Controller
             redirect('petugas/index', 'refresh');
         }
 
-        $this->load->view('petugas/register/index');
+        $data['title'] = 'Register';
+
+        $this->load->view('petugas/register/index', $data);
     }
 
     public function register_proses()
@@ -84,7 +89,8 @@ class Petugas extends CI_Controller
                     $data_login = array(
                         'is_login' => TRUE,
                         'email'  => $db->email,
-                        'username'   => $db->username
+                        'username'   => $db->username,
+                        'nama'   => $db->nama,
                     );
 
                     $this->session->set_userdata($data_login);
@@ -111,6 +117,7 @@ class Petugas extends CI_Controller
         $this->session->unset_userdata('is_login');
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('email');
+        $this->session->unset_userdata('nama');
 
         session_destroy();
         //$this->session->set_flashdata('pesan', 'Sign Out Berhasil!');

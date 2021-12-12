@@ -17,9 +17,11 @@ class DataPetugas extends CI_Controller
             redirect('/petugas/login/', 'refresh');
         }
 
-        $this->load->view('petugas/layout/header');
+        $data['title'] = 'Data Petugas';
+
+        $this->load->view('petugas/layout/header', $data);
         $this->load->view('petugas/layout/sidebar');
-        $this->load->view('petugas/datapetugas/index');
+        $this->load->view('petugas/datapetugas/index', $data);
         $this->load->view('petugas/layout/footer');
         $this->load->view('petugas/datapetugas/script');
     }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Register &mdash; Stisla</title>
+  <title>Petugas &mdash; <?= $title; ?></title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/bootstrap/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
             <div class="login-brand">
-              <img src="<?= base_url('assets_petugas/'); ?>img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+            <img src="<?= base_url('assets/'); ?>images/logo.png" alt="" width="225" />
             </div>
 
             <div class="card card-primary">
