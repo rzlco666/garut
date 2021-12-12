@@ -88,6 +88,7 @@ class Petugas extends CI_Controller
 
                     $data_login = array(
                         'is_login' => TRUE,
+                        'id_petugas' => $db->id_petugas,
                         'email'  => $db->email,
                         'username'   => $db->username,
                         'nama'   => $db->nama,
@@ -115,6 +116,7 @@ class Petugas extends CI_Controller
     {
 
         $this->session->unset_userdata('is_login');
+        $this->session->unset_userdata('id_petugas');
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('nama');

@@ -78,16 +78,20 @@ class Home extends CI_Controller
 
                 $db = $this->m_wisatawan->m_cek_mail()->row();
                 if (hash_verified($this->input->post('password'), $db->password)) {
+                    if ($db->status == 1) {
 
-                    $data_login = array(
-                        'is_login' => TRUE,
-                        'email'  => $db->email,
-                        'username'   => $db->username,
-                        'nama'   => $db->nama,
-                    );
-
-                    $this->session->set_userdata($data_login);
-                    redirect('/', 'refresh');
+                        $data_login = array(
+                            'is_login' => TRUE,
+                            'email'  => $db->email,
+                            'username'   => $db->username,
+                            'nama'   => $db->nama,
+                        );
+                        $this->session->set_userdata($data_login);
+                        redirect('/', 'refresh');
+                    } else {
+                        $this->session->set_flashdata('pesan', 'Login gagal: akun diblokir!');
+                        redirect('home/login/index', 'refresh');
+                    }
                 } else {
 
                     $this->session->set_flashdata('pesan', 'Login gagal: password salah!');

@@ -2,10 +2,10 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Data Petugas</h1>
+            <h1>Data Wisatawan</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="<?= base_url('petugas/'); ?>">Dashboard</a></div>
-                <div class="breadcrumb-item">Data Petugas</div>
+                <div class="breadcrumb-item">Data Wisatawan</div>
             </div>
         </div>
 
@@ -18,7 +18,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="tabel-petugas" class="table table-striped" id="table-1">
+                                <table id="tabel-wisatawan" class="table table-striped" id="table-1">
                                     <thead>
                                         <tr>
                                             <th class="text-center">
@@ -28,6 +28,8 @@
                                             <th>Username</th>
                                             <th>Email</th>
                                             <th>Alamat</th>
+                                            <th>No HP</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -62,7 +64,7 @@
     </section>
 </div>
 
-<div class="modal" id="modal-petugas" tabindex="-1">
+<div class="modal" id="modal-wisatawan" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -72,10 +74,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="form-petugas">
+                <form id="form-wisatawan">
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="hidden" id="id_petugas" name="id_petugas">
+                        <input type="hidden" id="id_wisatawan" name="id_wisatawan">
                         <input type="text" class="form-control" id="nama" name="nama" required="required">
                     </div>
                     <div class="form-group">
@@ -93,6 +95,10 @@
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
                         <input type="text" class="form-control" id="alamat" name="alamat" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="no_hp">No. HP</label>
+                        <input type="number" class="form-control" id="no_hp" name="no_hp" required="required">
                     </div>
                 </form>
             </div>

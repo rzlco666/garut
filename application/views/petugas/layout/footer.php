@@ -28,6 +28,9 @@
 <script src="<?= base_url('assets_petugas/'); ?>modules/chart.min.js"></script>
 <script src="<?= base_url('assets_petugas/'); ?>modules/owlcarousel2/dist/owl.carousel.min.js"></script>
 <script src="<?= base_url('assets_petugas/'); ?>modules/summernote/summernote-bs4.js"></script>
+<script src="<?= base_url('assets_petugas/'); ?>modules/codemirror/lib/codemirror.js"></script>
+<script src="<?= base_url('assets_petugas/'); ?>modules/codemirror/mode/javascript/javascript.js"></script>
+<script src="<?= base_url('assets_petugas/'); ?>modules/jquery-selectric/jquery.selectric.min.js"></script>
 <script src="<?= base_url('assets_petugas/'); ?>modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
 <!-- Page Specific JS File -->

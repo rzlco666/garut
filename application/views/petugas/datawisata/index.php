@@ -2,10 +2,10 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Data Petugas</h1>
+            <h1>Data Wisata</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="<?= base_url('petugas/'); ?>">Dashboard</a></div>
-                <div class="breadcrumb-item">Data Petugas</div>
+                <div class="breadcrumb-item">Data Wisata</div>
             </div>
         </div>
 
@@ -18,16 +18,15 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="tabel-petugas" class="table table-striped" id="table-1">
+                                <table id="tabel-wisata" class="table table-striped" id="table-1">
                                     <thead>
                                         <tr>
                                             <th class="text-center">
                                                 #
                                             </th>
                                             <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Email</th>
-                                            <th>Alamat</th>
+                                            <th>Lokasi</th>
+                                            <th>Deskripsi</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -62,7 +61,7 @@
     </section>
 </div>
 
-<div class="modal" id="modal-petugas" tabindex="-1">
+<div class="modal" id="modal-wisata" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -72,27 +71,20 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="form-petugas">
+                <form id="form-wisata">
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="hidden" id="id_petugas" name="id_petugas">
+                        <input type="hidden" id="id_wisata" name="id_wisata">
                         <input type="text" class="form-control" id="nama" name="nama" required="required">
                     </div>
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required="required">
+                        <label for="lokasi">Lokasi</label>
+                        <input type="text" class="form-control" id="lokasi" name="lokasi" required="required">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label for="alamat">Alamat</label>
-                        <input type="text" class="form-control" id="alamat" name="alamat" required="required">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea name="deskripsi" id="deskripsi" class="summernote-simple"></textarea>
+                        <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi" required="required"> -->
                     </div>
                 </form>
             </div>

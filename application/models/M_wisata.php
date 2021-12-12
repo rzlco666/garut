@@ -1,96 +1,48 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_wisatawan extends CI_Model
+class M_wisata extends CI_Model
 {
-    private $table = 'wisatawan';
+    private $table = 'wisata';
 
-    public function m_register()
-    {
-
-        $data = array(
-            'username' => $this->input->post('username'),
-            'email' => $this->input->post('email'),
-            'nama' => $this->input->post('nama'),
-            'alamat' => $this->input->post('alamat'),
-            'no_hp' => $this->input->post('no_hp'),
-            'status' => 1,
-            'password' => get_hash($this->input->post('password'))
-        );
-
-        return $this->db->insert('wisatawan', $data);
-    }
-
-    public function m_cek_mail()
-    {
-
-        return $this->db->get_where('wisatawan', array('email' => $this->input->post('email')));
-    }
-
-    public function aktivasi($id_wisatawan)
-	{
-		$data = array(
-			'status' => 1,
-		);
-		$this->db->set($data);
-		$this->db->where('id_wisatawan', $id_wisatawan);
-		$this->db->update('wisatawan', $data);
-	}
-
-	public function blokir($id_wisatawan)
-	{
-		$data = array(
-			'status' => 0,
-		);
-		$this->db->set($data);
-		$this->db->where('id_wisatawan', $id_wisatawan);
-		$this->db->update('wisatawan', $data);
-	}
-
-    public function save_wisatawan()
+    public function save_wisata()
     {
         $data = [
-            'username' => $this->input->post('username'),
-            'email' => $this->input->post('email'),
             'nama' => $this->input->post('nama'),
-            'alamat' => $this->input->post('alamat'),
-            'no_hp' => $this->input->post('no_hp'),
-            'status' => 1,
-            'password' => get_hash($this->input->post('password'))
+            'lokasi' => $this->input->post('lokasi'),
+            'deskripsi' => $this->input->post('deskripsi'),
+            'id_petugas' => $this->session->userdata('id_petugas'),
         ];
 
         $this->db->insert($this->table, $data);
         return $this->db->affected_rows();
     }
 
-    public function update_wisatawan()
+    public function update_wisata()
     {
         $data = [
-            'username' => $this->input->post('username'),
-            'email' => $this->input->post('email'),
             'nama' => $this->input->post('nama'),
-            'alamat' => $this->input->post('alamat'),
-            'no_hp' => $this->input->post('no_hp'),
-            'status' => 1,
-            'password' => get_hash($this->input->post('password'))
+            'lokasi' => $this->input->post('lokasi'),
+            'deskripsi' => $this->input->post('deskripsi'),
+            'id_petugas' => $this->session->userdata('id_petugas'),
         ];
 
         return $this->db->update($this->table, $data, [
-            'id_wisatawan' => $this->input->post('id_wisatawan')
+            'id_wisata' => $this->input->post('id_wisata')
         ]);
     }
 
-    public function delete_wisatawan()
+    public function delete_wisata()
     {
         return $this->db->delete($this->table, [
-            'id_wisatawan' => $this->input->post('id_wisatawan')
+            'id_wisata' => $this->input->post('id_wisata')
         ]);
     }
 
-    public function get_wisatawan_by_id()
+    public function get_wisata_by_id()
     {
         $data = [
-            'id_wisatawan' => $this->input->get('id_wisatawan')
+            'id_wisata' => $this->input->get('id_wisata')
         ];
 
         return $this->db->get_where($this->table, $data);
@@ -159,5 +111,4 @@ class M_wisatawan extends CI_Model
         $this->db->from($table);
         return $this->db->count_all_results();
     }
-
 }
