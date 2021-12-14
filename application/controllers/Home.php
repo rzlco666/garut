@@ -11,10 +11,23 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Dashboard';
+        $data['title'] = 'Landing';
+
+        $data['wisata'] = $this->templates->query("SELECT * FROM wisata ORDER BY id_wisata DESC LIMIT 3");
 
         $this->load->view('home/header', $data);
         $this->load->view('home/home', $data);
+        $this->load->view('home/footer');
+    }
+
+    public function wisata()
+    {
+        $data['title'] = 'Wisata';
+
+        $data['wisata'] = $this->templates->query("SELECT * FROM wisata ORDER BY id_wisata DESC");
+
+        $this->load->view('home/header', $data);
+        $this->load->view('home/wisata', $data);
         $this->load->view('home/footer');
     }
 

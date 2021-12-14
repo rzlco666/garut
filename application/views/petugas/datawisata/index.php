@@ -14,11 +14,12 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="javascript:;" onclick="tambah()" class="btn btn-primary">Tambah Data</a>
+                            <a href="<?= base_url('datawisata/create/'); ?>" class="btn btn-primary">Tambah Data</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="tabel-wisata" class="table table-striped" id="table-1">
+                                <?= $this->session->flashdata('message'); ?>
+                                <table id="tabel-wisata" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th class="text-center">
@@ -27,30 +28,25 @@
                                             <th>Nama</th>
                                             <th>Lokasi</th>
                                             <th>Deskripsi</th>
+                                            <th>Thumbnail</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <!-- <tbody>
-                                        <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>Create a mobile app</td>
-                                            <td class="align-middle">
-                                                <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-                                                    <div class="progress-bar bg-success" data-width="100%"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Wildan Ahdian">
-                                            </td>
-                                            <td>2018-01-20</td>
-                                            <td>
-                                                <div class="badge badge-success">Completed</div>
-                                            </td>
-                                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                                        </tr>
-                                    </tbody> -->
+                                    <tbody>
+                                        <?php $no = 1; foreach ($wisata as $isi) : ?>
+                                            <tr>
+                                                <td><?= $no; ?></td>
+                                                <td><?= $isi['nama']; ?></td>
+                                                <td><?= $isi['lokasi']; ?></td>
+                                                <td><?= $isi['deskripsi']; ?></td>
+                                                <td><img width="80%" src="<?= base_url('public/upload/image/wisata/'); ?><?= $isi['thumbnail']; ?>" class="img-responsive" alt="..."></td>
+                                                <td>
+                                                    <a href="<?= base_url('datawisata/edit/') . $isi['id_wisata']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                                                    <a href="<?= base_url('datawisata/delete/') . $isi['id_wisata']; ?>" class="btn btn-danger btn-sm">Hapus</a>
+                                                </td>
+                                            </tr>
+                                        <?php $no++; endforeach; ?>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -61,7 +57,7 @@
     </section>
 </div>
 
-<div class="modal" id="modal-wisata" tabindex="-1">
+<!-- <div class="modal" id="modal-wisata" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -84,7 +80,6 @@
                     <div class="form-group">
                         <label for="deskripsi">Deskripsi</label>
                         <textarea name="deskripsi" id="deskripsi" class="summernote-simple"></textarea>
-                        <!-- <input type="text" class="form-control" id="deskripsi" name="deskripsi" required="required"> -->
                     </div>
                 </form>
             </div>
@@ -94,4 +89,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

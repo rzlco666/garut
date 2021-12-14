@@ -56,7 +56,7 @@
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <!-- RD Navbar Brand-->
                 <div class="rd-navbar-brand">
-                  <!--Brand--><a class="brand" href="index.html"><img src="<?= base_url('assets/'); ?>images/logo.png" alt="" width="225" height="18" /></a>
+                  <!--Brand--><a class="brand" href="<?= base_url('/'); ?>"><img src="<?= base_url('assets/'); ?>images/logo.png" alt="" width="225" height="18" /></a>
                 </div>
               </div>
               <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -80,9 +80,13 @@
                   </ul> -->
                 <!-- RD Navbar Nav-->
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="<?= base_url('/'); ?>">Home</a>
+                  <li class="rd-nav-item <?php if ($title == 'Landing') {
+                                            echo 'active';
+                                          } ?>"><a class="rd-nav-link" href="<?= base_url('/'); ?>">Home</a>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                  <li class="rd-nav-item <?php if ($title == 'Wisata') {
+                                            echo 'active';
+                                          } ?>"><a class="rd-nav-link" href="<?= base_url('home/wisata'); ?>">Wisata</a>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
                   </li>
