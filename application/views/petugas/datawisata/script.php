@@ -10,15 +10,6 @@
         $('#tabel-wisata').DataTable({
             bDestroy: true,
             responsive: true,
-            columnDefs: [{
-                    targets: [0, 0, 0, 0],
-                    orderable: false,
-                },
-                {
-                    width: "1%",
-                    targets: [0, 0, 0, 0],
-                },
-            ],
         });
     }
 

@@ -37,9 +37,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail (368x420)</label>
                                     <div class="col-sm-12 col-md-7">
                                     <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header (1920x412)</label>
+                                    <div class="col-sm-12 col-md-7">
+                                    <input type="file" name="header" class="form-control" id="header">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">

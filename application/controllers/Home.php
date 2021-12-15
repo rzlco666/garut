@@ -31,6 +31,17 @@ class Home extends CI_Controller
         $this->load->view('home/footer');
     }
 
+    public function detail_wisata($id_wisata)
+    {
+        $data['title'] = 'Wisata';
+
+        $data['wisata'] = $this->templates->view_where('wisata', ['id_wisata' => $id_wisata])->result_array();
+
+        $this->load->view('home/header', $data);
+        $this->load->view('home/detail_wisata', $data);
+        $this->load->view('home/footer');
+    }
+
     public function login()
     {
 

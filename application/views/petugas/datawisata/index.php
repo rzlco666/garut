@@ -29,6 +29,7 @@
                                             <th>Lokasi</th>
                                             <th>Deskripsi</th>
                                             <th>Thumbnail</th>
+                                            <th>Header</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -40,6 +41,7 @@
                                                 <td><?= $isi['lokasi']; ?></td>
                                                 <td><?= $isi['deskripsi']; ?></td>
                                                 <td><img width="80%" src="<?= base_url('public/upload/image/wisata/'); ?><?= $isi['thumbnail']; ?>" class="img-responsive" alt="..."></td>
+                                                <td><img width="80%" src="<?= base_url('public/upload/image/wisata/header/'); ?><?= $isi['header']; ?>" class="img-responsive" alt="..."></td>
                                                 <td>
                                                     <a href="<?= base_url('datawisata/edit/') . $isi['id_wisata']; ?>" class="btn btn-warning btn-sm">Edit</a>
                                                     <a href="<?= base_url('datawisata/delete/') . $isi['id_wisata']; ?>" class="btn btn-danger btn-sm">Hapus</a>
