@@ -43,6 +43,15 @@ class DataWisata extends CI_Controller
         $this->load->view('petugas/layout/footer');
     }
 
+    private function _deleteImage($id_wisata)
+    {
+        $product = $this->templates->view_where('wisata', ['id_wisata' => $id_wisata])->row();
+        if ($product->thumbnail != "cta-1-368x420.jpg") {
+            $filename = explode(".", $product->thumbnail)[0];
+            return array_map('unlink', glob(FCPATH . "public/upload/image/wisata/$filename.*"));
+        }
+    }
+
     public function save()
     {
         $this->form_validation->set_rules('nama', 'Nama', 'required');
@@ -70,7 +79,7 @@ class DataWisata extends CI_Controller
 
                     $old_image = $data['wisata']['thumbnail'];
 
-                    if ($old_image != 'logo.png') {
+                    if ($old_image != 'cta-1-368x420.jpg') {
                         unlink(FCPATH . 'public/upload/image/wisata/' . $old_image);
                     }
                     $new_image = $this->upload->data('file_name');
@@ -140,13 +149,14 @@ class DataWisata extends CI_Controller
 
                 if ($this->upload->do_upload('thumbnail')) {
 
-                    /* $old_image = $data['wisata']['thumbnail'];
+                    $product = $this->templates->view_where('wisata', ['id_wisata' => $id_wisata])->row();
+                    $filename = $product->thumbnail[0];
 
-                    if ($old_image != 'logo.png') {
-                        unlink(FCPATH . 'public/upload/image/wisata/' . $old_image);
+                    if ($filename != 'cta-1-368x420.jpg') {
+                        unlink(FCPATH . 'public/upload/image/wisata/' . $filename);
                         $this->_deleteImage($id_wisata);
-                    } */
-                    $this->_deleteImage($id_wisata);
+                    }
+
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('thumbnail', $new_image);
                 } else {
@@ -170,19 +180,10 @@ class DataWisata extends CI_Controller
         }
     }
 
-    private function _deleteImage($id)
+    public function delete($id_wisata)
     {
-        $product = $this->templates->view_where('wisata', ['id_wisata' => $id])->row();
-        if ($product->foto != "logo.png") {
-            $filename = explode(".", $product->foto)[0];
-            return array_map('unlink', glob(FCPATH . "public/upload/image/wisata/$filename.*"));
-        }
-    }
-
-    public function delete($id)
-    {
-        $this->_deleteImage($id);
-        $this->templates->delete('wisata', ['id_wisata' => $id]);
+        $this->_deleteImage($id_wisata);
+        $this->templates->delete('wisata', ['id_wisata' => $id_wisata]);
         $this->session->set_flashdata('message', '
         <div class="alert alert-success alert-dismissible show fade">
             <div class="alert-body">
