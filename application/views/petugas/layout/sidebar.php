@@ -19,6 +19,9 @@
             <li class="<?php if ($title == 'Data Wisata') {
                             echo 'active';
                         } ?>"><a class="nav-link" href="<?= base_url('datawisata/'); ?>"><i class="fas fa-map-marker-alt"></i> <span>Data Wisata</span></a></li>
+            <li class="<?php if ($title == 'Transaksi Wisata') {
+                            echo 'active';
+                        } ?>"><a class="nav-link" href="<?= base_url('transaksiwisata/'); ?>"><i class="fas fa-ticket-alt"></i> <span>Transaksi Wisata</span></a></li>
             <li class="menu-header">Wisatawan</li>
             <li class="<?php if ($title == 'Data Wisatawan') {
                             echo 'active';

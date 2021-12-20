@@ -88,7 +88,7 @@
                         <?php endforeach; ?>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><a href="<?= base_url('home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
-                            <li class="list-group-item"><a href="#" class="card-link">Profile</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('home/profile'); ?>" class="card-link">Profile</a></li>
                         </ul>
                     </div>
                 </div>

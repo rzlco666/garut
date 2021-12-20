@@ -88,10 +88,20 @@
                                             echo 'active';
                                           } ?>"><a class="rd-nav-link" href="<?= base_url('home/wisata'); ?>">Wisata</a>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
-                  </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact Us</a>
-                  </li>
+                  <?php
+                  if ($this->session->userdata('is_login') == TRUE) {
+                  ?>
+                    <li class="rd-nav-item <?php if ($title == 'Transaksi Wisata') {
+                                              echo 'active';
+                                            } ?>"><a class="rd-nav-link" href="<?= base_url('home/transaksi_wisata'); ?>">Transaksi Wisata</a>
+                    </li>
+                    <li class="rd-nav-item <?php if ($title == 'Profile') {
+                                              echo 'active';
+                                            } ?>"><a class="rd-nav-link" href="<?= base_url('home/profile'); ?>">Profile</a>
+                    </li>
+                  <?php
+                  }
+                  ?>
                 </ul>
               </div>
             </div>

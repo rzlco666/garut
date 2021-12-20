@@ -67,6 +67,35 @@ class Home extends CI_Controller
         }
     }
 
+    public function rating_wisata()
+    {
+        $this->form_validation->set_rules('rating', 'Rating', 'required');
+
+        if ($this->form_validation->run() == true) {
+
+            $data['rating'] = $this->input->post('rating');
+            $data['id_wisatawan'] = $this->input->post('id_wisatawan');
+            $data['id_wisata'] = $this->input->post('id_wisata');
+            $data['order_id'] = $this->input->post('order_id');
+            $data['feedback'] = $this->input->post('feedback');
+
+            $this->templates->insert('rating_wisata', $data);
+            $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                <strong>Yes!</strong> Updated.
+            </div>
+        </div>');
+            redirect('home/transaksi_wisata');
+        } else {
+            $this->session->set_flashdata('error', validation_errors());
+            redirect('home/transaksi_wisata');
+        }
+    }
+
     public function profile()
     {
         $data['title'] = 'Profile';
