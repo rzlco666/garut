@@ -31,9 +31,21 @@
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Link Google Maps</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input name="maps" id="maps" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
                                     <div class="col-sm-12 col-md-7">
                                         <textarea name="deskripsi" id="deskripsi" class="summernote"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Harga Tiket (Rp.)</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input name="harga" id="harga" type="number" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
@@ -46,6 +58,24 @@
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header (1920x412)</label>
                                     <div class="col-sm-12 col-md-7">
                                     <input type="file" name="header" class="form-control" id="header">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 1</label>
+                                    <div class="col-sm-12 col-md-7">
+                                    <input type="file" name="destinasi1" class="form-control" id="destinasi1">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 2</label>
+                                    <div class="col-sm-12 col-md-7">
+                                    <input type="file" name="destinasi2" class="form-control" id="destinasi2">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 3</label>
+                                    <div class="col-sm-12 col-md-7">
+                                    <input type="file" name="destinasi3" class="form-control" id="destinasi3">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">

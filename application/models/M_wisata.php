@@ -10,7 +10,9 @@ class M_wisata extends CI_Model
         $data = [
             'nama' => $this->input->post('nama'),
             'lokasi' => $this->input->post('lokasi'),
+            'maps' => $this->input->post('maps'),
             'deskripsi' => $this->input->post('deskripsi'),
+            'harga' => $this->input->post('harga'),
             'id_petugas' => $this->session->userdata('id_petugas'),
         ];
 
@@ -23,7 +25,9 @@ class M_wisata extends CI_Model
         $data = [
             'nama' => $this->input->post('nama'),
             'lokasi' => $this->input->post('lokasi'),
+            'maps' => $this->input->post('maps'),
             'deskripsi' => $this->input->post('deskripsi'),
+            'harga' => $this->input->post('harga'),
             'id_petugas' => $this->session->userdata('id_petugas'),
         ];
 

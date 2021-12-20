@@ -13,7 +13,7 @@ class DataWisatawan extends CI_Controller
     public function index()
     {
 
-        if ($this->session->userdata('is_login') == FALSE) {
+        if ($this->session->userdata('is_petugas') == FALSE) {
             redirect('/petugas/login/', 'refresh');
         }
 

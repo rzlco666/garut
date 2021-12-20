@@ -13,7 +13,7 @@ class Petugas extends CI_Controller
     public function index()
     {
 
-        if ($this->session->userdata('is_login') == FALSE) {
+        if ($this->session->userdata('is_petugas') == FALSE) {
             redirect('/petugas/login/', 'refresh');
         }
 
@@ -28,7 +28,7 @@ class Petugas extends CI_Controller
     public function login()
     {
 
-        if ($this->session->userdata('is_login') == TRUE) {
+        if ($this->session->userdata('is_petugas') == TRUE) {
             redirect('petugas/index', 'refresh');
         }
         
@@ -40,7 +40,7 @@ class Petugas extends CI_Controller
     public function register()
     {
 
-        if ($this->session->userdata('is_login') == TRUE) {
+        if ($this->session->userdata('is_petugas') == TRUE) {
             redirect('petugas/index', 'refresh');
         }
 
@@ -87,7 +87,7 @@ class Petugas extends CI_Controller
                 if (hash_verified($this->input->post('password'), $db->password)) {
 
                     $data_login = array(
-                        'is_login' => TRUE,
+                        'is_petugas' => TRUE,
                         'id_petugas' => $db->id_petugas,
                         'email'  => $db->email,
                         'username'   => $db->username,
@@ -115,7 +115,7 @@ class Petugas extends CI_Controller
     public function logout()
     {
 
-        $this->session->unset_userdata('is_login');
+        $this->session->unset_userdata('is_petugas');
         $this->session->unset_userdata('id_petugas');
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('email');
