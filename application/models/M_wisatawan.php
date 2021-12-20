@@ -14,6 +14,7 @@ class M_wisatawan extends CI_Model
             'nama' => $this->input->post('nama'),
             'alamat' => $this->input->post('alamat'),
             'no_hp' => $this->input->post('no_hp'),
+            'foto' => 'about-1-519x564.jpg',
             'status' => 1,
             'password' => get_hash($this->input->post('password'))
         );

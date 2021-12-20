@@ -89,6 +89,15 @@ class Home extends CI_Controller
         }
     }
 
+    private function _deleteImage($id_wisatawan)
+    {
+        $product = $this->templates->view_where('wisatawan', ['id_wisatawan' => $id_wisatawan])->row();
+        if ($product->foto != "about-1-519x564.jpg") {
+            $filename = explode(".", $product->foto)[0];
+            return array_map('unlink', glob(FCPATH . "public/upload/image/wisatawan/$filename.*"));
+        }
+    }
+
     public function update_profile()
     {
         $this->form_validation->set_rules('nama', 'Nama', 'required');
@@ -98,10 +107,64 @@ class Home extends CI_Controller
             $id_wisatawan = $this->input->post('id_wisatawan');
             $data['nama'] = $this->input->post('nama');
             $data['username'] = $this->input->post('username');
-            $data['password'] = get_hash($this->input->post('password'));
             $data['alamat'] = $this->input->post('alamat');
             $data['email'] = $this->input->post('email');
             $data['no_hp'] = $this->input->post('no_hp');
+
+            //cek imange
+            $upload_image = $_FILES['foto']['name'];
+
+            if ($upload_image) {
+
+                $config['allowed_types'] = 'jpeg|jpg|png';
+                $config['upload_path'] = 'public/upload/image/wisatawan/';
+
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+
+                if ($this->upload->do_upload('foto')) {
+
+                    $product = $this->templates->view_where('wisatawan', ['id_wisatawan' => $id_wisatawan])->row();
+                    $filename = $product->foto[0];
+
+                    if ($filename != 'about-1-519x564.jpg') {
+                        unlink(FCPATH . 'public/upload/image/wisatawan/' . $filename);
+                        $this->_deleteImage($id_wisatawan);
+                    }
+
+                    $new_image = $this->upload->data('file_name');
+                    $this->db->set('foto', $new_image);
+                } else {
+                    echo $this->upload->display_errors();
+                }
+            }
+
+            $this->templates->update('wisatawan', ['id_wisatawan' => $id_wisatawan], $data);
+            $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                <strong>Yes!</strong> Updated.
+            </div>
+        </div>');
+            redirect('home/profile');
+        } else {
+            $this->session->set_flashdata('error', validation_errors());
+            redirect('home/profile');
+        }
+    }
+
+    public function ubah_password()
+    {
+        $this->form_validation->set_rules('password', 'Password', 'required');
+
+        if ($this->form_validation->run() == true) {
+
+            $id_wisatawan = $this->input->post('id_wisatawan');
+            $pass = $this->input->post('password');
+            $data['password'] = get_hash($pass);
 
             $this->templates->update('wisatawan', ['id_wisatawan' => $id_wisatawan], $data);
             $this->session->set_flashdata('message', '

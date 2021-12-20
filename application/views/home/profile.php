@@ -31,12 +31,6 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-wrap">
-                                    <input readonly class="form-input" id="password" type="password" value="<?= get_hash($i['password']); ?>" name="password">
-                                    <label class="form-label" for="password">Password</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-wrap">
                                     <input readonly class="form-input" id="no_hp" type="number" name="no_hp" value="<?= $i['no_hp']; ?>" data-constraints="@Numeric">
                                     <label class="form-label" for="no_hp">No. HP</label>
                                 </div>
@@ -48,7 +42,18 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button button-primary button-pipaluk" type="button" data-toggle="modal" data-target="#editProfile">Edit Profile</a>
+                        <div class="row row-14 gutters-14">
+                            <div class="col-md-4">
+                                <div class="form-wrap">
+                                    <button class="button button-md button-default-outline-2 button-ujarak" type="button" data-toggle="modal" data-target="#ubahPassword">Ubah Password</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-wrap">
+                                    <button class="button button-primary button-pipaluk" type="button" data-toggle="modal" data-target="#editProfile">Edit Profile</button>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 <?php endforeach; ?>
             </div>
@@ -56,7 +61,7 @@
                 <div class="offset-left-xl-45">
                     <div class="card">
                         <?php foreach ($profile as $i) : ?>
-                            <img class="card-img-top" src="<?= base_url('assets/'); ?>images/karacak.jpeg" alt="Card image cap">
+                            <img class="card-img-top" src="<?= base_url('public/upload/image/wisatawan/'); ?><?= $i['foto']; ?>" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $i['nama']; ?></h5>
                                 <p class="card-text">
@@ -103,7 +108,7 @@
                     </button>
                 </div>
                 <div style="text-align: left;" class="modal-body">
-                    <form enctype="multipart/form-data" action="<?php echo base_url('home/update_profile'); ?>" method="post"> 
+                    <form enctype="multipart/form-data" action="<?php echo base_url('home/update_profile'); ?>" method="post">
                         <div class="form-group">
                             <label for="nama" class="col-form-label">Nama</label>
                             <input type="hidden" name="id_wisatawan" id="id_wisatawan" value="<?= $i['id_wisatawan']; ?>">
@@ -118,10 +123,6 @@
                             <input type="email" class="form-control" name="email" id="email" value="<?= $i['email']; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="password" class="col-form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password">
-                        </div>
-                        <div class="form-group">
                             <label for="no_hp" class="col-form-label">No HP.</label>
                             <input type="number" class="form-control" name="no_hp" id="no_hp" value="<?= $i['no_hp']; ?>">
                         </div>
@@ -129,12 +130,42 @@
                             <label for="alamat" class="col-form-label">Alamat</label>
                             <input type="text" class="form-control" name="alamat" id="alamat" value="<?= $i['alamat']; ?>">
                         </div>
+                        <div class="form-group">
+                            <label for="foto" class="col-form-label">Foto</label>
+                            <input type="file" name="foto" class="form-control" id="foto">
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
-                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ubahPassword" tabindex="-1" role="dialog" aria-labelledby="ubahPassword" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ubahPassword">Ubah Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div style="text-align: left;" class="modal-body">
+                    <form enctype="multipart/form-data" action="<?php echo base_url('home/ubah_password'); ?>" method="post">
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password Baru</label>
+                            <input type="hidden" name="id_wisatawan" id="id_wisatawan" value="<?= $i['id_wisatawan']; ?>">
+                            <input type="password" class="form-control" name="password" id="password">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>
