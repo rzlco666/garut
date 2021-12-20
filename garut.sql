@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Des 2021 pada 18.29
+-- Waktu pembuatan: 20 Des 2021 pada 02.55
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.9
 
@@ -105,17 +105,60 @@ CREATE TABLE `transaksi_event` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `transaksi_midtrans`
+--
+
+CREATE TABLE `transaksi_midtrans` (
+  `order_id` char(20) NOT NULL,
+  `nama` text NOT NULL,
+  `wisata` text NOT NULL,
+  `gross_amount` int(11) NOT NULL,
+  `payment_type` varchar(13) NOT NULL,
+  `transaction_time` varchar(20) NOT NULL,
+  `bank` varchar(10) NOT NULL,
+  `va_number` varchar(30) NOT NULL,
+  `pdf_url` text NOT NULL,
+  `status_code` char(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `transaksi_midtrans`
+--
+
+INSERT INTO `transaksi_midtrans` (`order_id`, `nama`, `wisata`, `gross_amount`, `payment_type`, `transaction_time`, `bank`, `va_number`, `pdf_url`, `status_code`) VALUES
+('2109171865', 'Test', 'Karacak Valley', 100000, 'bank_transfer', '2021-12-18 17:27:19', 'bni', '9884609851102460', 'https://app.sandbox.midtrans.com/snap/v1/transactions/3ffcb5e9-e6f7-4563-810d-02527617c761/pdf', '201');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `transaksi_wisata`
 --
 
 CREATE TABLE `transaksi_wisata` (
-  `id_transaksi_wisata` int(11) NOT NULL,
+  `order_id` char(20) NOT NULL,
+  `gross_amount` int(11) NOT NULL,
+  `payment_type` varchar(13) NOT NULL,
+  `transaction_time` varchar(20) NOT NULL,
+  `bank` varchar(10) NOT NULL,
+  `va_number` varchar(30) NOT NULL,
+  `pdf_url` text NOT NULL,
+  `status_code` char(3) NOT NULL,
   `jumlah` int(3) NOT NULL,
-  `tanggal` date NOT NULL,
-  `bukti` text NOT NULL,
   `id_wisatawan` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `email` text NOT NULL,
+  `no_hp` varchar(20) NOT NULL,
   `id_wisata` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `transaksi_wisata`
+--
+
+INSERT INTO `transaksi_wisata` (`order_id`, `gross_amount`, `payment_type`, `transaction_time`, `bank`, `va_number`, `pdf_url`, `status_code`, `jumlah`, `id_wisatawan`, `nama`, `alamat`, `email`, `no_hp`, `id_wisata`) VALUES
+('1224965716', 10000, 'bank_transfer', '2021-12-19 18:48:05', 'bca', '46098241297', 'https://app.sandbox.midtrans.com/snap/v1/transactions/1e711fe5-014f-4256-881e-9fc72cc761f5/pdf', '201', 2, 4, 'Test', 'Solo', 'test@mail.com', '081231234', 4),
+('1475501474', 50000, 'bank_transfer', '2021-12-18 23:22:58', 'bca', '46098295135', 'https://app.sandbox.midtrans.com/snap/v1/transactions/7fd58dcf-80f5-492b-95a5-bfda73e9f2d6/pdf', '201', 5, 4, 'Test', 'Solo', 'test@mail.com', '081231234', 5);
 
 -- --------------------------------------------------------
 
@@ -127,8 +170,14 @@ CREATE TABLE `wisata` (
   `id_wisata` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `lokasi` text NOT NULL,
+  `maps` text NOT NULL,
+  `harga` int(100) NOT NULL,
   `deskripsi` text NOT NULL,
   `thumbnail` text NOT NULL,
+  `header` text NOT NULL,
+  `destinasi1` text NOT NULL,
+  `destinasi2` text NOT NULL,
+  `destinasi3` text NOT NULL,
   `id_petugas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -136,12 +185,11 @@ CREATE TABLE `wisata` (
 -- Dumping data untuk tabel `wisata`
 --
 
-INSERT INTO `wisata` (`id_wisata`, `nama`, `lokasi`, `deskripsi`, `thumbnail`, `id_petugas`) VALUES
-(1, 'Cipanas', 'Desa Cipanas', 'Wisata pemandian air panas alami', 'cta-1-368x420.jpg', 5),
-(2, 'Kompleks Wisata Darajat Garut', 'Puncak Darajat', 'Wisata pemandian air panas alami', 'cta-1-368x420.jpg', 5),
-(4, 'Karacak Valley', 'Garut Kota', '<p>Tempat liburan berupa hutan pinus dan kebun kopi.<br></p>', 'cta-1-368x420.jpg', 5),
-(5, 'Awit Sinar Alam Darajat', 'Kecamatan Pasirwangi', '<p>Pemandian air panas, <i>cottage</i> bergaya klasik dan area <i>outbound</i>.<br></p>', 'cta-1-368x420.jpg', 5),
-(78, 'Garut', 'Gar', '<p>Gaa</p>', 'lab_itspku-600x400.jpg', 5);
+INSERT INTO `wisata` (`id_wisata`, `nama`, `lokasi`, `maps`, `harga`, `deskripsi`, `thumbnail`, `header`, `destinasi1`, `destinasi2`, `destinasi3`, `id_petugas`) VALUES
+(1, 'Cipanas', 'Desa Cipanas', '', 0, 'Wisata pemandian air panas alami', 'cta-1-368x420.jpg', 'breadcrumbs-bg.jpg', 'cta-1-368x420.jpg', 'cta-1-368x420.jpg', 'cta-1-368x420.jpg', 5),
+(2, 'Kompleks Wisata Darajat Garut', 'Puncak Darajat', '', 0, 'Wisata pemandian air panas alami', 'cta-1-368x420.jpg', 'breadcrumbs-bg.jpg', 'cta-1-368x420.jpg', 'cta-1-368x420.jpg', 'cta-1-368x420.jpg', 5),
+(4, 'Karacak Valley', 'Garut Kota', 'https://maps.google.com/maps?q=karacak%20valley&t=k&z=13&ie=UTF8&iwloc=&output=embed', 5000, '<p>Tempat liburan berupa hutan pinus dan kebun kopi.<br></p>', 'cta-1-368x420.jpg', 'breadcrumbs-bg.jpg', 'cta-1-368x420.jpg', 'cta-1-368x420.jpg', 'cta-1-368x420.jpg', 5),
+(5, 'Awit Sinar Alam Darajat', 'Kecamatan Pasirwangi', 'https://maps.google.com/maps?q=Awit%20Sinar%20Alam%20Darajat&t=k&z=17&ie=UTF8&iwloc=&output=embed', 10000, '<p>Pemandian air panas, <i>cottage</i> bergaya klasik dan area <i>outbound</i>.<br></p>', 'thumbnail.jpg', '3.jpg', '2.jpg', '5.jpg', '4.jpg', 5);
 
 -- --------------------------------------------------------
 
@@ -165,8 +213,9 @@ CREATE TABLE `wisatawan` (
 --
 
 INSERT INTO `wisatawan` (`id_wisatawan`, `nama`, `username`, `password`, `alamat`, `email`, `no_hp`, `status`) VALUES
-(2, 'Syahrizal', 'rizal666', '$2y$05$P9unxmPMRtcE8LrBUx4Uc.KzXxf6SvrP7cpXS5Jj3sDiNDnJBexjO', 'Solo', 'rzlco20@gmail.com', '0812736123', 1),
-(4, 'Test', 'test', '$2y$05$UhuRQ19hb8uqenRgpOpTAOKux1bx3P3h/WvZbTWaWmN0scrrYuaSa', 'Solo', 'test@mail.com', '081231234', 0);
+(2, 'Syahrizal Hanif', 'rizal666', '$2y$05$Ybe6.dA8z26QJLfLUzvn1uJPUzddxrlTE/dmXjb8bjEzbNKaocBpa', 'Solo', 'rzlco20@gmail.com', '0812736123', 1),
+(4, 'Testt', 'test', '$2y$05$JTHHX/X67oVr76F6T4a0XexWQ6Ex908EgtTYYcz7r0qqXJS/aAr0C', 'Solo0', 'test@mail.com', '0812312344', 1),
+(5, 'Syahrizal Hanif', 'rzlco', '$2y$05$vXBZlZUdw1ncO5UgU1ciXepMQIQBkSfNhOKMGnNFDGYsNQ6OVFBi.', 'Semarang', 'syahrizalhanif@student.telkomuniversity.ac.id', '082312', 1);
 
 --
 -- Indexes for dumped tables
@@ -210,10 +259,16 @@ ALTER TABLE `transaksi_event`
   ADD KEY `id_event` (`id_event`);
 
 --
+-- Indeks untuk tabel `transaksi_midtrans`
+--
+ALTER TABLE `transaksi_midtrans`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indeks untuk tabel `transaksi_wisata`
 --
 ALTER TABLE `transaksi_wisata`
-  ADD PRIMARY KEY (`id_transaksi_wisata`),
+  ADD PRIMARY KEY (`order_id`),
   ADD KEY `id_wisata` (`id_wisata`),
   ADD KEY `id_wisatawan` (`id_wisatawan`);
 
@@ -265,22 +320,16 @@ ALTER TABLE `transaksi_event`
   MODIFY `id_transaksi_event` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `transaksi_wisata`
---
-ALTER TABLE `transaksi_wisata`
-  MODIFY `id_transaksi_wisata` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT untuk tabel `wisata`
 --
 ALTER TABLE `wisata`
-  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT untuk tabel `wisatawan`
 --
 ALTER TABLE `wisatawan`
-  MODIFY `id_wisatawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_wisatawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
