@@ -60,6 +60,7 @@ class Home extends CI_Controller
 
                 $this->load->view('home/header', $data);
                 $this->load->view('home/transaksi_wisata', $data);
+                $this->load->view('home/beri_ulasan', $data);
                 $this->load->view('home/footer');
             } else {
                 redirect('/petugas', 'refresh');
@@ -96,6 +97,58 @@ class Home extends CI_Controller
         }
     }
 
+    public function edit_ulasan($order_id)
+    {
+        $data['title'] = 'Transaksi Wisata';
+
+        $id_wisatawan = $this->session->userdata('id_wisatawan');
+
+        $data['transaksi'] = $this->templates->query("SELECT tw.order_id, tw.gross_amount, tw.payment_type, tw.transaction_time, tw.bank, tw.va_number,
+                tw.pdf_url, tw.status_code, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
+                tw.id_wisata, w.nama nama_wisata, w.thumbnail thumbnail, w.harga harga
+                FROM transaksi_wisata tw 
+                JOIN wisata w 
+                ON tw.id_wisata = w.id_wisata 
+                WHERE tw.id_wisatawan = $id_wisatawan 
+                ORDER BY transaction_time DESC")->result();
+        $data['profile'] = $this->templates->view_where('wisatawan', ['id_wisatawan' => $id_wisatawan])->result_array();
+
+        $data['ulasan'] = $this->templates->query("SELECT * FROM rating_wisata WHERE order_id = $order_id;")->result();
+
+        $this->load->view('home/header', $data);
+        $this->load->view('home/edit_ulasan', $data);
+        $this->load->view('home/footer');
+    }
+
+    public function update_ulasan()
+    {
+        $this->form_validation->set_rules('feedback', 'Feedback', 'required');
+        $this->form_validation->set_rules('rating', 'Rating', 'required');
+
+        if ($this->form_validation->run() == true) {
+
+            $id_rating_wisata = $this->input->post('id_rating_wisata');
+            $data['rating'] = $this->input->post('rating');
+            $data['feedback'] = $this->input->post('feedback');
+
+
+            $this->templates->update('rating_wisata', ['id_rating_wisata' => $id_rating_wisata], $data);
+            $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                <strong>Yes!</strong> Updated.
+            </div>
+        </div>');
+            redirect('home/transaksi_wisata');
+        } else {
+            $this->session->set_flashdata('error', validation_errors());
+            redirect('home/transaksi_wisata');
+        }
+    }
+
     public function profile()
     {
         $data['title'] = 'Profile';
@@ -111,7 +164,6 @@ class Home extends CI_Controller
                 $this->load->view('home/header', $data);
                 $this->load->view('home/profile', $data);
                 $this->load->view('home/footer');
-                
             } else {
                 redirect('/petugas', 'refresh');
             }
@@ -217,6 +269,13 @@ class Home extends CI_Controller
         $data['title'] = 'Wisata';
 
         $data['wisata'] = $this->templates->view_where('wisata', ['id_wisata' => $id_wisata])->result_array();
+        $data['ulasan'] = $this->templates->query("SELECT rw.id_rating_wisata, rw.rating, rw.feedback, rw.id_wisatawan,
+        w.nama nama, w.alamat alamat, w.foto foto,
+        rw.id_wisata, rw.order_id
+        FROM rating_wisata rw
+        JOIN wisatawan w
+        ON rw.id_wisatawan = w.id_wisatawan
+        WHERE rw.id_wisata = $id_wisata")->result_array();
 
         $this->load->view('home/header', $data);
         $this->load->view('home/detail_wisata', $data);

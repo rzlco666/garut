@@ -1,3 +1,9 @@
 1. thumbnail 368x420 v
 2. Gambar Header 1920x412 v
 3. Gambar Destinasi 420x308 X 4
+
+'username' => 'syahriza_666',
+'password' => 'uXqHCK8h_~o$',
+'database' => 'syahriza_garut',
+
+$config['base_url'] = 'https://www.syahrizalhanif.com/';
