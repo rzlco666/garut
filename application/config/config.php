@@ -23,8 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
  */
-$config['base_url'] = '';
-
+$config['base_url'] = 'https://www.alyaasrg.com/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -35,8 +34,6 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
  */
-$config['base_url'] = "http://" . $_SERVER['HTTP_HOST'];
-$config['base_url'] .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
 
 /*
 |--------------------------------------------------------------------------
