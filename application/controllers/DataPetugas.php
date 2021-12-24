@@ -14,7 +14,7 @@ class DataPetugas extends CI_Controller
     {
 
         if ($this->session->userdata('is_petugas') == FALSE) {
-            redirect('/petugas/login/', 'refresh');
+            redirect('/Petugas/login/', 'refresh');
         }
 
         $data['title'] = 'Data Petugas';

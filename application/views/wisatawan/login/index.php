@@ -49,7 +49,7 @@
 
                             <div class="card-body">
                                 <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
-                                <?php echo form_open('home/login_proses', ''); ?>
+                                <?php echo form_open('Home/login_proses', ''); ?>
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="mt-5 text-muted text-center">
-                            Don't have an account? <a href="<?= base_url('home/register/'); ?>">Create One</a>
+                            Don't have an account? <a href="<?= base_url('Home/register/'); ?>">Create One</a>
                         </div>
                         <div class="simple-footer">
                             Copyright &copy; Garut 2021

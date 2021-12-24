@@ -49,7 +49,7 @@
 
               <div class="card-body">
                 <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
-                <?php echo form_open('home/register_proses', ''); ?>
+                <?php echo form_open('Home/register_proses', ''); ?>
                 <div class="form-group">
                   <label for="nama">Nama Lengkap</label>
                   <input id="nama" type="text" class="form-control" name="nama" autofocus>
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Have an account? <a href="<?= base_url('home/login/'); ?>">Login</a>
+              Have an account? <a href="<?= base_url('Home/login/'); ?>">Login</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Garut 2021

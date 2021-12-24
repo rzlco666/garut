@@ -4,7 +4,7 @@
         <div class="section-header">
             <h1>Transaksi Wisata</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="<?= base_url('petugas/'); ?>">Dashboard</a></div>
+                <div class="breadcrumb-item active"><a href="<?= base_url('Petugas/'); ?>">Dashboard</a></div>
                 <div class="breadcrumb-item">Transaksi Wisata</div>
             </div>
         </div>
@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <!-- <a href="<?= base_url('datawisata/create/'); ?>" class="btn btn-primary">Tambah Data</a> -->
+                            <!-- <a href="<?= base_url('DataWisata/create/'); ?>" class="btn btn-primary">Tambah Data</a> -->
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -68,7 +68,7 @@
                                                     ?>
                                                 </td>
                                                 <!-- <td>
-                                                <a target="_blank" href="<?= base_url('home/invoice/') . $isi['order_id']; ?>" class="btn btn-success btn-sm">Invoice</a>
+                                                <a target="_blank" href="<?= base_url('Home/invoice/') . $isi['order_id']; ?>" class="btn btn-success btn-sm">Invoice</a>
                                                 </td> -->
                                             </tr>
                                         <?php $no++;

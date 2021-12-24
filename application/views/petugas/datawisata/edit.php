@@ -4,7 +4,7 @@
         <div class="section-header">
             <h1>Data Wisata</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="<?= base_url('petugas/'); ?>">Dashboard</a></div>
+                <div class="breadcrumb-item active"><a href="<?= base_url('Petugas/'); ?>">Dashboard</a></div>
                 <div class="breadcrumb-item">Data Wisata</div>
             </div>
         </div>
@@ -17,7 +17,7 @@
                             <h4>Edit Data Wisata</h4>
                         </div>
                         <div class="card-body">
-                            <form class="form" enctype="multipart/form-data" action="<?php echo base_url('datawisata/update'); ?>" method="post">
+                            <form class="form" enctype="multipart/form-data" action="<?php echo base_url('DataWisata/update'); ?>" method="post">
                                 <?php foreach ($isi as $i) : ?>
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Preview Thumbnail</label>

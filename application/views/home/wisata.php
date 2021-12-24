@@ -53,7 +53,7 @@
                         ?>
                               <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                                   <ul class="list-marked-2 box-categories-list">
-                                      <li><a href="<?=base_url('home/detail_wisata/') . $row->id_wisata; ?>"><img src="<?= base_url('public/upload/image/wisata/'); ?><?= $row->thumbnail; ?>" alt="" width="368" height="420" /></a>
+                                      <li><a href="<?=base_url('Home/detail_wisata/') . $row->id_wisata; ?>"><img src="<?= base_url('public/upload/image/wisata/'); ?><?= $row->thumbnail; ?>" alt="" width="368" height="420" /></a>
                                           <h5 class="box-categories-title"><?php echo $row->nama; ?></h5>
                                       </li>
                                   </ul>

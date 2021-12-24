@@ -4,7 +4,7 @@
         <div class="section-header">
             <h1>Data Wisata</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="<?= base_url('petugas/'); ?>">Dashboard</a></div>
+                <div class="breadcrumb-item active"><a href="<?= base_url('Petugas/'); ?>">Dashboard</a></div>
                 <div class="breadcrumb-item">Data Wisata</div>
             </div>
         </div>
@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="<?= base_url('datawisata/create/'); ?>" class="btn btn-primary">Tambah Data</a>
+                            <a href="<?= base_url('DataWisata/create/'); ?>" class="btn btn-primary">Tambah Data</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -53,8 +53,8 @@
                                                 <td><img width="80%" src="<?= base_url('public/upload/image/wisata/destinasi3/'); ?><?= $isi['destinasi3']; ?>" class="img-responsive" alt="..."></td>
                                                 <td><?= $isi['maps']; ?></td>
                                                 <td>
-                                                    <a href="<?= base_url('datawisata/edit/') . $isi['id_wisata']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                                                    <a href="<?= base_url('datawisata/delete/') . $isi['id_wisata']; ?>" class="btn btn-danger btn-sm">Hapus</a>
+                                                    <a href="<?= base_url('DataWisata/edit/') . $isi['id_wisata']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                                                    <a href="<?= base_url('DataWisata/delete/') . $isi['id_wisata']; ?>" class="btn btn-danger btn-sm">Hapus</a>
                                                 </td>
                                             </tr>
                                         <?php $no++; endforeach; ?>

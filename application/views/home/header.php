@@ -61,10 +61,10 @@
               </div>
               <div class="rd-navbar-aside-right rd-navbar-collapse">
                 <?php if ($this->session->userdata('is_login') == FALSE) : ?>
-                  <a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('home/login'); ?>">Login</a>
-                  <a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('home/register'); ?>">Register</a>
+                  <a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('Home/login'); ?>">Login</a>
+                  <a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('Home/register'); ?>">Register</a>
                 <?php else : ?>
-                  <a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('home/logout/'); ?>">Logout</a>
+                  <a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('Home/logout/'); ?>">Logout</a>
                 <?php endif ?>
               </div>
             </div>
@@ -86,18 +86,18 @@
                   </li>
                   <li class="rd-nav-item <?php if ($title == 'Wisata') {
                                             echo 'active';
-                                          } ?>"><a class="rd-nav-link" href="<?= base_url('home/wisata'); ?>">Wisata</a>
+                                          } ?>"><a class="rd-nav-link" href="<?= base_url('Home/wisata'); ?>">Wisata</a>
                   </li>
                   <?php
                   if ($this->session->userdata('is_login') == TRUE) {
                   ?>
                     <li class="rd-nav-item <?php if ($title == 'Transaksi Wisata') {
                                               echo 'active';
-                                            } ?>"><a class="rd-nav-link" href="<?= base_url('home/transaksi_wisata'); ?>">Transaksi Wisata</a>
+                                            } ?>"><a class="rd-nav-link" href="<?= base_url('Home/transaksi_wisata'); ?>">Transaksi Wisata</a>
                     </li>
                     <li class="rd-nav-item <?php if ($title == 'Profile') {
                                               echo 'active';
-                                            } ?>"><a class="rd-nav-link" href="<?= base_url('home/profile'); ?>">Profile</a>
+                                            } ?>"><a class="rd-nav-link" href="<?= base_url('Home/profile'); ?>">Profile</a>
                     </li>
                   <?php
                   }

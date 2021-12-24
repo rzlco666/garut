@@ -326,7 +326,7 @@
 
         $.ajax({
             type: 'POST',
-            url: '<?= site_url() ?>/home/token',
+            url: '<?= site_url() ?>/Home/token',
             data: {
                 id_wisatawan: id_wisatawan,
                 nama: nama,

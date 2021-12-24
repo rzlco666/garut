@@ -59,7 +59,7 @@
                 <div class="card">
                     <div class="card-body">
                         <?php foreach ($ulasan as $d) { ?>
-                            <form enctype="multipart/form-data" action="<?php echo base_url('home/update_ulasan'); ?>" method="post">
+                            <form enctype="multipart/form-data" action="<?php echo base_url('Home/update_ulasan'); ?>" method="post">
                                 <div class="form-group">
                                     <label for="rating" class="col-form-label">Rating</label>
                                     <fieldset class="rating">
@@ -117,8 +117,8 @@
                             </div>
                         <?php endforeach; ?>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="<?= base_url('home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
-                            <li class="list-group-item"><a href="<?= base_url('home/profile'); ?>" class="card-link">Profile</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('Home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('Home/profile'); ?>" class="card-link">Profile</a></li>
                         </ul>
                     </div>
                 </div>

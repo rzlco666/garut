@@ -16,7 +16,7 @@
             bDestroy: true,
             responsive: true,
             ajax: {
-                url: "<?= base_url('datawisatawan/get_wisatawan'); ?>",
+                url: "<?= base_url('DataWisatawan/get_wisatawan'); ?>",
                 type: "POST",
                 data: {},
             },
@@ -37,14 +37,14 @@
         switch (status) {
             case 'tambah':
                 $('#btn-proses').text('Save Changes');
-                url = "<?= base_url('datawisatawan/save_wisatawan'); ?>";
+                url = "<?= base_url('DataWisatawan/save_wisatawan'); ?>";
                 break;
             case 'edit':
                 $('#btn-proses').text('Update Changes');
-                url = "<?= base_url('datawisatawan/update_wisatawan'); ?>";
+                url = "<?= base_url('DataWisatawan/update_wisatawan'); ?>";
                 break;
             case 'hapus':
-                url = "<?= base_url('datawisatawan/delete_wisatawan'); ?>";
+                url = "<?= base_url('DataWisatawan/delete_wisatawan'); ?>";
                 break;
         }
     }
@@ -66,7 +66,7 @@
             .find('.modal-title').text('Edit Data');
         clear_form();
         $.ajax({
-            url: "<?= base_url('datawisatawan/edit_wisatawan'); ?>",
+            url: "<?= base_url('DataWisatawan/edit_wisatawan'); ?>",
             type: "GET",
             dataType: "JSON",
             data: {

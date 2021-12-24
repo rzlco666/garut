@@ -42,7 +42,7 @@ class Home extends CI_Controller
         $data['title'] = 'Transaksi Wisata';
 
         if ($this->session->userdata('is_login') == FALSE) {
-            redirect('/home/login/', 'refresh');
+            redirect('/Home/login/', 'refresh');
         } else {
             if ($this->session->userdata('roles') == 1) {
 
@@ -63,7 +63,7 @@ class Home extends CI_Controller
                 $this->load->view('home/beri_ulasan', $data);
                 $this->load->view('home/footer');
             } else {
-                redirect('/petugas', 'refresh');
+                redirect('/Petugas', 'refresh');
             }
         }
     }
@@ -90,10 +90,10 @@ class Home extends CI_Controller
                 <strong>Yes!</strong> Updated.
             </div>
         </div>');
-            redirect('home/transaksi_wisata');
+            redirect('Home/transaksi_wisata');
         } else {
             $this->session->set_flashdata('error', validation_errors());
-            redirect('home/transaksi_wisata');
+            redirect('Home/transaksi_wisata');
         }
     }
 
@@ -142,10 +142,10 @@ class Home extends CI_Controller
                 <strong>Yes!</strong> Updated.
             </div>
         </div>');
-            redirect('home/transaksi_wisata');
+            redirect('Home/transaksi_wisata');
         } else {
             $this->session->set_flashdata('error', validation_errors());
-            redirect('home/transaksi_wisata');
+            redirect('Home/transaksi_wisata');
         }
     }
 
@@ -165,7 +165,7 @@ class Home extends CI_Controller
                 $this->load->view('home/profile', $data);
                 $this->load->view('home/footer');
             } else {
-                redirect('/petugas', 'refresh');
+                redirect('/Petugas', 'refresh');
             }
         }
     }
@@ -230,10 +230,10 @@ class Home extends CI_Controller
                 <strong>Yes!</strong> Updated.
             </div>
         </div>');
-            redirect('home/profile');
+            redirect('Home/profile');
         } else {
             $this->session->set_flashdata('error', validation_errors());
-            redirect('home/profile');
+            redirect('Home/profile');
         }
     }
 
@@ -257,10 +257,10 @@ class Home extends CI_Controller
                 <strong>Yes!</strong> Updated.
             </div>
         </div>');
-            redirect('home/profile');
+            redirect('Home/profile');
         } else {
             $this->session->set_flashdata('error', validation_errors());
-            redirect('home/profile');
+            redirect('Home/profile');
         }
     }
 
@@ -287,7 +287,7 @@ class Home extends CI_Controller
         $data['title'] = 'Invoice';
 
         if ($this->session->userdata('is_login') == FALSE) {
-            redirect('/home/login/', 'refresh');
+            redirect('/Home/login/', 'refresh');
         } else {
 
             if ($this->session->userdata('roles') == 1) {
@@ -304,7 +304,7 @@ class Home extends CI_Controller
 
                 $this->load->view('home/invoice', $data);
             } else {
-                redirect('/petugas', 'refresh');
+                redirect('/Petugas', 'refresh');
             }
         }
     }
@@ -345,11 +345,11 @@ class Home extends CI_Controller
             if ($this->m_wisatawan->m_register()) {
 
                 $this->session->set_flashdata('pesan', 'Register berhasil, silahkan  Sign In.');
-                redirect('/home/login/', 'refresh');
+                redirect('/Home/login/', 'refresh');
             } else {
 
                 $this->session->set_flashdata('pesan', 'Register user gagal!');
-                redirect('/home/register/', 'refresh');
+                redirect('/Home/register/', 'refresh');
             }
         } else {
 
@@ -385,17 +385,17 @@ class Home extends CI_Controller
                         redirect('/', 'refresh');
                     } else {
                         $this->session->set_flashdata('pesan', 'Login gagal: akun diblokir!');
-                        redirect('home/login/index', 'refresh');
+                        redirect('Home/login/index', 'refresh');
                     }
                 } else {
 
                     $this->session->set_flashdata('pesan', 'Login gagal: password salah!');
-                    redirect('home/login/index', 'refresh');
+                    redirect('Home/login/index', 'refresh');
                 }
             } else { // jika email tidak terdaftar!
 
                 $this->session->set_flashdata('pesan', 'Login gagal: email salah!');
-                redirect('home/login/index', 'refresh');
+                redirect('Home/login/index', 'refresh');
             }
         } else {
 
@@ -417,7 +417,7 @@ class Home extends CI_Controller
 
         session_destroy();
         //$this->session->set_flashdata('pesan', 'Sign Out Berhasil!');
-        redirect('home/login/index', 'refresh');
+        redirect('Home/login/index', 'refresh');
     }
 
     //midtrans logic
@@ -526,10 +526,10 @@ class Home extends CI_Controller
         $simpan = $this->db->insert('transaksi_wisata', $data);
         if ($simpan) {
             $this->session->set_flashdata('transaksi_wisata', 'Transaksi berhasil!');
-            redirect('home/transaksi_wisata', 'refresh');
+            redirect('Home/transaksi_wisata', 'refresh');
         } else {
             $this->session->set_flashdata('transaksi_wisata', 'Transaksi gagal!');
-            redirect('home/transaksi_wisata', 'refresh');
+            redirect('Home/transaksi_wisata', 'refresh');
         }
     }
 }

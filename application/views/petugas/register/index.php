@@ -49,7 +49,7 @@
 
               <div class="card-body">
                 <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
-                <?php echo form_open('petugas/register_proses', ''); ?>
+                <?php echo form_open('Petugas/register_proses', ''); ?>
                 <div class="form-group">
                   <label for="nama">Nama Lengkap</label>
                   <input id="nama" type="text" class="form-control" name="nama" autofocus>
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Have an account? <a href="<?= base_url('petugas/login/'); ?>">Login</a>
+              Have an account? <a href="<?= base_url('Petugas/login/'); ?>">Login</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Garut 2021

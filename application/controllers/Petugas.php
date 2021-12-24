@@ -14,7 +14,7 @@ class Petugas extends CI_Controller
     {
 
         if ($this->session->userdata('is_petugas') == FALSE) {
-            redirect('/petugas/login/', 'refresh');
+            redirect('/Petugas/login/', 'refresh');
         }
 
         $data['title'] = 'Dashboard';
@@ -29,7 +29,7 @@ class Petugas extends CI_Controller
     {
 
         if ($this->session->userdata('is_petugas') == TRUE) {
-            redirect('petugas/index', 'refresh');
+            redirect('Petugas/index', 'refresh');
         }
         
         $data['title'] = 'Login';
@@ -41,7 +41,7 @@ class Petugas extends CI_Controller
     {
 
         if ($this->session->userdata('is_petugas') == TRUE) {
-            redirect('petugas/index', 'refresh');
+            redirect('Petugas/index', 'refresh');
         }
 
         $data['title'] = 'Register';
@@ -61,11 +61,11 @@ class Petugas extends CI_Controller
             if ($this->m_petugas->m_register()) {
 
                 $this->session->set_flashdata('pesan', 'Register berhasil, silahkan  Sign In.');
-                redirect('/petugas/login/', 'refresh');
+                redirect('/Petugas/login/', 'refresh');
             } else {
 
                 $this->session->set_flashdata('pesan', 'Register user gagal!');
-                redirect('/petugas/register/', 'refresh');
+                redirect('/Petugas/register/', 'refresh');
             }
         } else {
 
@@ -95,16 +95,16 @@ class Petugas extends CI_Controller
                     );
 
                     $this->session->set_userdata($data_login);
-                    redirect('petugas/index', 'refresh');
+                    redirect('Petugas/index', 'refresh');
                 } else {
 
                     $this->session->set_flashdata('pesan', 'Login gagal: password salah!');
-                    redirect('petugas/login/index', 'refresh');
+                    redirect('Petugas/login/index', 'refresh');
                 }
             } else { // jika email tidak terdaftar!
 
                 $this->session->set_flashdata('pesan', 'Login gagal: email salah!');
-                redirect('petugas/login/index', 'refresh');
+                redirect('Petugas/login/index', 'refresh');
             }
         } else {
 
@@ -123,7 +123,7 @@ class Petugas extends CI_Controller
 
         session_destroy();
         //$this->session->set_flashdata('pesan', 'Sign Out Berhasil!');
-        redirect('petugas/login/index', 'refresh');
+        redirect('Petugas/login/index', 'refresh');
     }
 }
 

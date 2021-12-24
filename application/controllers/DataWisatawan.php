@@ -14,7 +14,7 @@ class DataWisatawan extends CI_Controller
     {
 
         if ($this->session->userdata('is_petugas') == FALSE) {
-            redirect('/petugas/login/', 'refresh');
+            redirect('/Petugas/login/', 'refresh');
         }
 
         $data['title'] = 'Data Wisatawan';
@@ -31,7 +31,7 @@ class DataWisatawan extends CI_Controller
 
         $ID = $this->input->post('id_wisatawan', true);
         $this->m_wisatawan->aktivasi($ID);
-        redirect('datawisatawan/');
+        redirect('DataWisatawan/');
     }
 
     public function blokir()
@@ -39,7 +39,7 @@ class DataWisatawan extends CI_Controller
 
         $ID2 = $this->input->post('id_wisatawan', true);
         $this->m_wisatawan->blokir($ID2);
-        redirect('datawisatawan/');
+        redirect('DataWisatawan/');
     }
 
     public function get_wisatawan()

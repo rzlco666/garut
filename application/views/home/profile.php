@@ -87,8 +87,8 @@
                             </div>
                         <?php endforeach; ?>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="<?= base_url('home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
-                            <li class="list-group-item"><a href="<?= base_url('home/profile'); ?>" class="card-link">Profile</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('Home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('Home/profile'); ?>" class="card-link">Profile</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                     </button>
                 </div>
                 <div style="text-align: left;" class="modal-body">
-                    <form enctype="multipart/form-data" action="<?php echo base_url('home/update_profile'); ?>" method="post">
+                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/update_profile'); ?>" method="post">
                         <div class="form-group">
                             <label for="nama" class="col-form-label">Nama</label>
                             <input type="hidden" name="id_wisatawan" id="id_wisatawan" value="<?= $i['id_wisatawan']; ?>">
@@ -154,7 +154,7 @@
                     </button>
                 </div>
                 <div style="text-align: left;" class="modal-body">
-                    <form enctype="multipart/form-data" action="<?php echo base_url('home/ubah_password'); ?>" method="post">
+                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/ubah_password'); ?>" method="post">
                         <div class="form-group">
                             <label for="password" class="col-form-label">Password Baru</label>
                             <input type="hidden" name="id_wisatawan" id="id_wisatawan" value="<?= $i['id_wisatawan']; ?>">

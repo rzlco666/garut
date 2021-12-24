@@ -59,7 +59,7 @@
                     </button>
                 </div>
                 <div style="text-align: left;" class="modal-body">
-                    <form enctype="multipart/form-data" action="<?php echo base_url('home/rating_wisata'); ?>" method="post">
+                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/rating_wisata'); ?>" method="post">
                         <div class="form-group">
                             <label for="rating" class="col-form-label">Rating</label>
                             <fieldset class="rating">

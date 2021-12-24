@@ -127,8 +127,8 @@
                             </div>
                         <?php endforeach; ?>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="<?= base_url('home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
-                            <li class="list-group-item"><a href="<?= base_url('home/profile'); ?>" class="card-link">Profile</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('Home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
+                            <li class="list-group-item"><a href="<?= base_url('Home/profile'); ?>" class="card-link">Profile</a></li>
                         </ul>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <a target="_blank" href="<?= base_url('home/invoice/') . $d->order_id; ?>" class="btn btn-primary">Cetak Invoice</a>
+                    <a target="_blank" href="<?= base_url('Home/invoice/') . $d->order_id; ?>" class="btn btn-primary">Cetak Invoice</a>
                 </div>
             </div>
         </div>

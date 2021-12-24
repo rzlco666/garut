@@ -4,7 +4,7 @@
         <div class="section-header">
             <h1>Data Petugas</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="<?= base_url('petugas/'); ?>">Dashboard</a></div>
+                <div class="breadcrumb-item active"><a href="<?= base_url('Petugas/'); ?>">Dashboard</a></div>
                 <div class="breadcrumb-item">Data Petugas</div>
             </div>
         </div>
