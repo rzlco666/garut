@@ -248,10 +248,10 @@ class DataWisata extends CI_Controller
                 <strong>Yes!</strong> Updated.
             </div>
         </div>');
-            redirect('datawisata');
+            redirect('DataWisata');
         } else {
             $this->session->set_flashdata('error', validation_errors());
-            redirect('datawisata');
+            redirect('DataWisata');
         }
     }
 
@@ -259,7 +259,7 @@ class DataWisata extends CI_Controller
     {
 
         if ($this->session->userdata('is_petugas') == FALSE) {
-            redirect('/petugas/login/', 'refresh');
+            redirect('/Petugas/login/', 'refresh');
         }
 
         $data['title'] = 'Data Wisata';
