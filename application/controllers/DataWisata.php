@@ -116,11 +116,11 @@ class DataWisata extends CI_Controller
 
                 if ($this->upload->do_upload('thumbnail')) {
 
-                    $old_image = $data['wisata']['thumbnail'];
+                    /* $old_image = $data['wisata']['thumbnail'];
 
                     if ($old_image != 'cta-1-368x420.jpg') {
                         unlink(FCPATH . 'public/upload/image/wisata/' . $old_image);
-                    }
+                    } */
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('thumbnail', $new_image);
                 } else {
@@ -143,11 +143,11 @@ class DataWisata extends CI_Controller
 
                 if ($this->upload->do_upload('header')) {
 
-                    $old_image = $data['wisata']['header'];
+                    /* $old_image = $data['wisata']['header'];
 
                     if ($old_image != 'breadcrumbs-bg.jpg') {
                         unlink(FCPATH . 'public/upload/image/wisata/header/' . $old_image);
-                    }
+                    } */
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('header', $new_image);
                 } else {
@@ -170,11 +170,11 @@ class DataWisata extends CI_Controller
 
                 if ($this->upload->do_upload('destinasi1')) {
 
-                    $old_image = $data['wisata']['destinasi1'];
+                    /* $old_image = $data['wisata']['destinasi1'];
 
                     if ($old_image != 'cta-1-368x420.jpg') {
                         unlink(FCPATH . 'public/upload/image/wisata/destinasi1/' . $old_image);
-                    }
+                    } */
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('destinasi1', $new_image);
                 } else {
@@ -197,11 +197,11 @@ class DataWisata extends CI_Controller
 
                 if ($this->upload->do_upload('destinasi2')) {
 
-                    $old_image = $data['wisata']['destinasi2'];
+                    /* $old_image = $data['wisata']['destinasi2'];
 
                     if ($old_image != 'cta-1-368x420.jpg') {
                         unlink(FCPATH . 'public/upload/image/wisata/destinasi2/' . $old_image);
-                    }
+                    } */
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('destinasi2', $new_image);
                 } else {
@@ -224,11 +224,11 @@ class DataWisata extends CI_Controller
 
                 if ($this->upload->do_upload('destinasi3')) {
 
-                    $old_image = $data['wisata']['destinasi3'];
+                    /* $old_image = $data['wisata']['destinasi3'];
 
                     if ($old_image != 'cta-1-368x420.jpg') {
                         unlink(FCPATH . 'public/upload/image/wisata/destinasi3/' . $old_image);
-                    }
+                    } */
                     $new_image = $this->upload->data('file_name');
                     $this->db->set('destinasi3', $new_image);
                 } else {
