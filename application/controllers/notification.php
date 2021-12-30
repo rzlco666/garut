@@ -39,10 +39,13 @@ class Notification extends CI_Controller
 		$data = [
 			'status_code' => $result['status_code']
 		];
+		$data2 = [
+			'status_code' => $result['status_code']
+		];
 
 		if($result['status_code']==200){
 			$this->db->update('transaksi_wisata', $data, array('order_id'=>$order_id));
-			$this->db->update('transaksi_event', $data, array('order_id'=>$order_id));
+			$this->db->update('transaksi_event', $data2, array('order_id'=>$order_id));
 		}
 
 		/* if($result){
