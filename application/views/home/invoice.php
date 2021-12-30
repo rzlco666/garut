@@ -10,7 +10,7 @@
         <title>Invoice &mdash; <?= $i['order_id']; ?></title>
 
         <!-- Favicon -->
-        <link rel="icon" href="<?= base_url('assets/'); ?>images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="<?= base_url('assets_wisatawan/'); ?>images/favicon.ico" type="image/x-icon">
 
         <!-- Invoice styling -->
         <style>
@@ -129,7 +129,7 @@
                         <table>
                             <tr>
                                 <td class="title">
-                                    <img src="<?= base_url('assets/'); ?>images/logo.png" alt="Company logo" style="width: 100%; max-width: 300px" />
+                                    <img src="<?= base_url('assets_wisatawan/'); ?>images/logo.png" alt="Company logo" style="width: 100%; max-width: 300px" />
                                 </td>
 
                                 <td>

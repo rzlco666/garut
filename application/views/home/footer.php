@@ -1,105 +1,135 @@
-      <!-- Page Footer--><a class="banner"></a>
-      <footer class="section footer-corporate context-dark">
-        <div class="footer-corporate-inset">
-          <div class="container">
-            <div class="row row-40 justify-content-lg-between">
-              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInRight" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
-                    <ul class="footer-contacts d-inline-block d-sm-block">
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                          <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body"><a class="link-aemail" href="mailto:#">info@demolink.org</a></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInDown" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
-                    <!-- Post Minimal 2-->
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="#">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">May 04, 2019</time>
-                      </div>
-                    </article>
-                    <!-- Post Minimal 2-->
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="#">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">May 04, 2019</time>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInLeft" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
-                    <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
-                      <li><a href="about.html">About us</a></li>
-                      <li><a href="#">Our Tours</a></li>
-                      <li><a href="#">Our Team</a></li>
-                      <li><a href="#">Gallery</a></li>
-                      <li><a href="#">Blog</a></li>
-                    </ul>
-                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="#">Get in touch</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-corporate-bottom-panel">
-          <div class="container">
-            <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
-              <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
-                <div>
-                  <ul class="list-inline list-inline-sm footer-social-list-2">
-                    <li><a class="icon fa fa-facebook" href="#"></a></li>
-                    <li><a class="icon fa fa-twitter" href="#"></a></li>
-                    <li><a class="icon fa fa-google-plus" href="#"></a></li>
-                    <li><a class="icon fa fa-instagram" href="#"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 order-sm-first">
-                <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Wonder Tour</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
-              </div>
-              <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights"><a href="#">Privacy Policy</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+<div id="footer" class=" ppb_wrapper">
+  <ul class="sidebar_widget three">
+    <li id="text-2" class="widget widget_text">
+      <h2 class="widgettitle">Our Awards</h2>
+      <div class="textwidget">
+        <p>London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the
+          United Kingdom.
+          <br />
+          <img src="<?= base_url('assets_wisatawan/'); ?>upload/awards.png" width="246" height="113" style="margin-top:30px;" alt="" />
+        </p>
       </div>
-      <!-- Global Mailform Output-->
-      <div class="snackbars" id="form-output-global"></div>
-      <!-- Javascript-->
-      <script src="<?= base_url('assets/'); ?>js/core.min.js"></script>
-      <script src="<?= base_url('assets/'); ?>js/script.js"></script>
+    </li>
+    <li id="text-4" class="widget widget_text">
+      <h2 class="widgettitle">Contact Info</h2>
+      <div class="textwidget">
+        <p><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227</p>
+        <p><span class="ti-location-pin" style="margin-right:10px;"></span>184 Main Street East Perl Habour
+          8007</p>
+        <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday
+          CLOSED</p>
+        <div style="margin-top:20px;">
+          <div class="social_wrapper shortcode dark ">
+            <ul>
+              <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="twitter"><a target="_blank" title="Twitter" href="https://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+              <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+              <li class="pinterest"><a target="_blank" title="Pinterest" href="https://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li>
+              <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/theplanetd"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li id="grandtour_flickr-7" class="widget Grandtour_Flickr">
+      <h2 class="widgettitle">Menu</h2>
+      <ul class="footer_nav">
+        <li class="menu-item"><a href="<?= base_url('/'); ?>">Home</a></li>
+        <li class="menu-item"><a href="<?= base_url('Home/wisata'); ?>">Wisata</a></li>
+        <li class="menu-item"><a href="<?= base_url('Home/event'); ?>">Event</a></li>
+      </ul>
+      <br class="clear" />
+    </li>
+  </ul>
+</div>
 
-      </body>
+<div class="footer_bar  ppb_wrapper ">
 
-      </html>
+  <div class="footer_bar_wrapper ">
+    <div id="copyright"><?= date("Y"); ?> © Copyright Garut</div>
+    <br class="clear" />
+    <a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+  </div>
+</div>
+
+<div id="side_menu_wrapper" class="overlay_background">
+  <a id="close_share" href="javascript:;"><span class="ti-close"></span></a>
+
+</div>
+
+
+
+
+
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/jquery.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/core.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/datepicker.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/spin.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/spin.jquery.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/functions.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.blockUI.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.requestAnimationFrame.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/ilightbox.packed.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.easing.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/waypoints.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.isotope.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.masory.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jarallax.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.stellar.min.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/custom_plugins.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/custom.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/custom_onepage.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jarallax-video.js'></script>
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/plugins/jquery.cookie.js'></script>
+
+<script type='text/javascript' src='<?= base_url('assets_wisatawan/'); ?>js/bootstrap.js'></script>
+
+<script type='text/javascript'>
+  jQuery(document).ready(function(jQuery) {
+    jQuery.datepicker.setDefaults({
+      "closeText": "Close",
+      "currentText": "Today",
+      "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August",
+        "September", "October", "November", "December"
+      ],
+      "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
+        "Oct", "Nov", "Dec"
+      ],
+      "nextText": "Next",
+      "prevText": "Previous",
+      "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+        "Saturday"
+      ],
+      "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+      "dateFormat": "MM d, yy",
+      "firstDay": 1,
+      "isRTL": false
+    });
+  });
+</script>
+<script type='text/javascript'>
+  /* <![CDATA[ */
+  var booked_js_vars = {
+    "ajax_url": "#",
+    "profilePage": "",
+    "publicAppointments": "",
+    "i18n_confirm_appt_delete": "Are you sure you want to cancel this appointment?",
+    "i18n_please_wait": "Please wait ...",
+    "i18n_wrong_username_pass": "Wrong username\/password combination.",
+    "i18n_fill_out_required_fields": "Please fill out all required fields.",
+    "i18n_guest_appt_required_fields": "Please enter your name to book an appointment.",
+    "i18n_appt_required_fields": "Please enter your name, your email address and choose a password to book an appointment.",
+    "i18n_appt_required_fields_guest": "Please fill in all \"Information\" fields.",
+    "i18n_password_reset": "Please check your email for instructions on resetting your password.",
+    "i18n_password_reset_error": "That username or email is not recognized."
+  };
+  /* ]]> */
+</script>
+</body>
+
+</html>

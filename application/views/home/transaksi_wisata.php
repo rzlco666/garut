@@ -1,67 +1,69 @@
-<style>
-    tr.noBorder td {
-        border: 0;
-    }
-</style>
-<!-- Base typography-->
-<section class="section section-sm section-first bg-default text-left">
-    <div class="container">
-        <div class="row row-40 flex-lg-row-reverse justify-content-xl-between">
-            <div class="col-xl-9">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card">
-                            <table class="table table-responsive">
-                                <tbody>
-                                    <?php foreach ($transaksi as $d) { ?>
-                                        <tr class="noBorder">
-                                            <td colspan="10"><a class="icon fa fa-ticket" href="#"></a>&nbsp;&nbsp;Wisata
-                                                &nbsp;&nbsp;
-                                                <?php $date = date_create($d->transaction_time);
-                                                echo date_format($date, "d M Y"); ?>
-                                                &nbsp;&nbsp;
-                                                <?php
-                                                if ($d->status_code == "200") {
-                                                ?>
-                                                    <font color="green"><b>Lunas</b></font>
-                                                <?php
-                                                } else {
-                                                ?>
-                                                    <font color="yellow"><b>Pending</b></font>
-                                                <?php
-                                                }
-                                                ?>
-                                                &nbsp;&nbsp;
-                                                <?= $d->order_id; ?>
-                                            </td>
-                                        <tr class="noBorder">
-                                            <td>
-                                                <img style="width: 70px;" src="<?= base_url('public/upload/image/wisata/'); ?><?= $d->thumbnail; ?>" alt="...">
-                                            </td>
-                                            <td>
-                                                Tiket Wisata <?= $d->nama_wisata; ?> </br><?= $d->jumlah; ?> Tiket x Rp.<?= number_format($d->harga, '0', '', '.'); ?>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Total Pembayaran </br><b>Rp. <?= number_format($d->gross_amount, '0', '', '.'); ?></b></td>
-                                        </tr>
-                                        <tr class="noBorder">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: right; margin-right: 0px; vertical-align: middle">
-                                                <button type="button" style="border: none; padding: 0; background: none;" data-toggle="modal" data-target="#detailTransaksi<?= $d->order_id; ?>">Lihat Detail Transaksi</button>
-                                            </td>
+<div id="page_caption" class="hasbg parallax" style="background-image:url(<?= base_url('assets_wisatawan/'); ?>images/situ-sukamaju.jpg);">
+
+    <div class="page_title_wrapper">
+        <div class="page_title_inner">
+            <div class="page_title_content">
+                <h1>Transaksi Wisata</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Begin content -->
+<div id="page_content_wrapper" class="hasbg ">
+
+    <!-- Begin content -->
+
+    <div class="inner">
+
+        <div class="inner_wrapper nopadding">
+
+            <div id="page_main_content" class="sidebar_content left_sidebar fixed_column">
+
+                <div class="standard_wrapper">
+
+                    <div id="portfolio_filter_wrapper" class="gallery classic two_cols portfolio-content section content clearfix" data-columns="3">
+
+                        <?php foreach ($transaksi as $d) { ?>
+                            <div class="tour_list_wrapper floatleft">
+                                <div class="one_third">
+                                    <a class="tour_image" href="<?=base_url('Home/detail_wisata/') . $d->id_wisata; ?>">
+                                        <img src="<?= base_url('public/upload/image/wisata/'); ?><?= $d->thumbnail; ?>" alt="<?= $d->nama_wisata; ?>" />
+                                    </a>
+                                </div>
+
+                                <div class="two_third last">
+                                    <span class="icon fa fa-ticket"></span>&nbsp;Wisata
+                                    &nbsp;
+                                    <?php $date = date_create($d->transaction_time);
+                                    echo date_format($date, "d M Y"); ?>
+                                    &nbsp;
+                                    <?php
+                                    if ($d->status_code == "200") {
+                                    ?>
+                                        <font color="green"><b>Lunas</b></font>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <font color="yellow"><b>Pending</b></font>
+                                    <?php
+                                    }
+                                    ?>
+                                    &nbsp;
+                                    <?= $d->order_id; ?>
+                                    <div class="tour_list_excerpt">
+                                        Tiket Wisata <?= $d->nama_wisata; ?> </br><?= $d->jumlah; ?> Tiket x Rp.<?= number_format($d->harga, '0', '', '.'); ?> </div>
+                                    <div class="tour_list_excerpt">
+                                        Total Pembayaran </br><b>Rp. <?= number_format($d->gross_amount, '0', '', '.'); ?></b> </div>
+
+                                    <div class="tour_attribute_wrapper">
+                                        <div class="tour_attribute_rating">
+                                            <button class="button small left" type="button" style="background-color:#ffffff !important;color:#000000 !important;border:1px solid #ffffff !important;margin-right:10px;margin-bottom:10px;" data-toggle="modal" data-target="#detailTransaksi<?= $d->order_id; ?>">Detail Transaksi</button>
+                                            <!-- <button id="myBtn<?= $d->order_id; ?>" class="button small left" style="background-color:#ffffff !important;color:#000000 !important;border:1px solid #ffffff !important;margin-right:10px;margin-bottom:10px;">Open Modal</button> -->
+                                        </div>
+
+                                        <div class="tour_attribute_days">
                                             <?php
                                             if ($d->status_code == "200") {
                                             ?>
@@ -69,73 +71,63 @@
                                                 $check = $this->templates->query("SELECT * FROM rating_wisata WHERE order_id = $d->order_id");
                                                 if ($check->num_rows() > 0) {
                                                 ?>
-                                                    <td style="text-align: right; margin-right: 0px;">
-                                                        <a href="<?php echo base_url(); ?>home/edit_ulasan/<?php echo $d->order_id; ?>" class="button-primary button-pipaluk">Edit Ulasan</a>
-                                                        <!-- <button type="button" class="button-primary button-pipaluk" data-toggle="modal" data-target="#updateUlasan<?= $d->order_id; ?>">Update</button> -->
-                                                    </td>
+
+                                                    <a href="<?php echo base_url(); ?>home/edit_ulasan/<?php echo $d->order_id; ?>" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Edit Ulasan</a>
+
                                                 <?php
                                                 } else {
                                                 ?>
-                                                    <td style="text-align: right; margin-right: 0px;">
-                                                        <button type="button" class="button-primary button-pipaluk" data-toggle="modal" data-target="#beriUlasan<?= $d->order_id; ?>">Beri Ulasan</button>
-                                                    </td>
+
+                                                    <button type="button" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;" data-toggle="modal" data-target="#beriUlasan<?= $d->order_id; ?>">Beri Ulasan</button>
+
                                                 <?php
                                                 }
                                                 ?>
                                             <?php
                                             } else {
                                             ?>
-                                                <td style="text-align: right; margin-right: 0px;"><a href="<?= $d->pdf_url; ?>" class="button-primary button-pipaluk">Cara Bayar</a></td>
+                                                <a href="<?= $d->pdf_url; ?>" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Cara Bayar</a>
                                             <?php
                                             }
                                             ?>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+
                     </div>
+                    <br class="clear" />
+
                 </div>
             </div>
-            <div class="col-xl-3 d-none d-xl-block">
-                <div class="offset-left-xl-45">
-                    <div class="card">
+
+            <div class="sidebar_wrapper left_sidebar">
+                <div class="sidebar">
+
+                    <div class="content">
                         <?php foreach ($profile as $i) : ?>
-                            <img class="card-img-top" src="<?= base_url('public/upload/image/wisatawan/'); ?><?= $i['foto']; ?>" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $i['nama']; ?></h5>
-                                <p class="card-text">
-                                <table>
-                                    <tr>
-                                        <td><a class="icon fa fa-user" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['username']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="icon fa fa-envelope" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['email']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="icon fa fa-phone" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['no_hp']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="icon fa fa-home" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['alamat']; ?></td>
-                                    </tr>
-                                </table>
-                                </p>
+                            <div class="teaser_wrapper" style="background-color:#f0f0f0;padding:15px;"><img src="<?= base_url('public/upload/image/wisatawan/'); ?><?= $i['foto']; ?>" alt="" />
+                                <div class="teaser_content_wrapper">
+                                    <h5><?= $i['nama']; ?></h5>
+                                    <div class="teaser_content">
+                                        <span class="icon fa fa-user" href="#"></span>&nbsp;<?= $i['username']; ?></br>
+                                        <span class="icon fa fa-envelope" href="#"></span>&nbsp;<?= $i['email']; ?></br>
+                                        <span class="icon fa fa-phone" href="#"></span>&nbsp;<?= $i['no_hp']; ?></br>
+                                        <span class="icon fa fa-home" href="#"></span>&nbsp;<?= $i['alamat']; ?></br>
+                                    </div>
+                                </div>
                             </div>
                         <?php endforeach; ?>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="<?= base_url('Home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
-                            <li class="list-group-item"><a href="<?= base_url('Home/profile'); ?>" class="card-link">Profile</a></li>
-                        </ul>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
-</section>
+</div>
 
 <?php foreach ($transaksi as $d) { ?>
     <!-- Modal Detail -->
@@ -149,7 +141,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <table style="text-align: left;">
+                    <table>
                         <tr>
                             <td>Order ID</td>
                             <td>:</td>
@@ -219,8 +211,8 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <a target="_blank" href="<?= base_url('Home/invoice/') . $d->order_id; ?>" class="btn btn-primary">Cetak Invoice</a>
+                    <a target="_blank" href="<?= base_url('Home/invoice/') . $d->order_id; ?>" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Cetak Invoice</a>
+                    <button type="button" class="button small left" style="background-color:#97a2a2 !important;color:#ffffff !important;border:1px solid #97a2a2 !important;margin-right:10px;margin-bottom:10px;" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

@@ -1,383 +1,322 @@
-      <!-- Swiper-->
-      <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
-        <div class="swiper-wrapper text-left">
-          <div class="swiper-slide context-dark" data-slide-bg="<?= base_url('assets/'); ?>images/karacak.jpeg">
-            <div class="swiper-slide-caption section-md">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10">
-                    <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Enjoy the Best Destinations with Our Travel Agency</h6>
-                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Explore</span><span class="font-weight-bold"> The World</span></h2><a class="button button-default-outline button-ujarak" href="#" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
+    <div class="ppb_wrapper  ">
+      <div class="one withsmallpadding ppb_tour_search_youtube parallax withbg " data-jarallax-video="https://youtu.be/LEzsarKxfZ4" style="text-align:center;height:800px;color:#ffffff;">
+        <div class="overlay_background" style="background:#000000;background:rgb(0,0,0,0.3);background:rgba(0,0,0,0.3);"></div>
+        <div class="center_wrapper">
+          <div class="inner_content">
+            <div class="standard_wrapper">
+              <h2 class="ppb_title" style="color:#ffffff;">Pariwisata Garut</h2>
+              <div class="page_tagline" style="color:#ffffff;">Wisata dan Event.</div>
+              <form id="tour_search_form" class="tour_search_form" method="get" action="#">
+                <div class="tour_search_wrapper">
+                  <div class="one_fourth themeborder">
+                    <input id="keyword" name="keyword" type="text" autocomplete="off" placeholder="Destination, city" />
+                    <span class="ti-search"></span>
+                    <div id="autocomplete" class="autocomplete" data-mousedown="false"></div>
+                  </div>
+                  <div class="one_fourth themeborder">
+                    <select id="month" name="month">
+                      <option value="">Any Month</option>
+                      <option value="january">January</option>
+                    </select>
+                    <span class="ti-calendar"></span>
+                  </div>
+                  <div class="one_fourth themeborder">
+                    <select id="sort_by" name="sort_by">
+                      <option value="date">Sort By Date</option>
+                      <option value="price_low">Price Low to High</option>
+                      <option value="price_high">Price High to Low</option>
+                      <option value="name">Sort By Name</option>
+                      <option value="popular">Sort By Popularity</option>
+                      <option value="review">Sort By Review Score</option>
+                    </select>
+                    <span class="ti-exchange-vertical"></span>
+                  </div>
+                  <div class="one_fourth last themeborder">
+                    <input id="tour_search_btn" type="submit" class="button" value="Search" />
                   </div>
                 </div>
-              </div>
             </div>
+            </form>
           </div>
-          <div class="swiper-slide context-dark" data-slide-bg="<?= base_url('assets/'); ?>images/gunung.jpeg">
-            <div class="swiper-slide-caption section-md">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10">
-                    <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">A team of professional Travel Experts</h6>
-                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Trust</span><span class="font-weight-bold"> Our Experience</span></h2><a class="button button-default-outline button-ujarak" href="#" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide context-dark" data-slide-bg="<?= base_url('assets/'); ?>images/danau.jpeg">
-            <div class="swiper-slide-caption section-md">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10">
-                    <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Build your Next Holiday Trip with Us</h6>
-                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Create</span><span class="font-weight-bold"> Your Tour</span></h2><a class="button button-default-outline button-ujarak" href="#" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+    <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-top:70px;margin-bottom:50px;">
+      <div class="standard_wrapper">
+        <div class="page_content_wrapper">
+          <div class="inner">
+            <div style="margin:auto;width:100%">
+              <h2 class="ppb_title">Destinasi Wisata</h2>
+              <div class="page_tagline">Destinasi wisata terbaik</div>
             </div>
           </div>
         </div>
-        <!-- Swiper Pagination-->
-        <div class="swiper-pagination"></div>
-      </section>
-      <!-- Section Box Categories-->
-      <section class="section section-lg section-top-1 bg-gray-4">
-        <div class="container offset-negative-1">
-          <div class="box-categories cta-box-wrap">
-            <div class="box-categories-content">
-              <?php
-              foreach (array_chunk($wisata->result(), 3) as $entriesRow) {
-                echo '<div class="row justify-content-center">';
-                foreach ($entriesRow as $row) {
-              ?>
-                  <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
-                    <ul class="list-marked-2 box-categories-list">
-                      <li><a href="<?=base_url('Home/detail_wisata/') . $row->id_wisata; ?>"><img src="<?= base_url('public/upload/image/wisata/'); ?><?= $row->thumbnail; ?>" alt="" width="368" height="420" /></a>
-                        <h5 class="box-categories-title"><?php echo $row->nama; ?></h5>
-                      </li>
-                    </ul>
+      </div>
+    </div>
+    <!-- <div class="ppb_destination_grid one nopadding " style="margin-top:50px;margin-bottom:50px;">
+      <div class="page_content_wrapper page_main_content sidebar_content full_width fixed_column">
+        <div class="standard_wrapper">
+          <div id="1568019739508161166" class="portfolio_filter_wrapper gallery grid portrait four_cols" data-columns="4">
+            <?php
+            foreach (array_chunk($wisata->result(), 1) as $entriesRow) {
+              echo '<div class="element grid baseline classic4_cols">';
+              foreach ($entriesRow as $row) {
+            ?>
+
+                <div class="one_fourth gallery4 grid static filterable portfolio_type themeborder" style="background-image:url(<?= base_url('public/upload/image/wisata/'); ?><?= $row->thumbnail; ?>);">
+                  <a class="tour_image" href="<?= base_url('Home/detail_wisata/') . $row->id_wisata; ?>"></a>
+                  <div class="portfolio_info_wrapper">
+                    <div class="portfolio_info_content">
+                      <h3><?php echo $row->nama; ?></h3>
+                    </div>
                   </div>
-              <?php
-                }
-                echo '</div>';
+                </div>
+            <?php
               }
-              ?>
-            </div>
-          </div><a class="link-classic wow fadeInUp" href="<?= base_url('Home/wisata'); ?>">Other Tours<span></span></a>
-          <!-- Owl Carousel-->
-        </div>
-      </section>
-      <!-- Discover New Horizons-->
-      <section class="section section-sm section-first bg-default text-md-left">
-        <div class="container">
-          <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-            <div class="col-lg-6 text-center wow fadeInUp"><img src="<?= base_url('assets/'); ?>images/index-3-556x382.jpg" alt="" width="556" height="382" />
-            </div>
-            <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
-              <div class="box-width-lg-470">
-                <h3>Discover New Horizons</h3>
-                <!-- Bootstrap tabs-->
-                <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left" id="tabs-7">
-                  <!-- Nav tabs-->
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-7-1" data-toggle="tab">About us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-2" data-toggle="tab">Why choose us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-3" data-toggle="tab">Our mission</a></li>
-                  </ul>
-                  <!-- Tab panes-->
-                  <div class="tab-content">
-                    <div class="tab-pane fade show active" id="tabs-7-1">
-                      <p>Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
-                    </div>
-                    <div class="tab-pane fade" id="tabs-7-2">
-                      <p>We are proud to offer excellent quality and value for money in our tours, which give you the chance to experience your chosen destination in an authentic and exciting way.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
-                    </div>
-                    <div class="tab-pane fade" id="tabs-7-3">
-                      <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              echo '</div>';
+            }
+            ?>
           </div>
         </div>
-      </section>
-      <!--	Our Services-->
-      <section class="section section-sm">
-        <div class="container">
-          <h3>Our Services</h3>
-          <div class="row row-30">
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-equalization3"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Personalized Matching</a></h5>
-                    <p class="box-icon-classic-text">Our unique matching system lets you find just the tour you want for your next holiday.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-circular220"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Wide Variety of Tours</a></h5>
-                    <p class="box-icon-classic-text">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-favourites5"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Highly Qualified Service</a></h5>
-                    <p class="box-icon-classic-text">Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-headphones32"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">24/7 Support</a></h5>
-                    <p class="box-icon-classic-text">You can always get professional support from our staff 24/7 and ask any question you have.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-hot67"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Handpicked Hotels</a></h5>
-                    <p class="box-icon-classic-text">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-wallet26"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Best Price Guarantee</a></h5>
-                    <p class="box-icon-classic-text">If you find tours that are cheaper than ours, we will compensate the difference.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Hot tours-->
-      <section class="section section-sm bg-default">
-        <div class="container">
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Hot Tours</span></h3>
-          <div class="row row-sm row-40 row-md-50">
-            <div class="col-sm-6 col-md-12 wow fadeInRight">
-              <!-- Product Big-->
-              <article class="product-big">
-                <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="<?= base_url('assets/'); ?>images/product-big-1-600x366.jpg" alt="" width="600" height="366" /></a></div>
-                  <div class="unit-body">
-                    <div class="product-big-body">
-                      <h5 class="product-big-title"><a href="#">Benidorm, Spain</a></h5>
-                      <div class="group-sm group-middle justify-content-start">
-                        <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">4 customer reviews</a>
+      </div>
+    </div> -->
+    <div class="ppb_tour_classic one nopadding " style="margin-bottom:50px;">
+      <div class="page_content_wrapper page_main_content sidebar_content full_width fixed_column">
+        <div class="standard_wrapper">
+          <div id="1568019739482243752" class="portfolio_filter_wrapper gallery classic three_cols" data-columns="3">
+            <?php
+            foreach (array_chunk($wisata->result(), 1) as $entriesRow) {
+              echo '<div class="element grid classic3_cols">';
+              foreach ($entriesRow as $row) {
+            ?>
+                <div class="one_third gallery3 classic static filterable portfolio_type themeborder">
+                  <a class="tour_image" href="<?= base_url('Home/detail_wisata/') . $row->id_wisata; ?>">
+                    <img src="<?= base_url('public/upload/image/wisata/'); ?><?= $row->thumbnail; ?>" alt="<?= $row->nama; ?>" />
+                    <div class="tour_price ">Rp. <?= number_format($row->harga, '0', '', '.'); ?></div>
+                  </a>
+                  <div class="portfolio_info_wrapper">
+                    <a class="tour_link" href="<?= base_url('Home/detail_wisata/') . $row->id_wisata; ?>">
+                      <h4><?= $row->nama; ?></h4>
+                    </a>
+                    <div class="tour_excerpt">
+                      <p><?= $row->lokasi; ?></p>
+                    </div>
+                    <div class="tour_attribute_wrapper">
+                      <div class="tour_attribute_rating">
+                        <div class="br-theme-fontawesome-stars-o">
+                          <div class="br-widget">
+                            <?php
+                            if ($row->rating == 1) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 2) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 3) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 4) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 5) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>';
+                            } elseif ($row->rating == 0) {
+                              echo '<a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            }
+                            ?>
+                          </div>
+                        </div>
+                        <div class="tour_attribute_rating_count"><?= $row->jumlah; ?>&nbsp;reviews</div>
                       </div>
-                      <p class="product-big-text">Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
-                      <div class="product-big-price-wrap"><span class="product-big-price">$790</span></div>
                     </div>
+                    <br class="clear" />
                   </div>
                 </div>
-              </article>
+            <?php
+              }
+              echo '</div>';
+            }
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-top:10px;margin-bottom:50px;">
+      <div class="standard_wrapper">
+        <div class="page_content_wrapper">
+          <div class="inner">
+            <div style="margin:auto;width:100%">
+              <h2 class="ppb_title">Event</h2>
+              <div class="page_tagline">List Event Garut</div>
             </div>
-            <div class="col-sm-6 col-md-12 wow fadeInLeft">
-              <!-- Product Big-->
-              <article class="product-big">
-                <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="<?= base_url('assets/'); ?>images/product-big-2-600x366.jpg" alt="" width="600" height="366" /></a></div>
-                  <div class="unit-body">
-                    <div class="product-big-body">
-                      <h5 class="product-big-title"><a href="#">Mauritius Island, Africa</a></h5>
-                      <div class="group-sm group-middle justify-content-start">
-                        <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">5 customer reviews</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ppb_tour_classic one nopadding " style="margin-bottom:50px;">
+      <div class="page_content_wrapper page_main_content sidebar_content full_width fixed_column">
+        <div class="standard_wrapper">
+          <div id="1568019739482243752" class="portfolio_filter_wrapper gallery classic three_cols" data-columns="3">
+            <?php
+            foreach (array_chunk($event->result(), 1) as $entriesRow) {
+              echo '<div class="element grid classic3_cols">';
+              foreach ($entriesRow as $row) {
+            ?>
+                <div class="one_third gallery3 classic static filterable portfolio_type themeborder">
+                  <a class="tour_image" href="<?= base_url('Home/detail_event/') . $row->id_event; ?>">
+                    <img src="<?= base_url('public/upload/image/event/'); ?><?= $row->thumbnail; ?>" alt="<?= $row->nama; ?>" />
+                    <div class="tour_price ">Rp. <?= number_format($row->harga, '0', '', '.'); ?></div>
+                  </a>
+                  <div class="portfolio_info_wrapper">
+                    <a class="tour_link" href="<?= base_url('Home/detail_event/') . $row->id_event; ?>">
+                      <h4><?= $row->nama; ?></h4>
+                    </a>
+                    <div class="tour_excerpt">
+                      <p><?= $row->lokasi; ?></p>
+                    </div>
+                    <div class="tour_attribute_wrapper">
+                      <div class="tour_attribute_rating">
+                        <div class="br-theme-fontawesome-stars-o">
+                          <div class="br-widget">
+                            <?php
+                            if ($row->rating == 1) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 2) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 3) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 4) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;"></a>';
+                            } elseif ($row->rating == 5) {
+                              echo '<a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>
+                                    <a href="javascript:;" class="br-selected"></a>';
+                            } elseif ($row->rating == 0) {
+                              echo '<a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>';
+                            }
+                            ?>
+                          </div>
+                        </div>
+                        <div class="tour_attribute_rating_count"><?= $row->jumlah; ?>&nbsp;reviews</div>
                       </div>
-                      <p class="product-big-text">The beautiful and inviting island nation of Mauritius is an ideal ‘flop and drop’ at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
-                      <div class="product-big-price-wrap"><span class="product-big-price">$890</span></div>
                     </div>
+                    <br class="clear" />
                   </div>
                 </div>
-              </article>
+            <?php
+              }
+              echo '</div>';
+            }
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-bottom:40px;">
+      <div class="standard_wrapper">
+        <div class="page_content_wrapper">
+          <div class="inner">
+            <div style="margin:auto;width:100%">
+              <h2 class="ppb_title">Why Choose Us</h2>
+              <div class="page_tagline">Here are reasons you should plan trip with us</div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Different People-->
-      <section class="section section-sm">
-        <div class="container">
-          <h3 class="title-block find-car oh"><span class="d-inline-block wow slideInUp">Different People — One Mission</span></h3>
-          <div class="row row-30 justify-content-center box-ordered">
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-1-118x118.jpg" alt="" width="118" height="118" /></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Diana Robinson</a></h6>
-                  <p class="team-modern-status">Founder, Owner</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-2-118x118.jpg" alt="" width="118" height="118" /></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Peter McMillan</a></h6>
-                  <p class="team-modern-status">Travel Agent</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-3-118x118.jpg" alt="" width="118" height="118" /></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Jill Peterson</a></h6>
-                  <p class="team-modern-status">Tour Consultant</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="<?= base_url('assets/'); ?>images/user-4-118x118.jpg" alt="" width="118" height="118" /></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">James Smith</a></h6>
-                  <p class="team-modern-status">PR Manager</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
+      </div>
+    </div>
+    <div class="standard_wrapper">
+      <div class="one_third withsmallpadding ppb_text" style="text-align:center;padding:0px 0 0px 0;margin-bottom:70px;">
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div style="margin:auto;width:100%">
+                <p><img class="alignnone wp-image-3106 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Map-Marker-300x300.png" width="150" height="150" alt="" /></p>
+                <h4 class="p1"><span class="s1"><b>Handpicked Hotels</b></span></h4>
+                <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget
+                  dolor. Aenean massa</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Section Subscribe-->
-      <section class="section bg-default text-center offset-top-50">
-        <div class="parallax-container" data-parallax-img="<?= base_url('assets/'); ?>images/parallax-1-1920x850.jpg">
-          <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
-            <div class="container">
-              <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-semi-bold">First-class Impressions</span><span class="d-block font-weight-light">are Waiting for You!</span></h2>
-              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Our agency offers travelers various tours and excursions with destinations all over the world. Browse our website to find your dream tour!</p><a class="button button-secondary button-pipaluk" href="#">Book a Tour Now</a>
+      </div>
+    </div>
+    <div class="standard_wrapper">
+      <div class="one_third withsmallpadding ppb_text" style="text-align:center;padding:0px 0 0px 0;margin-bottom:70px;">
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div style="margin:auto;width:100%">
+                <p><img class="alignnone wp-image-3107 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Worldwide-Location-300x300.png" width="150" height="150" alt="" />
+                </p>
+                <h4 class="p1"><span class="s1"><b>World Class Service</b></span></h4>
+                <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget
+                  dolor. Aenean massa</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <!--	Instagrram wondertour-->
-      <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
-        <div class="container-fluid">
-          <h6 class="gallery-title">Gallery</h6>
-          <!-- Owl Carousel-->
-          <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-1-270x195.jpg" alt="" width="270" height="195" />
+      </div>
+    </div>
+    <div class="standard_wrapper">
+      <div class="one_third last withsmallpadding ppb_text" style="text-align:center;padding:0px 0 0px 0;margin-bottom:70px;">
+        <div class="standard_wrapper">
+          <div class="page_content_wrapper">
+            <div class="inner">
+              <div style="margin:auto;width:100%">
+                <p><img class="alignnone wp-image-3108 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Hot-Air-Balloon-300x300.png" width="140" height="140" alt="" /></p>
+                <h4 class="p1"><span class="s1"><b>Best Price Guarantee</b></span></h4>
+                <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget
+                  dolor. Aenean massa</p>
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-2-270x195.jpg" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-3-270x195.jpg" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-4-270x195.jpg" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-5-270x195.jpg" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-6-270x195.jpg" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="<?= base_url('assets/'); ?>images/gallery-image-7-270x195.jpg" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?= base_url('assets/'); ?>images/gallery-image-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+    <div class="parallax " style="background-image: url(<?= base_url('assets_wisatawan/'); ?>images/situ-sukamaju.jpg);height:60vh; "></div>
+    </div>
+
+
+    </div>

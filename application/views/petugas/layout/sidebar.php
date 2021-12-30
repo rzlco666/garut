@@ -22,6 +22,13 @@
             <li class="<?php if ($title == 'Transaksi Wisata') {
                             echo 'active';
                         } ?>"><a class="nav-link" href="<?= base_url('TransaksiWisata/'); ?>"><i class="fas fa-ticket-alt"></i> <span>Transaksi Wisata</span></a></li>
+            <li class="menu-header">Event</li>
+            <li class="<?php if ($title == 'Data Event') {
+                            echo 'active';
+                        } ?>"><a class="nav-link" href="<?= base_url('DataEvent/'); ?>"><i class="fas fa-map-marker-alt"></i> <span>Data Event</span></a></li>
+            <li class="<?php if ($title == 'Transaksi Event') {
+                            echo 'active';
+                        } ?>"><a class="nav-link" href="<?= base_url('TransaksiEvent/'); ?>"><i class="fas fa-ticket-alt"></i> <span>Transaksi Event</span></a></li>
             <li class="menu-header">Wisatawan</li>
             <li class="<?php if ($title == 'Data Wisatawan') {
                             echo 'active';

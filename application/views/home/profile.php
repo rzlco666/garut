@@ -1,101 +1,89 @@
-<style>
-    tr.noBorder td {
-        border: 0;
-    }
-</style>
-<!-- Base typography-->
-<section class="section section-sm section-first bg-default text-left">
-    <div class="container">
-        <div class="row row-40 flex-lg-row-reverse justify-content-xl-between">
-            <div class="col-xl-9">
-                <?php foreach ($profile as $i) : ?>
-                    <form class="rd-form rd-form-variant-2">
-                        <div class="row row-14 gutters-14">
-                            <div class="col-md-12">
-                                <div class="form-wrap">
-                                    <input readonly class="form-input" type="text" class="form-control" name="nama" id="nama" value="<?= $i['nama']; ?>" data-constraints="@Required">
-                                    <label class="form-label" for="nama">Nama Lengkap</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-wrap">
-                                    <input readonly class="form-input" type="text" class="form-control" name="username" id="username" value="<?= $i['username']; ?>" data-constraints="@Required">
-                                    <label class="form-label" for="username">Username</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-wrap">
-                                    <input readonly class="form-input" id="email" type="email" name="email" value="<?= $i['email']; ?>" data-constraints="@Email @Required">
-                                    <label class="form-label" for="email">E-mail</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-wrap">
-                                    <input readonly class="form-input" id="no_hp" type="number" name="no_hp" value="<?= $i['no_hp']; ?>" data-constraints="@Numeric">
-                                    <label class="form-label" for="no_hp">No. HP</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-wrap">
-                                    <input readonly class="form-input" type="text" class="form-control" name="alamat" id="alamat" value="<?= $i['alamat']; ?>" data-constraints="@Required">
-                                    <label class="form-label" for="alamat">Alamat</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-14 gutters-14">
-                            <div class="col-md-4">
-                                <div class="form-wrap">
-                                    <button class="button button-md button-default-outline-2 button-ujarak" type="button" data-toggle="modal" data-target="#ubahPassword">Ubah Password</button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-wrap">
-                                    <button class="button button-primary button-pipaluk" type="button" data-toggle="modal" data-target="#editProfile">Edit Profile</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                <?php endforeach; ?>
-            </div>
-            <div class="col-xl-3 d-none d-xl-block">
-                <div class="offset-left-xl-45">
-                    <div class="card">
-                        <?php foreach ($profile as $i) : ?>
-                            <img class="card-img-top" src="<?= base_url('public/upload/image/wisatawan/'); ?><?= $i['foto']; ?>" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $i['nama']; ?></h5>
-                                <p class="card-text">
-                                <table>
-                                    <tr>
-                                        <td><a class="icon fa fa-user" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['username']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="icon fa fa-envelope" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['email']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="icon fa fa-phone" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['no_hp']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="icon fa fa-home" href="#"></a></td>
-                                        <td>&nbsp;&nbsp;&nbsp;<?= $i['alamat']; ?></td>
-                                    </tr>
-                                </table>
-                                </p>
-                            </div>
-                        <?php endforeach; ?>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="<?= base_url('Home/transaksi_wisata'); ?>" class="card-link">Transaksi Wisata</a></li>
-                            <li class="list-group-item"><a href="<?= base_url('Home/profile'); ?>" class="card-link">Profile</a></li>
-                        </ul>
-                    </div>
-                </div>
+<div id="page_caption" class="hasbg parallax" style="background-image:url(<?= base_url('assets_wisatawan/'); ?>images/situ-sukamaju.jpg);">
+
+    <div class="page_title_wrapper">
+        <div class="page_title_inner">
+            <div class="page_title_content">
+                <h1>Profile</h1>
             </div>
         </div>
     </div>
-</section>
+
+</div>
+
+<!-- Begin content -->
+<div id="page_content_wrapper" class="hasbg ">
+
+    <!-- Begin content -->
+
+    <div class="inner">
+
+        <div class="inner_wrapper nopadding">
+
+            <div id="page_main_content" class="sidebar_content left_sidebar fixed_column">
+
+                <div class="standard_wrapper">
+                    <?php foreach ($profile as $i) : ?>
+                        <div id="respond" class="comment-respond">
+                            <h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">Cancel reply</a></small></h3>
+                            <form action="#" method="post" id="commentform" class="comment-form">
+                                <p class="comment-form-comment">
+                                    <label for="comment">Nama Lengkap</label>
+                                    <input readonly id="author" name="author" type="text" value="<?= $i['nama']; ?>" size="45" maxlength="245" required='required' />
+                                </p>
+                                <p class="comment-form-author">
+                                    <label for="author">Username</label>
+                                    <input readonly id="author" name="author" type="text" value="<?= $i['username']; ?>" size="30" maxlength="245" required='required' />
+                                </p>
+                                <p class="comment-form-email">
+                                    <label for="email">Email</label>
+                                    <input readonly id="email" name="email" type="text" value="<?= $i['email']; ?>" size="30" maxlength="100" aria-describedby="email-notes" required='required' />
+                                </p>
+                                <p class="comment-form-url">
+                                    <label for="url">No HP.</label>
+                                    <input readonly id="url" name="url" type="text" value="<?= $i['no_hp']; ?>" size="30" maxlength="200" />
+                                </p>
+                                <p class="comment-form-comment">
+                                    <label for="comment">Alamat</label>
+                                    <textarea readonly id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"><?= $i['alamat']; ?></textarea>
+                                </p>
+                                <p class="form-submit">
+                                    <button class="button small left" style="background-color:#4ec380 !important;color:#ffffff !important;border:1px solid #4ec380 !important;margin-right:10px;margin-bottom:10px;" type="button" data-toggle="modal" data-target="#ubahPassword">Ubah Password</button>
+                                    <button class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;" type="button" data-toggle="modal" data-target="#editProfile">Edit Profile</button>
+                                </p>
+                            </form>
+                        </div><!-- #respond -->
+                    <?php endforeach; ?>
+                    <br class="clear" />
+
+                </div>
+            </div>
+
+            <div class="sidebar_wrapper left_sidebar">
+                <div class="sidebar">
+
+                    <div class="content">
+                        <?php foreach ($profile as $i) : ?>
+                            <div class="teaser_wrapper" style="background-color:#f0f0f0;padding:15px;"><img src="<?= base_url('public/upload/image/wisatawan/'); ?><?= $i['foto']; ?>" alt="" />
+                                <div class="teaser_content_wrapper">
+                                    <h5><?= $i['nama']; ?></h5>
+                                    <div class="teaser_content">
+                                        <span class="icon fa fa-user" href="#"></span>&nbsp;<?= $i['username']; ?></br>
+                                        <span class="icon fa fa-envelope" href="#"></span>&nbsp;<?= $i['email']; ?></br>
+                                        <span class="icon fa fa-phone" href="#"></span>&nbsp;<?= $i['no_hp']; ?></br>
+                                        <span class="icon fa fa-home" href="#"></span>&nbsp;<?= $i['alamat']; ?></br>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <?php foreach ($profile as $i) { ?>
     <div class="modal fade" id="editProfile" tabindex="-1" role="dialog" aria-labelledby="editProfile" aria-hidden="true">
@@ -107,37 +95,37 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div style="text-align: left;" class="modal-body">
-                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/update_profile'); ?>" method="post">
-                        <div class="form-group">
-                            <label for="nama" class="col-form-label">Nama</label>
+                <div class="modal-body">
+                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/update_profile'); ?>" method="post" id="commentform" class="comment-form">
+                        <p class="comment-form-comment">
+                            <label for="nama">Nama Lengkap</label>
                             <input type="hidden" name="id_wisatawan" id="id_wisatawan" value="<?= $i['id_wisatawan']; ?>">
-                            <input type="text" class="form-control" name="nama" id="nama" value="<?= $i['nama']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="username" class="col-form-label">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" value="<?= $i['username']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="email" value="<?= $i['email']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="no_hp" class="col-form-label">No HP.</label>
-                            <input type="number" class="form-control" name="no_hp" id="no_hp" value="<?= $i['no_hp']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat" class="col-form-label">Alamat</label>
-                            <input type="text" class="form-control" name="alamat" id="alamat" value="<?= $i['alamat']; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="foto" class="col-form-label">Foto</label>
-                            <input type="file" name="foto" class="form-control" id="foto">
-                        </div>
+                            <input id="nama" name="nama" type="text" value="<?= $i['nama']; ?>" size="45" maxlength="245" required='required' />
+                        </p>
+                        <p class="comment-form-comment">
+                            <label for="username">Username</label>
+                            <input id="username" name="username" type="text" value="<?= $i['username']; ?>" size="45" maxlength="245" required='required' />
+                        </p>
+                        <p class="comment-form-comment">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="text" value="<?= $i['email']; ?>" size="45" maxlength="100" aria-describedby="email-notes" required='required' />
+                        </p>
+                        <p class="comment-form-comment">
+                            <label for="no_hp">No HP.</label>
+                            <input id="no_hp" name="no_hp" type="text" value="<?= $i['no_hp']; ?>" size="45" maxlength="200" />
+                        </p>
+                        <p class="comment-form-comment">
+                            <label for="alamat">Alamat</label>
+                            <textarea id="alamat" name="alamat" cols="45" rows="4" maxlength="65525" required="required"><?= $i['alamat']; ?></textarea>
+                        </p>
+                        <p class="comment-form-comment">
+                            <label for="foto">Foto</label>
+                            <input type="file" name="foto" id="foto">
+                        </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="button" class="button small left" style="background-color:#97a2a2 !important;color:#ffffff !important;border:1px solid #97a2a2 !important;margin-right:10px;margin-bottom:10px;" data-dismiss="modal">Close</button>
+                    <button type="submit" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Update</button>
                 </div>
                 </form>
             </div>
@@ -153,17 +141,17 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div style="text-align: left;" class="modal-body">
-                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/ubah_password'); ?>" method="post">
-                        <div class="form-group">
-                            <label for="password" class="col-form-label">Password Baru</label>
+                <div class="modal-body">
+                    <form enctype="multipart/form-data" action="<?php echo base_url('Home/ubah_password'); ?>" method="post" id="commentform" class="comment-form">
+                        <p class="comment-form-comment">
+                            <label for="password">Password Baru</label>
                             <input type="hidden" name="id_wisatawan" id="id_wisatawan" value="<?= $i['id_wisatawan']; ?>">
-                            <input type="password" class="form-control" name="password" id="password">
-                        </div>
+                            <input type="password" class="form-control" name="password" id="password" require>
+                        </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="button" class="button small left" style="background-color:#97a2a2 !important;color:#ffffff !important;border:1px solid #97a2a2 !important;margin-right:10px;margin-bottom:10px;" data-dismiss="modal">Close</button>
+                    <button type="submit" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Update</button>
                 </div>
                 </form>
             </div>

@@ -1,139 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<div id="page_caption" class="hasbg parallax" style="background-image:url(<?= base_url('assets_wisatawan/'); ?>images/situ-sukamaju.jpg);">
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Wisatawan &mdash; <?= $title; ?></title>
-    <link rel="icon" href="<?= base_url('assets/'); ?>images/favicon.ico" type="image/x-icon">
+    <div class="page_title_wrapper">
+        <div class="page_title_inner">
+            <div class="page_title_content">
+                <h1>Login</h1>
+                <div class="page_tagline">
+                    Silahkan login untuk masuk ke aplikasi </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/fontawesome/css/all.min.css">
+</div>
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/bootstrap-social/bootstrap-social.css">
-
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>css/style.css">
-    <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>css/components.css">
-    <!-- Start GA -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-94034622-3');
-    </script>
-    <!-- /END GA -->
-</head>
-
-<body>
-    <div id="app">
-        <section class="section">
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-                        <div class="login-brand">
-                            <a href="<?= base_url('/'); ?>"><img src="<?= base_url('assets/'); ?>images/logo.png" alt="" width="225" /></a>
-                        </div>
-
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h4>Login Petugas</h4>
-                            </div>
-
-                            <div class="card-body">
-                                <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
-                                <?php echo form_open('Home/login_proses', ''); ?>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
+<div class="ppb_wrapper hasbg ">
+    <div class="one withsmallpadding ppb_text" style="text-align:left;padding:0px 0 0px 0;margin-bottom:60px;margin-top:20px;">
+        <div class="standard_wrapper">
+            <div class="page_content_wrapper">
+                <div class="inner">
+                    <div style="margin:auto;width:60%">
+                        <div role="form" class="wpcf7" id="wpcf7-f3075-o1" lang="en-US" dir="ltr">
+                            <div class="screen-reader-response"></div>
+                            <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
+                            <form action='<?= base_url('Home/login_proses'); ?>' method="post" class="wpcf7-form" novalidate="novalidate">
+                                <div style="display: none;">
+                                    <input type="hidden" name="_wpcf7" value="3075" />
+                                    <input type="hidden" name="_wpcf7_version" value="5.0.4" />
+                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3075-o1" />
+                                    <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                </div>
+                                <p>
+                                    <label> Email Address
+                                        <br />
+                                        <span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="sample@mail.com" /></span> </label>
                                     <?php echo form_error('email', '<div class="text-danger"><small>', '</small></div>'); ?>
-                                    <div class="invalid-feedback">
-                                        Please fill in your email
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="d-block">
-                                        <label for="password" class="control-label">Password</label>
-                                        <div class="float-right">
-                                            <a href="auth-forgot-password.html" class="text-small">
-                                                Forgot Password?
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                                </p>
+                                <p>
+                                    <label> Password
+                                        <br />
+                                        <span class="wpcf7-form-control-wrap"><input type="password" name="password" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Password" /></span> </label>
                                     <?php echo form_error('password', '<div class="text-danger"><small>', '</small></div>'); ?>
-                                    <div class="invalid-feedback">
-                                        please fill in your password
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                                        <label class="custom-control-label" for="remember-me">Remember Me</label>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                                        Login
-                                    </button>
-                                </div>
-                                <?php echo form_close(); ?>
-                                <!-- <div class="text-center mt-4 mb-3">
-                                    <div class="text-job text-muted">Login With Social</div>
-                                </div>
-                                <div class="row sm-gutters">
-                                    <div class="col-6">
-                                        <a class="btn btn-block btn-social btn-facebook">
-                                            <span class="fab fa-facebook"></span> Facebook
-                                        </a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a class="btn btn-block btn-social btn-twitter">
-                                            <span class="fab fa-twitter"></span> Twitter
-                                        </a>
-                                    </div>
-                                </div> -->
-
-                            </div>
-                        </div>
-                        <div class="mt-5 text-muted text-center">
-                            Don't have an account? <a href="<?= base_url('Home/register/'); ?>">Create One</a>
-                        </div>
-                        <div class="simple-footer">
-                            Copyright &copy; Garut 2021
+                                </p>
+                                <p>
+                                    <input type="submit" value="Login" class="wpcf7-form-control wpcf7-submit" />
+                                </p>
+                                <div class="wpcf7-response-output wpcf7-display-none"></div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-
-    <!-- General JS Scripts -->
-    <script src="<?= base_url('assets_petugas/'); ?>modules/jquery.min.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>modules/popper.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>modules/tooltip.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>modules/moment.min.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>js/stisla.js"></script>
-
-    <!-- JS Libraies -->
-
-    <!-- Page Specific JS File -->
-
-    <!-- Template JS File -->
-    <script src="<?= base_url('assets_petugas/'); ?>js/scripts.js"></script>
-    <script src="<?= base_url('assets_petugas/'); ?>js/custom.js"></script>
-</body>
-
-</html>
+</div>
+</div>
