@@ -6,28 +6,26 @@
             <div class="standard_wrapper">
               <h2 class="ppb_title" style="color:#ffffff;">Pariwisata Garut</h2>
               <div class="page_tagline" style="color:#ffffff;">Wisata dan Event.</div>
-              <form id="tour_search_form" class="tour_search_form" method="get" action="#">
+              <form id="tour_search_form" class="tour_search_form" action="<?php echo base_url("Home/pencarian/") ?>">
                 <div class="tour_search_wrapper">
                   <div class="one_fourth themeborder">
-                    <input id="keyword" name="keyword" type="text" autocomplete="off" placeholder="Destination, city" />
+                    <input id="nama" name="nama" type="text" autocomplete="off" placeholder="Destinasi/Event" />
                     <span class="ti-search"></span>
                     <div id="autocomplete" class="autocomplete" data-mousedown="false"></div>
                   </div>
                   <div class="one_fourth themeborder">
-                    <select id="month" name="month">
-                      <option value="">Any Month</option>
-                      <option value="january">January</option>
+                    <select id="kategori" name="kategori">
+                      <option value="1" name="kategori">Wisata</option>
+                      <option value="0" name="kategori">Event</option>
                     </select>
-                    <span class="ti-calendar"></span>
+                    <span class="ti-tag"></span>
                   </div>
                   <div class="one_fourth themeborder">
                     <select id="sort_by" name="sort_by">
-                      <option value="date">Sort By Date</option>
-                      <option value="price_low">Price Low to High</option>
-                      <option value="price_high">Price High to Low</option>
-                      <option value="name">Sort By Name</option>
-                      <option value="popular">Sort By Popularity</option>
-                      <option value="review">Sort By Review Score</option>
+                      <option value="0" name="sort_by">Sort By Popularity</option>
+                      <option value="1" name="sort_by">Sort By Review Score</option>
+                      <option value="2" name="sort_by">Price Low to High</option>
+                      <option value="3" name="sort_by">Price High to Low</option>
                     </select>
                     <span class="ti-exchange-vertical"></span>
                   </div>

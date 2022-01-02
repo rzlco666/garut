@@ -1,12 +1,10 @@
 <div id="footer" class=" ppb_wrapper">
   <ul class="sidebar_widget three">
     <li id="text-2" class="widget widget_text">
-      <h2 class="widgettitle">Our Awards</h2>
+      <h2 class="widgettitle">Dikembangkan Oleh</h2>
       <div class="textwidget">
-        <p>London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the
-          United Kingdom.
-          <br />
-          <img src="<?= base_url('assets_wisatawan/'); ?>upload/awards.png" width="246" height="113" style="margin-top:30px;" alt="" />
+        <p>
+          <img src="<?= base_url('assets_wisatawan/'); ?>images/logo-white.png" style="margin-top:30px;" alt="" />
         </p>
       </div>
     </li>
@@ -14,17 +12,13 @@
       <h2 class="widgettitle">Contact Info</h2>
       <div class="textwidget">
         <p><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227</p>
-        <p><span class="ti-location-pin" style="margin-right:10px;"></span>184 Main Street East Perl Habour
-          8007</p>
-        <p><span class="ti-alarm-clock" style="margin-right:10px;"></span>Mon - Sat 8.00 - 18.00 Sunday
-          CLOSED</p>
+        <p><span class="ti-location-pin" style="margin-right:10px;"></span>Garut</p>
         <div style="margin-top:20px;">
           <div class="social_wrapper shortcode dark ">
             <ul>
               <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
               <li class="twitter"><a target="_blank" title="Twitter" href="https://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
               <li class="youtube"><a target="_blank" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
-              <li class="pinterest"><a target="_blank" title="Pinterest" href="https://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li>
               <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/theplanetd"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>

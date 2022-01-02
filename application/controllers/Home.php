@@ -13,6 +13,7 @@ class Home extends CI_Controller
         $this->load->helper('url');
 
         $this->load->model('m_wisatawan');
+        $this->load->model('m_pencarian');
     }
 
     public function index()
@@ -47,6 +48,12 @@ class Home extends CI_Controller
         IFNULL((SELECT COUNT(id_rating_wisata) FROM rating_wisata WHERE id_wisata=w.id_wisata GROUP BY id_wisata), 0) AS jumlah
         FROM wisata w
         ORDER BY w.id_wisata DESC");
+        $data['event'] = $this->templates->query("SELECT w.id_event, w.nama, w.lokasi, w.maps, w.harga, w.deskripsi, w.tanggal,
+        w.thumbnail, w.header, w.event1, w.event2, w.event3, w.id_petugas,
+        IFNULL((SELECT FORMAT(AVG(rating),0) FROM rating_event WHERE id_event=w.id_event GROUP BY id_event), 0) AS rating,
+        IFNULL((SELECT COUNT(id_rating_event) FROM rating_event WHERE id_event=w.id_event GROUP BY id_event), 0) AS jumlah
+        FROM event w
+        ORDER BY w.tanggal DESC LIMIT 3");
 
         $this->load->view('home/header', $data);
         $this->load->view('home/wisata', $data);
@@ -63,6 +70,12 @@ class Home extends CI_Controller
         IFNULL((SELECT COUNT(id_rating_event) FROM rating_event WHERE id_event=w.id_event GROUP BY id_event), 0) AS jumlah
         FROM event w
         ORDER BY w.id_event DESC");
+        $data['wisata'] = $this->templates->query("SELECT w.id_wisata, w.nama, w.lokasi, w.maps, w.harga, w.deskripsi,
+        w.thumbnail, w.header, w.destinasi1, w.destinasi2, w.destinasi3, w.id_petugas,
+        IFNULL((SELECT FORMAT(AVG(rating),0) FROM rating_wisata WHERE id_wisata=w.id_wisata GROUP BY id_wisata), 0) AS rating,
+        IFNULL((SELECT COUNT(id_rating_wisata) FROM rating_wisata WHERE id_wisata=w.id_wisata GROUP BY id_wisata), 0) AS jumlah
+        FROM wisata w
+        ORDER BY w.id_wisata DESC LIMIT 3");
 
         $this->load->view('home/header', $data);
         $this->load->view('home/event', $data);
@@ -627,6 +640,32 @@ class Home extends CI_Controller
         session_destroy();
         //$this->session->set_flashdata('pesan', 'Sign Out Berhasil!');
         redirect('Home/login/index', 'refresh');
+    }
+
+    public function pencarian()
+    {
+
+        $data['title'] = 'Pencarian';
+
+        $kategori = $this->input->get('kategori');
+        $kat = (int)$kategori;
+        $nama = $this->input->get('nama');
+        $sort_byy = $this->input->get('sort_by');
+        $sort_by = (int)$sort_byy;
+
+        if ($kat == 0) {
+            $data['kat'] = $kat;
+            $data['hasil'] = $this->m_pencarian->pencarian_e($kategori, $nama, $sort_by);
+        }else{
+            $data['kat'] = $kat;
+            $data['hasil'] = $this->m_pencarian->pencarian_w($kategori, $nama, $sort_by);
+        }
+
+        $this->session->set_flashdata('success', 'Pencarian telah ditampilkan.');
+
+        $this->load->view('home/header', $data);
+        $this->load->view('home/pencarian', $data);
+        $this->load->view('home/footer');
     }
 
     //midtrans logic
