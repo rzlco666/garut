@@ -518,11 +518,11 @@ class Home extends CI_Controller
 
             if ($this->m_wisatawan->m_register()) {
 
-                $this->session->set_flashdata('pesan', 'Register berhasil, silahkan  Sign In.');
+                $this->session->set_flashdata('message', 'Register berhasil, silahkan  Sign In.');
                 redirect('/Home/login/', 'refresh');
             } else {
 
-                $this->session->set_flashdata('pesan', 'Register user gagal!');
+                $this->session->set_flashdata('error', 'Register user gagal!');
                 redirect('/Home/register/', 'refresh');
             }
         } else {
@@ -558,17 +558,17 @@ class Home extends CI_Controller
                         $this->session->set_userdata($data_login);
                         redirect('/', 'refresh');
                     } else {
-                        $this->session->set_flashdata('pesan', 'Login gagal: akun diblokir!');
+                        $this->session->set_flashdata('error', 'Login gagal: akun diblokir!');
                         redirect('Home/login/index', 'refresh');
                     }
                 } else {
 
-                    $this->session->set_flashdata('pesan', 'Login gagal: password salah!');
+                    $this->session->set_flashdata('error', 'Login gagal: password salah!');
                     redirect('Home/login/index', 'refresh');
                 }
             } else { // jika email tidak terdaftar!
 
-                $this->session->set_flashdata('pesan', 'Login gagal: email salah!');
+                $this->session->set_flashdata('error', 'Login gagal: email salah!');
                 redirect('Home/login/index', 'refresh');
             }
         } else {
@@ -588,11 +588,11 @@ class Home extends CI_Controller
         $this->session->unset_userdata('alamat');
         $this->session->unset_userdata('no_hp');
         $this->session->unset_userdata('roles');
-        $this->session->unset_userdata('pesan');
+        $this->session->unset_userdata('error');
         $this->session->unset_userdata('message');
 
         session_destroy();
-        //$this->session->set_flashdata('pesan', 'Sign Out Berhasil!');
+        $this->session->set_flashdata('message', 'Sign Out Berhasil!');
         redirect('Home/login/index', 'refresh');
     }
 

@@ -22,22 +22,23 @@
                             <div class="screen-reader-response"></div>
 
                             <?php
-                            if (!empty($this->session->flashdata('pesan'))) {
-                                if (str_contains($this->session->flashdata('pesan'), 'Register berhasil')) {
+                            if (!empty($this->session->flashdata('message'))) {
                             ?>
-                                    <div id="15689862881347657664" class="alert_box success"><i class="fa fa-flag alert_icon"></i>
-                                        <div class="alert_box_msg"><?php echo $this->session->flashdata('pesan'); ?></div><a href="#" class="close_alert" data-target="15689862881347657664"><i class="fa fa-times"></i></a>
-                                    </div>
-                                    <br />
-                                <?php
-                                } else {
-                                ?>
-                                    <div id="15689862881137689461" class="alert_box error"><i class="fa fa-exclamation-circle alert_icon"></i>
-                                        <div class="alert_box_msg"><?php echo $this->session->flashdata('pesan'); ?></div><a href="#" class="close_alert" data-target="15689862881137689461"><i class="fa fa-times"></i></a>
-                                    </div>
-                                    <br />
+                                <div id="15689862881347657664" class="alert_box success"><i class="fa fa-flag alert_icon"></i>
+                                    <div class="alert_box_msg"><?php echo $this->session->flashdata('message'); ?></div><a href="#" class="close_alert" data-target="15689862881347657664"><i class="fa fa-times"></i></a>
+                                </div>
+                                <br />
                             <?php
-                                }
+                            }
+                            ?>
+                            <?php
+                            if (!empty($this->session->flashdata('error'))) {
+                            ?>
+                                <div id="15689862881137689461" class="alert_box error"><i class="fa fa-exclamation-circle alert_icon"></i>
+                                    <div class="alert_box_msg"><?php echo $this->session->flashdata('error'); ?></div><a href="#" class="close_alert" data-target="15689862881137689461"><i class="fa fa-times"></i></a>
+                                </div>
+                                <br />
+                            <?php
                             }
                             ?>
 
