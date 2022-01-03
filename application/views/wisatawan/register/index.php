@@ -20,7 +20,16 @@
           <div style="margin:auto;width:60%">
             <div role="form" class="wpcf7" id="wpcf7-f3075-o1" lang="en-US" dir="ltr">
               <div class="screen-reader-response"></div>
-              <font color="green"><?php echo $this->session->flashdata('pesan'); ?></font>
+              <?php
+              if (!empty($this->session->flashdata('pesan'))) {
+              ?>
+                <div id="15689862881137689461" class="alert_box error"><i class="fa fa-exclamation-circle alert_icon"></i>
+                  <div class="alert_box_msg"><?php echo $this->session->flashdata('pesan'); ?></div><a href="#" class="close_alert" data-target="15689862881137689461"><i class="fa fa-times"></i></a>
+                </div>
+                <br />
+              <?php
+              }
+              ?>
               <form action='<?= base_url('Home/register_proses'); ?>' method="post" class="wpcf7-form" novalidate="novalidate">
                 <div style="display: none;">
                   <input type="hidden" name="_wpcf7" value="3075" />

@@ -157,15 +157,7 @@ class Home extends CI_Controller
             $data['feedback'] = $this->input->post('feedback');
 
             $this->templates->insert('rating_wisata', $data);
-            $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                <strong>Yes!</strong> Updated.
-            </div>
-        </div>');
+            $this->session->set_flashdata('message', 'Rating berhasil ditambahkan!');
             redirect('Home/transaksi_wisata');
         } else {
             $this->session->set_flashdata('error', validation_errors());
@@ -186,15 +178,7 @@ class Home extends CI_Controller
             $data['feedback'] = $this->input->post('feedback');
 
             $this->templates->insert('rating_event', $data);
-            $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                <strong>Yes!</strong> Updated.
-            </div>
-        </div>');
+            $this->session->set_flashdata('message', 'Rating berhasil ditambahkan!');
             redirect('Home/transaksi_event');
         } else {
             $this->session->set_flashdata('error', validation_errors());
@@ -261,15 +245,7 @@ class Home extends CI_Controller
 
 
             $this->templates->update('rating_wisata', ['id_rating_wisata' => $id_rating_wisata], $data);
-            $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                <strong>Yes!</strong> Updated.
-            </div>
-        </div>');
+            $this->session->set_flashdata('message', 'Ulasan berhasil diperbarui!');
             redirect('Home/transaksi_wisata');
         } else {
             $this->session->set_flashdata('error', validation_errors());
@@ -290,15 +266,7 @@ class Home extends CI_Controller
 
 
             $this->templates->update('rating_event', ['id_rating_event' => $id_rating_event], $data);
-            $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                <strong>Yes!</strong> Updated.
-            </div>
-        </div>');
+            $this->session->set_flashdata('message', 'Ulasan berhasil diperbarui!');
             redirect('Home/transaksi_event');
         } else {
             $this->session->set_flashdata('error', validation_errors());
@@ -378,15 +346,7 @@ class Home extends CI_Controller
             }
 
             $this->templates->update('wisatawan', ['id_wisatawan' => $id_wisatawan], $data);
-            $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                <strong>Yes!</strong> Updated.
-            </div>
-        </div>');
+            $this->session->set_flashdata('message', 'Profile berhasil diperbarui!');
             redirect('Home/profile');
         } else {
             $this->session->set_flashdata('error', validation_errors());
@@ -405,15 +365,7 @@ class Home extends CI_Controller
             $data['password'] = get_hash($pass);
 
             $this->templates->update('wisatawan', ['id_wisatawan' => $id_wisatawan], $data);
-            $this->session->set_flashdata('message', '
-            <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
-                <strong>Yes!</strong> Updated.
-            </div>
-        </div>');
+            $this->session->set_flashdata('message', 'Password berhasil diperbarui!');
             redirect('Home/profile');
         } else {
             $this->session->set_flashdata('error', validation_errors());
@@ -636,6 +588,8 @@ class Home extends CI_Controller
         $this->session->unset_userdata('alamat');
         $this->session->unset_userdata('no_hp');
         $this->session->unset_userdata('roles');
+        $this->session->unset_userdata('pesan');
+        $this->session->unset_userdata('message');
 
         session_destroy();
         //$this->session->set_flashdata('pesan', 'Sign Out Berhasil!');
@@ -815,10 +769,10 @@ class Home extends CI_Controller
 
             $simpan = $this->db->insert('transaksi_event', $data);
             if ($simpan) {
-                $this->session->set_flashdata('transaksi_event', 'Transaksi berhasil!');
+                $this->session->set_flashdata('message', 'Transaksi berhasil!');
                 redirect('Home/transaksi_event', 'refresh');
             } else {
-                $this->session->set_flashdata('transaksi_event', 'Transaksi gagal!');
+                $this->session->set_flashdata('message', 'Transaksi gagal!');
                 redirect('Home/transaksi_event', 'refresh');
             }
         }
