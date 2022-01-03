@@ -197,7 +197,8 @@
                         <div class="one_fourth">
                             <div class="tour_attribute_icon ti-calendar"></div>
                             <div class="tour_attribute_content">
-                                <?= $i['tanggal']; ?> </div>
+                                <?= format_indo($i['tanggal']); ?> </div>
+                                <!-- <?= $i['tanggal']; ?> </div> -->
                         </div>
 
                         <div class="one_fourth last">
@@ -231,7 +232,7 @@
 
                         <li>
                             <div class="single_tour_departure_title">Tanggal Event</div>
-                            <div class="single_tour_departure_content"><?= $i['tanggal']; ?></div>
+                            <div class="single_tour_departure_content"><?= format_indo($i['tanggal']); ?></div>
                         </li>
 
                         <li>
@@ -335,7 +336,7 @@
 
                                             <h7><?= $u['nama']; ?></h7>
 
-                                            <div class="comment_date"><?= $u['tanggal']; ?></div>
+                                            <div class="comment_date"><?= format_indo($u['tanggal']); ?></div>
                                             <div class="comment_text">
                                                 <p><?= $u['feedback']; ?></p>
                                                 <div class="comment_rating_wrapper">

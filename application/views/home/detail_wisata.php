@@ -320,7 +320,7 @@
 
                                             <h7><?= $u['nama']; ?></h7>
 
-                                            <div class="comment_date"><?= $u['tanggal']; ?></div>
+                                            <div class="comment_date"><?= format_indo($u['tanggal']); ?></div>
                                             <div class="comment_text">
                                                 <p><?= $u['feedback']; ?></p>
                                                 <div class="comment_rating_wrapper">

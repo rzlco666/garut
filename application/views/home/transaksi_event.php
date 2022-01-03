@@ -36,8 +36,7 @@
                                 <div class="two_third last">
                                     <span class="icon fa fa-ticket"></span>&nbsp;Event
                                     &nbsp;
-                                    <?php $date = date_create($d->transaction_time);
-                                    echo date_format($date, "d M Y"); ?>
+                                    <?php echo format_indo2($d->transaction_time); ?>
                                     &nbsp;
                                     <?php
                                     if ($d->status_code == "200") {
@@ -188,7 +187,7 @@
                         <tr>
                             <td>Transcation Time</td>
                             <td>:</td>
-                            <td><?= $d->transaction_time; ?></td>
+                            <td><?php echo format_indo($d->transaction_time); ?></td>
                         </tr>
                         <tr>
                             <td>Status Transaksi</td>

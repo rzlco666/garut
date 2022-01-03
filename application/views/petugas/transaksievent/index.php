@@ -50,7 +50,7 @@
                                                     $string = str_replace('_', ' ', $text);
                                                     echo ucwords($string);
                                                     echo ' ' . strtoupper($isi['bank']) ?></td>
-                                                <td><?= $isi['transaction_time']; ?></td>
+                                                <td><?php echo format_indo($isi['transaction_time']); ?></td>
                                                 <td><?php
                                                     if ($isi['status_code'] == "200") {
                                                     ?>

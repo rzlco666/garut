@@ -50,7 +50,7 @@
                                                 <td><?= $isi['deskripsi']; ?></td>
                                                 <td>Rp. <?= number_format($isi['harga'], '0', '', '.'); ?></td>
                                                 <td><?= $isi['durasi']; ?></td>
-                                                <td><?= $isi['tanggal']; ?></td>
+                                                <td><?php echo format_indo2($isi['tanggal']); ?></td>
                                                 <td><?= $isi['slot']; ?></td>
                                                 <td><img width="80%" src="<?= base_url('public/upload/image/event/'); ?><?= $isi['thumbnail']; ?>" class="img-responsive" alt="..."></td>
                                                 <td><img width="80%" src="<?= base_url('public/upload/image/event/header/'); ?><?= $isi['header']; ?>" class="img-responsive" alt="..."></td>
