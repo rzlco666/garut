@@ -68,7 +68,7 @@
                                 <div class="single_tour_booking_wrapper themeborder contact_form7">
                                     <div role="form" class="wpcf7" id="wpcf7-f142-o1" lang="en-US" dir="ltr">
                                         <div class="screen-reader-response"></div>
-                                        <form id="payment-form" method="post" action="<?= site_url() ?>home/finish" class="wpcf7-form" novalidate="novalidate">
+                                        <form id="payment-form" method="post" action="<?= site_url() ?>Home/finish" class="wpcf7-form" novalidate="novalidate">
                                             <input type="hidden" name="result_type" id="result-type" value="">
                                             <input type="hidden" name="result_data" id="result-data" value="">
                                             <p>
