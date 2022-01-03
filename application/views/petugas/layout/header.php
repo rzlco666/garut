@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Petugas &mdash; <?= $title; ?></title>
-    <link rel="icon" href="<?= base_url('assets/'); ?>images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?= base_url('assets_wisatawan/'); ?>images/favicon.ico" type="image/x-icon">
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/bootstrap/css/bootstrap.min.css">
