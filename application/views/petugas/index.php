@@ -41,7 +41,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="card card-statistic-2">
                                 <div class="card-chart">
-                                    <canvas id="balance-chart" height="80"></canvas>
+                                    <canvas id="test-chart" height="80"></canvas>
                                 </div>
                                 <div class="card-icon shadow-primary bg-primary">
                                     <i class="fas fa-dollar-sign"></i>
@@ -83,10 +83,10 @@
                         <div class="col-lg-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Budget vs Sales</h4>
+                                    <h4>Wisata vs Event</h4>
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="myChart" height="158"></canvas>
+                                    <canvas id="myChartt" height="158"></canvas>
                                 </div>
                             </div>
                         </div>

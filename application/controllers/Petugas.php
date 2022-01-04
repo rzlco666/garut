@@ -18,7 +18,7 @@ class Petugas extends CI_Controller
         }
 
         $data['title'] = 'Dashboard';
-        
+
         $data['wisata'] = $this->templates->query("SELECT tw.order_id, tw.gross_amount, tw.payment_type, tw.transaction_time, tw.bank, tw.va_number,
         tw.pdf_url, tw.status_code, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
         tw.id_wisata, w.nama nama_wisata, w.thumbnail thumbnail, w.harga harga
@@ -28,9 +28,16 @@ class Petugas extends CI_Controller
         ORDER BY transaction_time DESC LIMIT 5")->result_array();
         $data['pendapatan_wisata'] = $this->templates->query("SELECT SUM(gross_amount) AS total, status_code FROM `transaksi_wisata` WHERE status_code = 200")->result();
         $data['transaksi_wisata'] = $this->templates->view('transaksi_wisata')->num_rows();
-        $data['transaksi_wisata_pending'] = $this->templates->view_where('transaksi_wisata',['status_code'=>201])->num_rows();
-        $data['transaksi_wisata_acc'] = $this->templates->view_where('transaksi_wisata',['status_code'=>200])->num_rows();
-        $data['transaksi_wisata_cancel'] = $this->templates->view_where('transaksi_wisata',['status_code'=>202])->num_rows();
+        $data['transaksi_wisata_pending'] = $this->templates->view_where('transaksi_wisata', ['status_code' => 201])->num_rows();
+        $data['transaksi_wisata_acc'] = $this->templates->view_where('transaksi_wisata', ['status_code' => 200])->num_rows();
+        $data['transaksi_wisata_cancel'] = $this->templates->view_where('transaksi_wisata', ['status_code' => 202])->num_rows();
+        $data['grafik_wisata'] = $this->templates->query("SELECT
+        SUM(gross_amount) as jumlah, DATE_FORMAT(transaction_time,'%d-%M-%Y') as bulan
+        FROM
+        transaksi_wisata
+        WHERE status_code = 200
+        GROUP BY DATE_FORMAT(transaction_time,'%d-%M-%Y')
+        ORDER BY transaction_time ASC")->result();
 
         $data['event'] = $this->templates->query("SELECT tw.order_id, tw.gross_amount, tw.payment_type, tw.transaction_time, tw.bank, tw.va_number,
         tw.pdf_url, tw.status_code, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
@@ -41,14 +48,32 @@ class Petugas extends CI_Controller
         ORDER BY transaction_time DESC LIMIT 5")->result_array();
         $data['pendapatan_event'] = $this->templates->query("SELECT SUM(gross_amount) AS total, status_code FROM `transaksi_event` WHERE status_code = 200")->result();
         $data['transaksi_event'] = $this->templates->view('transaksi_event')->num_rows();
-        $data['transaksi_event_pending'] = $this->templates->view_where('transaksi_event',['status_code'=>201])->num_rows();
-        $data['transaksi_event_acc'] = $this->templates->view_where('transaksi_event',['status_code'=>200])->num_rows();
-        $data['transaksi_event_cancel'] = $this->templates->view_where('transaksi_event',['status_code'=>202])->num_rows();
+        $data['transaksi_event_pending'] = $this->templates->view_where('transaksi_event', ['status_code' => 201])->num_rows();
+        $data['transaksi_event_acc'] = $this->templates->view_where('transaksi_event', ['status_code' => 200])->num_rows();
+        $data['transaksi_event_cancel'] = $this->templates->view_where('transaksi_event', ['status_code' => 202])->num_rows();
+        $data['grafik_event'] = $this->templates->query("SELECT
+        SUM(gross_amount) as jumlah, DATE_FORMAT(transaction_time,'%d-%M-%Y') as bulan
+        FROM
+        transaksi_event
+        WHERE status_code = 200
+        GROUP BY DATE_FORMAT(transaction_time,'%d-%M-%Y')
+        ORDER BY transaction_time ASC")->result();
+
+        $data['grafik_perbandingan'] = $this->templates->query("SELECT
+        SUM(tw.gross_amount) as jumlah_wisata,
+        IFNULL((SELECT SUM(gross_amount) as jumlah_event FROM transaksi_event WHERE status_code=200 AND DATE_FORMAT(transaction_time,'%M-%y') = DATE_FORMAT(tw.transaction_time,'%M-%y') GROUP BY DATE_FORMAT(transaction_time,'%M-%y')), 0) AS jumlah_event,
+        DATE_FORMAT(tw.transaction_time,'%M-%y') as bulan
+        FROM
+        transaksi_wisata tw
+        WHERE tw.status_code = 200
+        GROUP BY DATE_FORMAT(tw.transaction_time,'%M-%y')
+        ORDER BY tw.transaction_time ASC")->result();
 
         $this->load->view('petugas/layout/header', $data);
         $this->load->view('petugas/layout/sidebar');
         $this->load->view('petugas/index', $data);
         $this->load->view('petugas/layout/footer');
+        $this->load->view('petugas/script', $data);
     }
 
     public function login()
@@ -57,7 +82,7 @@ class Petugas extends CI_Controller
         if ($this->session->userdata('is_petugas') == TRUE) {
             redirect('Petugas/index', 'refresh');
         }
-        
+
         $data['title'] = 'Login';
 
         $this->load->view('petugas/login/index', $data);
