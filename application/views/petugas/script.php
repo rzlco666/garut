@@ -21,10 +21,10 @@ foreach ($grafik_wisata as $item) {
     var myChart = new Chart(balance_chart, {
         type: 'line',
         data: {
-            labels: [<?= $bln_laporan; ?>],
+            labels: [<?= $bln_laporan; ?>'Test'],
             datasets: [{
                 label: 'Jumlah',
-                data: [<?= $jumlah; ?>],
+                data: [<?= $jumlah; ?>10000],
                 backgroundColor: balance_chart_bg_color,
                 borderWidth: 3,
                 borderColor: 'rgba(63,82,227,1)',
@@ -93,10 +93,10 @@ foreach ($grafik_event as $item) {
     var myChart = new Chart(sales_chart, {
         type: 'line',
         data: {
-            labels: [<?= $bln_laporann; ?>],
+            labels: [<?= $bln_laporann; ?>'Test'],
             datasets: [{
                 label: 'Jumlah',
-                data: [<?= $jumlahh; ?>],
+                data: [<?= $jumlahh; ?>20000],
                 borderWidth: 2,
                 backgroundColor: balance_chart_bg_color,
                 borderWidth: 3,
@@ -150,9 +150,9 @@ $jumlahha = null;
 $bln_laporannn = "";
 foreach ($grafik_perbandingan as $item) {
     $jummm = $item->jumlah_wisata;
-    $jumlahh .= "$jummm" . ", ";
-    $jummma = $item->jumlah_event;
-    $jumlahha .= "$jummma" . ", ";
+    $jumlahhh .= "$jummm" . ", ";
+    $jummmm = $item->jumlah_event;
+    $jumlahha .= "$jummmm" . ", ";
 
     $jurrr = $item->bulan;
     $bln_laporannn .= "'$jurrr'" . ", ";
@@ -164,10 +164,10 @@ foreach ($grafik_perbandingan as $item) {
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: [<?= $bln_laporannn;?>'Testing'],
+            labels: [<?= $bln_laporannn;?>'Test'],
             datasets: [{
                     label: 'Wisata',
-                    data: [<?= $jumlahh;?>10000],
+                    data: [<?= $jumlahhh;?>10000],
                     borderWidth: 2,
                     backgroundColor: 'rgba(63,82,227,.8)',
                     borderWidth: 0,
@@ -204,7 +204,7 @@ foreach ($grafik_perbandingan as $item) {
                     },
                     ticks: {
                         beginAtZero: true,
-                        stepSize: 100000,
+                        stepSize: 50000,
                         callback: function(value, index, values) {
                             return 'Rp ' + value;
                         }

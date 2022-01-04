@@ -271,9 +271,8 @@
             <div class="inner">
               <div style="margin:auto;width:100%">
                 <p><img class="alignnone wp-image-3106 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Map-Marker-300x300.png" width="150" height="150" alt="" /></p>
-                <h4 class="p1"><span class="s1"><b>Handpicked Hotels</b></span></h4>
-                <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget
-                  dolor. Aenean massa</p>
+                <h4 class="p1"><span class="s1"><b>Lokasi Lengkap</b></span></h4>
+                <p>Cari seluruh wisata maupun event Garut dan kunjungi lokasinya</p>
               </div>
             </div>
           </div>
@@ -288,9 +287,8 @@
               <div style="margin:auto;width:100%">
                 <p><img class="alignnone wp-image-3107 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Worldwide-Location-300x300.png" width="150" height="150" alt="" />
                 </p>
-                <h4 class="p1"><span class="s1"><b>World Class Service</b></span></h4>
-                <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget
-                  dolor. Aenean massa</p>
+                <h4 class="p1"><span class="s1"><b>Layanan Terbaik</b></span></h4>
+                <p>Cari wisata maupun event dan jika menemui kesulitan tersedia live chat untuk bertanya</p>
               </div>
             </div>
           </div>
@@ -304,9 +302,8 @@
             <div class="inner">
               <div style="margin:auto;width:100%">
                 <p><img class="alignnone wp-image-3108 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Hot-Air-Balloon-300x300.png" width="140" height="140" alt="" /></p>
-                <h4 class="p1"><span class="s1"><b>Best Price Guarantee</b></span></h4>
-                <p>Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget
-                  dolor. Aenean massa</p>
+                <h4 class="p1"><span class="s1"><b>Mudah</b></span></h4>
+                <p>Wisata dengan mudah, pesan tiket lewat website</p>
               </div>
             </div>
           </div>

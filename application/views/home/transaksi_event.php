@@ -64,9 +64,13 @@
                                     ?>
                                         <font color="green"><b>Lunas</b></font>
                                     <?php
-                                    } else {
+                                    } elseif ($d->status_code == "201") {
                                     ?>
                                         <font color="yellow"><b>Pending</b></font>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <font color="red"><b>Dibatalkan</b></font>
                                     <?php
                                     }
                                     ?>
@@ -104,9 +108,13 @@
                                                 }
                                                 ?>
                                             <?php
-                                            } else {
+                                            } elseif ($d->status_code == "201") {
                                             ?>
                                                 <a href="<?= $d->pdf_url; ?>" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Cara Bayar</a>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <a href="" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Dibatalkan</a>
                                             <?php
                                             }
                                             ?>
@@ -214,17 +222,19 @@
                             <td>Status Transaksi</td>
                             <td>:</td>
                             <td><?php
-
                                 if ($d->status_code == "200") {
                                 ?>
-                                    <font color="green">Lunas</font>
+                                    <font color="green"><b>Lunas</b></font>
+                                <?php
+                                } elseif ($d->status_code == "201") {
+                                ?>
+                                    <font color="yellow"><b>Pending</b></font>
                                 <?php
                                 } else {
                                 ?>
-                                    <font color="yellow">Pending</font>
+                                    <font color="red"><b>Dibatalkan</b></font>
                                 <?php
                                 }
-
                                 ?>
                             </td>
                         </tr>

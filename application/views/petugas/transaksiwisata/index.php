@@ -58,10 +58,16 @@
                                                             <span class="badge badge-success">Lunas</span>
                                                         </div>
                                                     <?php
-                                                    } else {
+                                                    } elseif ($isi['status_code'] == "201") {
                                                     ?>
                                                         <div class="badges">
                                                             <span class="badge badge-warning">Pending</span>
+                                                        </div>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <div class="badges">
+                                                            <span class="badge badge-danger">Dibatalkan</span>
                                                         </div>
                                                     <?php
                                                     }

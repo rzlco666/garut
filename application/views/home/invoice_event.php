@@ -174,9 +174,13 @@
                         ?>
                             Lunas
                         <?php
-                        } else {
+                        } elseif ($i['status_code'] == "201") {
                         ?>
                             Pending
+                        <?php
+                        } else {
+                        ?>
+                            Dibatalkan
                         <?php
                         }
                         ?>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Petugas &mdash; <?= $title; ?></title>
-  <link rel="icon" href="<?= base_url('assets/'); ?>images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?= base_url('assets_wisatawan/'); ?>images/favicon.ico" type="image/x-icon">
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?= base_url('assets_petugas/'); ?>modules/bootstrap/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
             <div class="login-brand">
-              <a href="<?= base_url('/'); ?>"><img src="<?= base_url('assets/'); ?>images/logo.png" alt="" width="225" /></a>
+              <a href="<?= base_url('/'); ?>"><img src="<?= base_url('assets_wisatawan/'); ?>images/logo.png" alt="" width="225" /></a>
             </div>
 
             <div class="card card-primary">
