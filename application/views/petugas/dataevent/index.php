@@ -47,7 +47,7 @@
                                                 <td><?= $no; ?></td>
                                                 <td><?= $isi['nama']; ?></td>
                                                 <td><?= $isi['lokasi']; ?></td>
-                                                <td><?= $isi['deskripsi']; ?></td>
+                                                <td><?= implode(' ', array_slice(explode(' ', $isi['deskripsi']), 0, 5)); ?> ...</td>
                                                 <td>Rp. <?= number_format($isi['harga'], '0', '', '.'); ?></td>
                                                 <td><?= $isi['durasi']; ?></td>
                                                 <td><?php echo format_indo2($isi['tanggal']); ?></td>

@@ -44,7 +44,7 @@
                                                 <td><?= $no; ?></td>
                                                 <td><?= $isi['nama']; ?></td>
                                                 <td><?= $isi['lokasi']; ?></td>
-                                                <td><?= $isi['deskripsi']; ?></td>
+                                                <td><?= implode(' ', array_slice(explode(' ', $isi['deskripsi']), 0, 5)); ?> ...</td>
                                                 <td>Rp. <?= number_format($isi['harga'], '0', '', '.'); ?></td>
                                                 <td><img width="80%" src="<?= base_url('public/upload/image/wisata/'); ?><?= $isi['thumbnail']; ?>" class="img-responsive" alt="..."></td>
                                                 <td><img width="80%" src="<?= base_url('public/upload/image/wisata/header/'); ?><?= $isi['header']; ?>" class="img-responsive" alt="..."></td>
