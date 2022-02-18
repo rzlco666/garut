@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <div class="footer-left">
-        Copyright &copy; Garut 2021
+        Copyright &copy; ITS PKU Muhammadiyah Surakarta
     </div>
     <div class="footer-right">
 

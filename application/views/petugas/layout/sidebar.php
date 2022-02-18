@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('Petugas/'); ?>">Garut</a>
+            <a href="<?= base_url('Petugas/'); ?>">Event</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="<?= base_url('Petugas/'); ?>">Gr</a>
+            <a href="<?= base_url('Petugas/'); ?>">Ev</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
@@ -15,13 +15,13 @@
             <li class="<?php if ($title == 'Data Petugas') {
                             echo 'active';
                         } ?>"><a class="nav-link" href="<?= base_url('DataPetugas/'); ?>"><i class="far fa-file-alt"></i> <span>Data Petugas</span></a></li>
-            <li class="menu-header">Wisata</li>
+            <!-- <li class="menu-header">Wisata</li>
             <li class="<?php if ($title == 'Data Wisata') {
                             echo 'active';
                         } ?>"><a class="nav-link" href="<?= base_url('DataWisata/'); ?>"><i class="fas fa-map-marker-alt"></i> <span>Data Wisata</span></a></li>
             <li class="<?php if ($title == 'Transaksi Wisata') {
                             echo 'active';
-                        } ?>"><a class="nav-link" href="<?= base_url('TransaksiWisata/'); ?>"><i class="fas fa-ticket-alt"></i> <span>Transaksi Wisata</span></a></li>
+                        } ?>"><a class="nav-link" href="<?= base_url('TransaksiWisata/'); ?>"><i class="fas fa-ticket-alt"></i> <span>Transaksi Wisata</span></a></li> -->
             <li class="menu-header">Event</li>
             <li class="<?php if ($title == 'Data Event') {
                             echo 'active';
