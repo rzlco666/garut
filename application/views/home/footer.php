@@ -12,7 +12,7 @@
       <h2 class="widgettitle">Contact Info</h2>
       <div class="textwidget">
         <p><span class="ti-mobile" style="margin-right:10px;"></span>1-567-124-44227</p>
-        <p><span class="ti-location-pin" style="margin-right:10px;"></span>Garut</p>
+        <p><span class="ti-location-pin" style="margin-right:10px;"></span>ITS PKU Muhammadiyah Surakarta</p>
         <div style="margin-top:20px;">
           <div class="social_wrapper shortcode dark ">
             <ul>
@@ -29,7 +29,7 @@
       <h2 class="widgettitle">Menu</h2>
       <ul class="footer_nav">
         <li class="menu-item"><a href="<?= base_url('/'); ?>">Home</a></li>
-        <li class="menu-item"><a href="<?= base_url('Home/wisata'); ?>">Wisata</a></li>
+        <!-- <li class="menu-item"><a href="<?= base_url('Home/wisata'); ?>">Wisata</a></li> -->
         <li class="menu-item"><a href="<?= base_url('Home/event'); ?>">Event</a></li>
       </ul>
       <br class="clear" />
@@ -40,7 +40,7 @@
 <div class="footer_bar  ppb_wrapper ">
 
   <div class="footer_bar_wrapper ">
-    <div id="copyright"><?= date("Y"); ?> © Copyright Garut</div>
+    <div id="copyright"><?= date("Y"); ?> © Copyright ITS PKU Muhammadiyah Surakarta</div>
     <br class="clear" />
     <a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
   </div>
