@@ -1,4 +1,4 @@
-<div id="page_caption" class="hasbg parallax" data-jarallax-video="https://www.youtube.com/watch?v=q8WOItIN6Pc">
+<div id="page_caption" class="hasbg parallax" data-jarallax-video="https://youtu.be/WpGhiIbFSYE">
 
     <div class="page_title_wrapper">
         <div class="page_title_inner">
