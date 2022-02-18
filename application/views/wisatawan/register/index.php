@@ -79,7 +79,7 @@
                   <?php echo form_error('no_hp', '<div class="text-danger"><small>', '</small></div>'); ?>
                 </p>
                 <p>
-                  <label> Almat
+                  <label> Alamat
                     <br />
                     <span class="wpcf7-form-control-wrap your-name"><input type="text" name="alamat" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Sukamaju, Kersamanah, Garut" /></span> </label>
                   <?php echo form_error('alamat', '<div class="text-danger"><small>', '</small></div>'); ?>
