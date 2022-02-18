@@ -1,11 +1,11 @@
     <div class="ppb_wrapper  ">
-      <div class="one withsmallpadding ppb_tour_search_youtube parallax withbg " data-jarallax-video="https://youtu.be/LEzsarKxfZ4" style="text-align:center;height:800px;color:#ffffff;">
+      <div class="one withsmallpadding ppb_tour_search_youtube parallax withbg " data-jarallax-video="https://www.youtube.com/watch?v=q8WOItIN6Pc" style="text-align:center;height:800px;color:#ffffff;">
         <div class="overlay_background" style="background:#000000;background:rgb(0,0,0,0.3);background:rgba(0,0,0,0.3);"></div>
         <div class="center_wrapper">
           <div class="inner_content">
             <div class="standard_wrapper">
-              <h2 class="ppb_title" style="color:#ffffff;">Pariwisata Garut</h2>
-              <div class="page_tagline" style="color:#ffffff;">Wisata dan Event.</div>
+              <h2 class="ppb_title" style="color:#ffffff;">Manajemen Event</h2>
+              <div class="page_tagline" style="color:#ffffff;">ITS PKU Muhammadiyah Surakarta</div>
               <form id="tour_search_form" class="tour_search_form" action="<?php echo base_url("Home/pencarian/") ?>">
                 <div class="tour_search_wrapper">
                   <div class="one_fourth themeborder">
@@ -15,8 +15,8 @@
                   </div>
                   <div class="one_fourth themeborder">
                     <select id="kategori" name="kategori">
-                      <option value="1" name="kategori">Wisata</option>
                       <option value="0" name="kategori">Event</option>
+                      <option value="1" name="kategori">Wisata</option>
                     </select>
                     <span class="ti-tag"></span>
                   </div>
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-top:70px;margin-bottom:50px;">
+    <!-- <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-top:70px;margin-bottom:50px;">
       <div class="standard_wrapper">
         <div class="page_content_wrapper">
           <div class="inner">
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="ppb_destination_grid one nopadding " style="margin-top:50px;margin-bottom:50px;">
       <div class="page_content_wrapper page_main_content sidebar_content full_width fixed_column">
         <div class="standard_wrapper">
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div> -->
-    <div class="ppb_tour_classic one nopadding " style="margin-bottom:50px;">
+    <!-- <div class="ppb_tour_classic one nopadding " style="margin-bottom:50px;">
       <div class="page_content_wrapper page_main_content sidebar_content full_width fixed_column">
         <div class="standard_wrapper">
           <div id="1568019739482243752" class="portfolio_filter_wrapper gallery classic three_cols" data-columns="3">
@@ -158,14 +158,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="one withsmallpadding ppb_header " style="text-align:center;padding:0px 0 0px 0;margin-top:10px;margin-bottom:50px;">
       <div class="standard_wrapper">
         <div class="page_content_wrapper">
           <div class="inner">
             <div style="margin:auto;width:100%">
               <h2 class="ppb_title">Event</h2>
-              <div class="page_tagline">List Event Garut</div>
+              <div class="page_tagline">List Event</div>
             </div>
           </div>
         </div>
@@ -272,7 +272,7 @@
               <div style="margin:auto;width:100%">
                 <p><img class="alignnone wp-image-3106 size-medium" src="<?= base_url('assets_wisatawan/'); ?>images/Map-Marker-300x300.png" width="150" height="150" alt="" /></p>
                 <h4 class="p1"><span class="s1"><b>Lokasi Lengkap</b></span></h4>
-                <p>Cari seluruh wisata maupun event Garut dan kunjungi lokasinya</p>
+                <p>Cari seluruh wisata maupun event dan kunjungi lokasinya</p>
               </div>
             </div>
           </div>
