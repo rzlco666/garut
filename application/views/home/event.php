@@ -1,11 +1,11 @@
-<div id="page_caption" class="hasbg parallax" data-jarallax-video="https://youtu.be/WpGhiIbFSYE">
+<div id="page_caption" class="hasbg parallax" data-jarallax-video="https://youtu.be/LEzsarKxfZ4">
 
     <div class="page_title_wrapper">
         <div class="page_title_inner">
             <div class="page_title_content">
                 <h1>Event</h1>
                 <div class="page_tagline">
-                    Event terlengkap </div>
+                    Event kota Garut terlengkap </div>
             </div>
         </div>
     </div>
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <!-- <div class="sidebar_wrapper left_sidebar">
+            <div class="sidebar_wrapper left_sidebar">
                 <div class="sidebar">
 
                     <div class="content">
@@ -231,7 +231,7 @@
                     </div>
 
                 </div>
-            </div> -->
+            </div>
 
         </div>
     </div>
