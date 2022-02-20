@@ -210,18 +210,18 @@
                     <br class="clear" />
                     <div class="single_tour_content">
                         <p class="p1"><?= $i['deskripsi']; ?></p>
-                        <!-- <div id="attachment_48" style="width: 1034px" class="wp-caption alignnone"><img class="wp-image-48 size-large" src="<?= base_url('public/upload/image/event/header/'); ?><?= $i['header']; ?>" width="1024" />
+                        <div id="attachment_48" style="width: 1034px" class="wp-caption alignnone"><img class="wp-image-48 size-large" src="<?= base_url('public/upload/image/event/header/'); ?><?= $i['header']; ?>" width="1024" />
                             <p class="wp-caption-text">Foto Event <?= $i['nama']; ?>.</p>
-                        </div> -->
+                        </div>
                         <div id="attachment_48" style="width: 1034px" class="wp-caption alignnone"><img class="wp-image-48 size-large" src="<?= base_url('public/upload/image/event/event1/'); ?><?= $i['event1']; ?>" width="1024" />
                             <p class="wp-caption-text">Foto Event <?= $i['nama']; ?>.</p>
                         </div>
-                        <!-- <div id="attachment_48" style="width: 1034px" class="wp-caption alignnone"><img class="wp-image-48 size-large" src="<?= base_url('public/upload/image/event/event2/'); ?><?= $i['event2']; ?>" width="1024" />
+                        <div id="attachment_48" style="width: 1034px" class="wp-caption alignnone"><img class="wp-image-48 size-large" src="<?= base_url('public/upload/image/event/event2/'); ?><?= $i['event2']; ?>" width="1024" />
                             <p class="wp-caption-text">Foto Event <?= $i['nama']; ?>.</p>
                         </div>
                         <div id="attachment_48" style="width: 1034px" class="wp-caption alignnone"><img class="wp-image-48 size-large" src="<?= base_url('public/upload/image/event/event3/'); ?><?= $i['event3']; ?>" width="1024" />
                             <p class="wp-caption-text">Foto Event <?= $i['nama']; ?>.</p>
-                        </div> -->
+                        </div>
                     </div>
 
                     <ul class="single_tour_departure_wrapper themeborder">
