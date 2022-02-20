@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <div class="footer-left">
-        Copyright &copy; ITS PKU Muhammadiyah Surakarta
+        Copyright &copy; Garut
     </div>
     <div class="footer-right">
 
