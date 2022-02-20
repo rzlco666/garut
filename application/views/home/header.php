@@ -5,7 +5,7 @@
 
   <link rel="icon" href="<?= base_url('assets_wisatawan/'); ?>images/favicon.ico" type="image/x-icon">
 
-  <title>Event &mdash; <?= $title; ?></title>
+  <title>Wisatawan &mdash; <?= $title; ?></title>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -82,7 +82,7 @@
                                   echo 'current-menu-item';
                                 } ?>"><a href="<?= base_url('/'); ?>">Home</a>
           </li>
-          <!-- <li class="menu-item menu-item-has-children arrow <?php if ($title == 'Wisata' || $title == 'Transaksi Wisata') {
+          <li class="menu-item menu-item-has-children arrow <?php if ($title == 'Wisata' || $title == 'Transaksi Wisata') {
                                                               echo 'current-menu-item';
                                                             } ?>"><a href="#">Wisata</a>
             <ul class="sub-menu">
@@ -93,7 +93,7 @@
                     Wisata</a></li>
               <?php endif ?>
             </ul>
-          </li> -->
+          </li>
           <li class="menu-item menu-item-has-children arrow <?php if ($title == 'Event' || $title == 'Transaksi Event') {
                                                               echo 'current-menu-item';
                                                             } ?>"><a href="#">Event</a>
@@ -180,7 +180,7 @@
                                                 echo 'current-menu-item';
                                               } ?>"><a href="<?= base_url('/'); ?>">Home</a>
                         </li>
-                        <!-- <li class="menu-item menu-item-has-children arrow <?php if ($title == 'Wisata' || $title == 'Transaksi Wisata') {
+                        <li class="menu-item menu-item-has-children arrow <?php if ($title == 'Wisata' || $title == 'Transaksi Wisata') {
                                                                             echo 'current-menu-item';
                                                                           } ?>"><a href="#">Wisata</a>
                           <ul class="sub-menu">
@@ -191,7 +191,7 @@
                                   Wisata</a></li>
                             <?php endif ?>
                           </ul>
-                        </li> -->
+                        </li>
                         <li class="menu-item menu-item-has-children arrow <?php if ($title == 'Event' || $title == 'Transaksi Event') {
                                                                             echo 'current-menu-item';
                                                                           } ?>"><a href="#">Event</a>
