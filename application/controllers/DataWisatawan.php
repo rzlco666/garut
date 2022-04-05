@@ -63,7 +63,7 @@ class DataWisatawan extends CI_Controller
                 $data[$key][]  = $lists->no_hp;
                 if ($lists->status == 0) {
                     $data[$key][]  = 'Nonaktif';
-                    $data[$key][]  = '<form action="' . base_URL("datawisatawan/aktivasi/") . '" method="POST">
+                    $data[$key][]  = '<form action="' . base_URL("DataWisatawan/aktivasi/") . '" method="POST">
                 <input type="hidden" name="id_wisatawan" value="' . $lists->id_wisatawan . '">
                 <button type="submit" name="edit_btn" class="btn btn-success btn-sm">Aktif</button>
             </form>';
