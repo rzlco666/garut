@@ -69,7 +69,7 @@ class DataWisatawan extends CI_Controller
             </form>';
                 } else {
                     $data[$key][]  = 'Aktif';
-                    $data[$key][]  = '<form action="' . base_URL("datawisatawan/blokir") . '" method="POST">
+                    $data[$key][]  = '<form action="' . base_URL("DataWisatawan/blokir") . '" method="POST">
                     <input type="hidden" name="id_wisatawan" value="' . $lists->id_wisatawan . '">
                     <button type="submit" name="edit_btn" class="btn btn-danger btn-sm">BLOCK</button>
                 </form>';
