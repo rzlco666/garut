@@ -45,7 +45,8 @@ class DataPetugas extends CI_Controller
                 $data[$key][]  = $lists->email;
                 /* $data[$key][]  = $lists->password; */
                 $data[$key][]  = $lists->alamat;
-                $data[$key][]  = '<a href="javascript:;" class="btn btn-warning btn-sm" onclick="edit(' . $lists->id_petugas . ')">Edit</a> <a href="javascript:;" class="btn btn-danger btn-sm" onclick="hapus(' . $lists->id_petugas . ')">Hapus</a>';
+                $data[$key][]  = '<a href="javascript:;" class="btn btn-warning btn-sm" onclick="edit(' . $lists->id_petugas . ')">Edit</a>';
+                /*$data[$key][]  = '<a href="javascript:;" class="btn btn-warning btn-sm" onclick="edit(' . $lists->id_petugas . ')">Edit</a> <a href="javascript:;" class="btn btn-danger btn-sm" onclick="hapus(' . $lists->id_petugas . ')">Hapus</a>';*/
             }
 
             // Output menggunakan JSON

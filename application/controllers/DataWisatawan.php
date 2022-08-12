@@ -71,8 +71,11 @@ class DataWisatawan extends CI_Controller
                     $data[$key][]  = 'Aktif';
                     $data[$key][]  = '<form action="' . base_URL("DataWisatawan/blokir") . '" method="POST">
                     <input type="hidden" name="id_wisatawan" value="' . $lists->id_wisatawan . '">
-                    <button type="submit" name="edit_btn" class="btn btn-danger btn-sm">BLOCK</button>
                 </form>';
+                    /*$data[$key][]  = '<form action="' . base_URL("DataWisatawan/blokir") . '" method="POST">
+                    <input type="hidden" name="id_wisatawan" value="' . $lists->id_wisatawan . '">
+                    <button type="submit" name="edit_btn" class="btn btn-danger btn-sm">BLOCK</button>
+                </form>';*/
                 }
                 /* $data[$key][]  = '<a href="javascript:;" class="btn btn-warning btn-sm" onclick="edit(' . $lists->id_wisatawan . ')">Edit</a> <a href="javascript:;" class="btn btn-danger btn-sm" onclick="hapus(' . $lists->id_wisatawan . ')">Hapus</a>'; */
             }

@@ -7,32 +7,6 @@
             <h2 class="ppb_title" style="color:#ffffff;">Pariwisata Garut</h2>
               <div class="page_tagline" style="color:#ffffff;">Wisata dan Event.</div>
               <form id="tour_search_form" class="tour_search_form" action="<?php echo base_url("Home/pencarian/") ?>">
-                <div class="tour_search_wrapper">
-                  <div class="one_fourth themeborder">
-                    <input id="nama" name="nama" type="text" autocomplete="off" placeholder="Destinasi/Event" />
-                    <span class="ti-search"></span>
-                    <div id="autocomplete" class="autocomplete" data-mousedown="false"></div>
-                  </div>
-                  <div class="one_fourth themeborder">
-                    <select id="kategori" name="kategori">
-                      <option value="0" name="kategori">Event</option>
-                      <option value="1" name="kategori">Wisata</option>
-                    </select>
-                    <span class="ti-tag"></span>
-                  </div>
-                  <div class="one_fourth themeborder">
-                    <select id="sort_by" name="sort_by">
-                      <option value="0" name="sort_by">Sort By Popularity</option>
-                      <option value="1" name="sort_by">Sort By Review Score</option>
-                      <option value="2" name="sort_by">Price Low to High</option>
-                      <option value="3" name="sort_by">Price High to Low</option>
-                    </select>
-                    <span class="ti-exchange-vertical"></span>
-                  </div>
-                  <div class="one_fourth last themeborder">
-                    <input id="tour_search_btn" type="submit" class="button" value="Search" />
-                  </div>
-                </div>
             </div>
             </form>
           </div>
