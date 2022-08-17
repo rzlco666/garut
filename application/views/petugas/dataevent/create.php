@@ -67,33 +67,38 @@
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail (368x420)</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                                    	<input type="file" name="thumbnail" class="form-control-file" accept="image/png, image/jpeg, image/jpg" id="thumbnail">
+										<label for="thumbnail" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>368x420 pixel</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header (1920x412)</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="header" class="form-control" id="header">
+                                    	<input type="file" name="header" class="form-control-file" accept="image/png, image/jpeg, image/jpg" id="header">
+										<label for="header" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>1920x412 pixel</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Event 1</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="event1" class="form-control" id="event1">
+                                    <input type="file" name="event1" class="form-control-file" accept="image/png, image/jpeg, image/jpg" id="event1">
+										<label for="event1" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Event 2</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="event2" class="form-control" id="event2">
+                                    <input type="file" name="event2" class="form-control-file" accept="image/png, image/jpeg, image/jpg" id="event2">
+										<label for="event2" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Event 3</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="event3" class="form-control" id="event3">
+                                    <input type="file" name="event3" class="form-control-file" accept="image/png, image/jpeg, image/jpg" id="event3">
+										<label for="event3" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">

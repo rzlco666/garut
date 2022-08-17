@@ -14,7 +14,7 @@
             processing: true,
             serverSide: true,
             bDestroy: true,
-            responsive: true,
+            responsive: false,
             ajax: {
                 url: "<?= base_url('DataWisatawan/get_wisatawan'); ?>",
                 type: "POST",

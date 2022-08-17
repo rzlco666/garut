@@ -1,3 +1,55 @@
+<style>
+	.vendor_logo_hide1{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo1{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide2{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo2{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide3{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo3{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide4{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo4{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide5{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo5{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+</style>
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
@@ -57,33 +109,38 @@
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail (368x420)</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                                            <input type="file" name="thumbnail" class="vendor_logo_hide1" id="thumbnail" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="thumbnail" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>368x420 pixel</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header (1920x412)</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="header" class="form-control" id="header">
+                                            <input type="file" name="header" class="vendor_logo_hide2" id="header" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="header" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>1920x412 pixel</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 1</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="destinasi1" class="form-control" id="destinasi1">
+                                    	<input type="file" name="destinasi1" class="vendor_logo_hide3" id="destinasi1" accept="image/png, image/jpeg, image/jpg"><br>
+										<label for="destinasi1" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 2</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="destinasi2" class="form-control" id="destinasi2">
+                                    	<input type="file" name="destinasi2" class="vendor_logo_hide4" id="destinasi2" accept="image/png, image/jpeg, image/jpg"><br>
+										<label for="destinasi2" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 3</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="destinasi3" class="form-control" id="destinasi3">
+                                    	<input type="file" name="destinasi3" class="vendor_logo_hide5" id="destinasi3" accept="image/png, image/jpeg, image/jpg"><br>
+										<label for="destinasi3" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                     <div class="form-group row mb-4">

@@ -1,3 +1,55 @@
+<style>
+	.vendor_logo_hide1{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo1{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide2{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo2{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide3{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo3{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide4{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo4{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+	.vendor_logo_hide5{
+		display: inline !important;;
+		color: transparent;
+		width: 99px;
+	}
+	.vendor_logo5{
+		display: block !important;
+		color: black;
+		width: 100%;
+	}
+</style>
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
@@ -65,7 +117,7 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Event</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input name="tanggal" id="tanggal" type="date" class="form-control">
+                                            <input name="tanggal" id="tanggal" type="date" value="<?= $i['tanggal']; ?>" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
@@ -75,33 +127,38 @@
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail (368x420)</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                                            <input type="file" name="thumbnail" class="vendor_logo_hide1" id="thumbnail" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="thumbnail" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>368x420 pixel</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header (1920x412)</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="header" class="form-control" id="header">
+                                            <input type="file" name="header" class="vendor_logo_hide2" id="header" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="header" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>1920x412 pixel</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Event 1</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="event1" class="form-control" id="event1">
+                                            <input type="file" name="event1" class="vendor_logo_hide3" id="event1" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="event1" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Event 2</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="event2" class="form-control" id="event2">
+                                            <input type="file" name="event2" class="vendor_logo_hide4" id="event2" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="event2" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Event 3</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="file" name="event3" class="form-control" id="event3">
+                                            <input type="file" name="event3" class="vendor_logo_hide5" id="event3" accept="image/png, image/jpeg, image/jpg"><br>
+											<label for="event3" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">

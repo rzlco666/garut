@@ -13,9 +13,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
+                        <!--<div class="card-header">
                             <a href="javascript:;" onclick="tambah()" class="btn btn-primary">Tambah Data</a>
-                        </div>
+                        </div>-->
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="tabel-petugas" class="table table-striped" id="table-1">

@@ -275,6 +275,7 @@ class DataEvent extends CI_Controller
         $this->load->view('petugas/layout/sidebar');
         $this->load->view('petugas/dataevent/edit', $data);
         $this->load->view('petugas/layout/footer');
+		$this->load->view('petugas/dataevent/custom_script', $data);
     }
 
     public function update()
@@ -283,7 +284,6 @@ class DataEvent extends CI_Controller
         $this->form_validation->set_rules('lokasi', 'Lokasi', 'required');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
         $this->form_validation->set_rules('harga', 'Harga', 'required');
-        $this->form_validation->set_rules('tanggal', 'Tanggal', 'required');
 
         if ($this->form_validation->run() == true) {
 

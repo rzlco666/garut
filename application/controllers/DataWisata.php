@@ -271,6 +271,7 @@ class DataWisata extends CI_Controller
         $this->load->view('petugas/layout/sidebar');
         $this->load->view('petugas/datawisata/edit', $data);
         $this->load->view('petugas/layout/footer');
+        $this->load->view('petugas/datawisata/custom_script', $data);
     }
 
     public function update()

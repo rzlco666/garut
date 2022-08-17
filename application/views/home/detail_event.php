@@ -1,7 +1,8 @@
 <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-zQtZZRkH9k_rq429"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<?php foreach ($event as $i) : ?>
+<?php foreach ($event as $i) :
+		foreach ($slot as $s) :?>
     <div id="page_caption" class="hasbg parallax" style="background-image:url(<?= base_url('public/upload/image/event/header/'); ?><?= $i['header']; ?>);">
         <div class="single_tour_header_content">
             <div class="standard_wrapper">
@@ -55,6 +56,7 @@
 
                             <?php
                             if ($this->session->userdata('is_login') == FALSE) {
+								if (($s['slot'] - $s['slot_terjual']) > 0) {
                             ?>
                                 <div class="single_tour_booking_wrapper themeborder contact_form7">
                                     <div role="form" class="wpcf7" id="wpcf7-f142-o1" lang="en-US" dir="ltr">
@@ -63,7 +65,18 @@
                                     </div>
                                 </div>
                             <?php
+								} else {
+									?>
+									<div class="single_tour_booking_wrapper themeborder contact_form7">
+										<div role="form" class="wpcf7" id="wpcf7-f142-o1" lang="en-US" dir="ltr">
+											<div class="screen-reader-response"></div>
+											<p>Tiket telah habis terjual, ayo beli tiket event yang lain <a href="<?= base_url('home/event'); ?>"><b>disini</b></a>. Kami tunggu kehadiranmu ya!</p>
+										</div>
+									</div>
+									<?php
+								}
                             } else {
+								if (($s['slot'] - $s['slot_terjual']) > 0) {
                             ?>
                                 <div class="single_tour_booking_wrapper themeborder contact_form7">
                                     <div role="form" class="wpcf7" id="wpcf7-f142-o1" lang="en-US" dir="ltr">
@@ -123,6 +136,16 @@
                                     </div>
                                 </div>
                             <?php
+								} else {
+									?>
+									<div class="single_tour_booking_wrapper themeborder contact_form7">
+										<div role="form" class="wpcf7" id="wpcf7-f142-o1" lang="en-US" dir="ltr">
+											<div class="screen-reader-response"></div>
+											<p>Tiket telah habis terjual, ayo beli tiket event yang lain <a href="<?= base_url('home/event'); ?>"><b>disini</b></a>. Kami tunggu kehadiranmu ya!</p>
+										</div>
+									</div>
+									<?php
+								}
                             } ?>
 
                             <a id="single_tour_share_button" href="javascript:;" class="button ghost themeborder"><span class="ti-email"></span>Share this tour</a>
@@ -181,6 +204,18 @@
                 <div class="sidebar_content ">
 
                     <h1><?= $i['nama']; ?></h1>
+					<?php
+						if (($s['slot'] - $s['slot_terjual']) > 0) :
+					?>
+					<?php
+						else:
+ 					?>
+							<div id="15689862881347657664" class="alert_box notice"><i class="fa fa-flag alert_icon"></i>
+								<div class="alert_box_msg">Tiket Sudah Terjual Habis!</div><a href="#" class="close_alert" data-target="15689862881347657664"><i class="fa fa-times"></i></a>
+							</div>
+ 					<?php
+						endif;
+					?>
                     <div class="single_tour_attribute_wrapper themeborder ">
                         <div class="one_fourth">
                             <div class="tour_attribute_icon ti-time"></div>
@@ -244,7 +279,16 @@
                             <div class="single_tour_departure_title">Slot Event</div>
                             <div class="single_tour_departure_content"><?= $i['slot']; ?> orang</div>
                         </li>
+						<li>
+							<div class="single_tour_departure_title">Tiket Terjual</div>
+							<div class="single_tour_departure_content"><?= ($s['slot_terjual']); ?> tiket</div>
 
+						</li>
+							<li>
+								<div class="single_tour_departure_title">Sisa Tiket</div>
+								<div class="single_tour_departure_content"><?= ($s['slot']-$s['slot_terjual']); ?> tiket</div>
+
+							</li>
                         <li>
                             <div class="single_tour_departure_title">Harga Tiket</div>
                             <div class="single_tour_departure_content">Rp. <?= number_format($i['harga'], '0', '', '.'); ?> /orang</div>
@@ -514,7 +558,8 @@
         </div>
         <br class="clear" />
     </div>
-<?php endforeach; ?>
+<?php endforeach;
+endforeach;?>
 
 <script type="text/javascript">
     $('#pay-button').click(function(event) {

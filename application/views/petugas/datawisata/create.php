@@ -49,33 +49,38 @@
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail (368x420)</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                                    <input type="file" name="thumbnail" class="form-control-file" id="thumbnail" accept="image/png, image/jpeg, image/jpg">
+										<label for="thumbnail" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>368x420 pixel</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header (1920x412)</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Header</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="header" class="form-control" id="header">
+                                    	<input type="file" name="header" class="form-control-file" id="header" accept="image/png, image/jpeg, image/jpg">
+										<label for="header" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b> dan ukuran foto <b>1920x412 pixel</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 1</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="destinasi1" class="form-control" id="destinasi1">
+                                    	<input type="file" name="destinasi1" class="form-control-file" id="destinasi1" accept="image/png, image/jpeg, image/jpg">
+										<label for="destinasi1" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 2</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="destinasi2" class="form-control" id="destinasi2">
+                                    	<input type="file" name="destinasi2" class="form-control-file" id="destinasi2" accept="image/png, image/jpeg, image/jpg">
+										<label for="destinasi2" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto Destinasi 3</label>
                                     <div class="col-sm-12 col-md-7">
-                                    <input type="file" name="destinasi3" class="form-control" id="destinasi3">
+                                    	<input type="file" name="destinasi3" class="form-control-file" id="destinasi3" accept="image/png, image/jpeg, image/jpg">
+										<label for="destinasi3" class="label">Pastikan file foto anda dalam format <b>jpg/jpeg/png</b>.</label>
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">

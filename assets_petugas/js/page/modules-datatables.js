@@ -31,7 +31,9 @@ $("[data-checkboxes]").each(function() {
 $("#table-1").dataTable({
   "columnDefs": [
     { "sortable": false, "targets": [2,3] }
-  ]
+  ],
+	"iDisplayLength": 10,
+	"responsive": false,
 });
 $("#table-2").dataTable({
   "columnDefs": [

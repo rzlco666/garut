@@ -100,12 +100,18 @@
 
                                                 <?php
                                                 } else {
+													if ($d->status_akhir == 2) {
                                                 ?>
 
                                                     <button type="button" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;" data-toggle="modal" data-target="#beriUlasan<?= $d->order_id; ?>">Beri Ulasan</button>
 
                                                 <?php
+                                                }else{
+													?>
+													<button type="button" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;" data-toggle="modal" data-target="#selesaikan<?= $d->order_id; ?>">Selesaikan</button>
+												<?php
                                                 }
+												}
                                                 ?>
                                             <?php
                                             } elseif ($d->status_code == "201") {
@@ -247,4 +253,23 @@
             </div>
         </div>
     </div>
+	<div class="modal fade" id="selesaikan<?= $d->order_id; ?>" tabindex="-1" role="dialog" aria-labelledby="selesaikanLabel<?= $d->order_id; ?>" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="detailTransaksiLabel<?= $d->order_id; ?>">Selesaikan Transaksi &mdash; <?= $d->order_id; ?></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="text-body">Apakah anda yakin untuk menyelesaikan transaksi?</p>
+				</div>
+				<div class="modal-footer">
+					<a href="<?= base_url('Home/status_wisata/') . $d->order_id; ?>" class="button small left" style="background-color:#cb5f54 !important;color:#ffffff !important;border:1px solid #cb5f54 !important;margin-right:10px;margin-bottom:10px;">Selesaikan</a>
+					<button type="button" class="button small left" style="background-color:#97a2a2 !important;color:#ffffff !important;border:1px solid #97a2a2 !important;margin-right:10px;margin-bottom:10px;" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 <?php } ?>

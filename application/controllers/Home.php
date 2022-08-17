@@ -94,7 +94,7 @@ class Home extends CI_Controller
                 $id_wisatawan = $this->session->userdata('id_wisatawan');
 
                 $data['transaksi'] = $this->templates->query("SELECT tw.order_id, tw.gross_amount, tw.payment_type, tw.transaction_time, tw.bank, tw.va_number,
-                tw.pdf_url, tw.status_code, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
+                tw.pdf_url, tw.status_code, tw.status_akhir, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
                 tw.id_wisata, w.nama nama_wisata, w.thumbnail thumbnail, w.harga harga
                 FROM transaksi_wisata tw 
                 JOIN wisata w 
@@ -125,7 +125,7 @@ class Home extends CI_Controller
                 $id_wisatawan = $this->session->userdata('id_wisatawan');
 
                 $data['transaksi'] = $this->templates->query("SELECT tw.order_id, tw.gross_amount, tw.payment_type, tw.transaction_time, tw.bank, tw.va_number,
-                tw.pdf_url, tw.status_code, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
+                tw.pdf_url, tw.status_code, tw.status_akhir, tw.jumlah, tw.id_wisatawan, tw.nama, tw.alamat, tw.email, tw.no_hp,
                 tw.id_event, w.nama nama_event, w.thumbnail thumbnail, w.harga harga
                 FROM transaksi_event tw 
                 JOIN event w 
@@ -404,6 +404,12 @@ class Home extends CI_Controller
         $data['title'] = 'Event';
 
         $data['event'] = $this->templates->view_where('event', ['id_event' => $id_event])->result_array();
+		$data['slot'] = $this->templates->query("
+			select event.id_event, event.nama, event.slot, ifnull(sum(te.jumlah), 0) as slot_terjual
+			from event
+			left join transaksi_event te on event.id_event = te.id_event
+			where event.id_event = $id_event
+			group by event.id_event")->result_array();
         $data['jumlah'] = $this->templates->query("SELECT count(id_rating_event) jumlah FROM rating_event WHERE id_event = $id_event")->result_array();
         $data['ratarata'] = $this->templates->query("SELECT id_event, FORMAT(AVG(rating),0) rating FROM rating_event WHERE id_event = $id_event")->result_array();
         $data['ulasan'] = $this->templates->query("SELECT rw.id_rating_event, rw.rating, rw.feedback, rw.id_wisatawan,
@@ -478,6 +484,24 @@ class Home extends CI_Controller
             }
         }
     }
+
+	public function status_wisata($order_id)
+	{
+			$data['status_akhir'] = 2;
+
+			$this->templates->update('transaksi_wisata', ['order_id' => $order_id], $data);
+			$this->session->set_flashdata('message', 'Transaksi berhasil diselesaikan!');
+			redirect('Home/transaksi_wisata');
+	}
+
+	public function status_event($order_id)
+	{
+		$data['status_akhir'] = 2;
+
+		$this->templates->update('transaksi_event', ['order_id' => $order_id], $data);
+		$this->session->set_flashdata('message', 'Transaksi berhasil diselesaikan!');
+		redirect('Home/transaksi_event');
+	}
 
     public function login()
     {
@@ -731,6 +755,7 @@ class Home extends CI_Controller
                 'va_number' => $result['va_numbers'][0]['va_number'],
                 'pdf_url' => $result['pdf_url'],
                 'status_code' => $result['status_code'],
+				'status_akhir' => 1,
                 'jumlah' => $jumlah,
                 'id_wisatawan' => $id_wisatawan,
                 'nama' => $nama,
@@ -758,6 +783,7 @@ class Home extends CI_Controller
                 'va_number' => $result['va_numbers'][0]['va_number'],
                 'pdf_url' => $result['pdf_url'],
                 'status_code' => $result['status_code'],
+				'status_akhir' => 1,
                 'jumlah' => $jumlah,
                 'id_wisatawan' => $id_wisatawan,
                 'nama' => $nama,
